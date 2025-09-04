@@ -2580,3 +2580,9 @@ p {
 .current a {
     color: #FF630E !important;
 }
+.link-class {
+    color: #4ecdc4 !important;
+}
+.link-class:hover {
+    color: #00DDFF !important;
+}

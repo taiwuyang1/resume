@@ -90,7 +90,7 @@
 
     async function loadResumeData() {
         try {
-            const response = await fetch('/static/js/resume.json');
+            const response = await fetch('static/js/resume.json');
             if (!response.ok) {
                 throw new Error('Failed to load resume data');
             }
