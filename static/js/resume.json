@@ -1,7 +1,7 @@
 {
     "personal": {
       "name": "Hongzhang (Alpha) Liu",
-      "location": "中国 北京市",
+      "location": "Beijing, China",
       "intro": "Simple souls can also harbor mighty dreams -- I stand on the plain, gazing at the celestial plane.",
       "contacts": {
         "google_scholar": "https://scholar.google.com",
@@ -13,14 +13,14 @@
     "experience": [
       {
         "company": "Moonshot AI",
-        "location": "中国 北京市 · 混合办公",
-        "duration": "8 个月",
+        "location": "Beijing, China · Hybrid",
+        "duration": "8 months",
         "company_logo": "static/image/work8.jpg",
         "roles": [
           {
             "title": "Agentic Staff",
-            "type": "正式",
-            "duration": "2025年8月 - 至今 · 2 个月",
+            "type": "Full-time",
+            "duration": "2025 Aug - Present · 2 months",
             "description": [
               "Accepting full-time offer",
               "Product Engineer & Researcher"
@@ -36,8 +36,8 @@
           },
           {
             "title": "Member of Agent Team",
-            "type": "实习",
-            "duration": "2025年2月 - 2025年8月 · 7 个月",
+            "type": "Internship",
+            "duration": "2025 Feb - 2025 Aug · 7 months",
             "description": [
               "Foundation Model → Agentic Model (Kimi-K2)",
               "End-to-end RL Deep Research Agent (Kimi-Researcher)",
@@ -59,9 +59,9 @@
         "company": "HSG",
         "company_logo": "static/image/work7.jpg",
         "title": "AI Researcher",
-        "type": "自由职业",
-        "location": "中国 北京市 · 远程办公",
-        "duration": "2025年4月 - 至今 · 6 个月",
+        "type": "Freelance",
+        "location": "Beijing, China · Remote",
+        "duration": "2025 Apr - Present · 6 months",
         "description_title": "Affiliate to xbench team to HongShan - fka.Sequoia China",
         "description": [
           "Core author of paper (xbench - arXiv: 2506.13651), a “Evergreen” Benchmark for AI Agents",
@@ -80,9 +80,9 @@
         "company": "Tencent",
         "company_logo": "static/image/work6.jpg",
         "title": "Research Engineer",
-        "type": "合同",
-        "location": "中国 广东省 深圳 · 远程办公",
-        "duration": "2025年2月 - 2025年4月 · 3 个月",
+        "type": "Contract",
+        "location": "Guangdong, China · Remote",
+        "duration": "2025 Feb - 2025 Apr · 3 months",
         "description_title": "IEG Research Talent Program",
         "description": [
           "Focus on LLM Multi-Agent System for Game-NPC OS",
@@ -100,9 +100,9 @@
         "company": "Shanghai AI Laboratory",
         "company_logo": "static/image/work5.jpg",
         "title": "Research Intern # National Laboratory",
-        "type": "实习",
-        "location": "中国 上海市 · 现场办公",
-        "duration": "2024年8月 - 2025年2月 · 7 个月",
+        "type": "Internship",
+        "location": "Shanghai, China · On-site",
+        "duration": "2024 Aug - 2025 Feb · 7 months",
         "description_title": "Supervised by Prof, Wanli Ouyang and mentored by Dr. Shuyue Hu",
         "description": [
           "Focus on LLM Collective Intelligence",
@@ -120,9 +120,9 @@
         "company": "Tsinghua University",
         "company_logo": "static/image/work4.jpg",
         "title": "Research Assistant @THUNLP",
-        "type": "全职",
-        "location": "中国 北京市 · 现场办公",
-        "duration": "2023年9月 - 2024年3月 · 7 个月",
+        "type": "Full-time",
+        "location": "Beijing, China · On-site",
+        "duration": "2023 Sep - 2024 Mar · 7 months",
         "description_title": "Supervised by Prof. Zhiyuan Liu and mentored by Prof. Chen Qian",
         "description": [
           "Focused on the innovation and integration of Large Language Models and Multi-Agent Framework",
@@ -140,9 +140,9 @@
         "company": "Modelbest",
         "company_logo": "static/image/work3.jpg",
         "title": "Algorithm Engineer",
-        "type": "实习",
-        "location": "中国 北京市 · 混合办公",
-        "duration": "2023年9月 - 2024年1月 · 5 个月",
+        "type": "Internship",
+        "location": "Beijing, China · Hybrid",
+        "duration": "Sep 2023 – Jan 2024 · 5 months",
         "description_title": "Joint Internship with TsinghuaNLP",
         "description": [
           "Conducted regular technical sharing sessions with company engineers and researchers, honored as a 'ModelBest Scholar' for outstanding contributions",
@@ -165,8 +165,8 @@
         "company": "NIP Group",
         "company_logo": "static/image/work2.jpg",
         "title": "Esports Assistant Coach @eStarPro",
-        "type": "自由职业",
-        "duration": "2023年6月 - 2023年8月 · 3 个月",
+        "type": "Freelance",
+        "duration": "2023 Jun - 2023 Aug · 3 months",
         "description": [
           "Assisted the Honor of Kings Division at eStarPro Professional Club's Youth Training Team",
           "Secured the runner-up position in the 7th National Honor of Kings Tournament and won the championship in the Central China Region"
@@ -176,9 +176,9 @@
         "company": "Chinese Go Association",
         "company_logo": "static/image/work1.jpg",
         "title": "Go Player",
-        "type": "正式",
+        "type": "Full-time",
         "location": "China",
-        "duration": "2015年10月 - 2023年8月 · 7 年 11 个月",
+        "duration": "2015 Oct - 2023 Aug · 7 years 11 months",
         "description_title": "Go is the beginning of all my motivations, and I selected my English name in light of the emergence of AlphaGo.",
         "highlights": [
           {
@@ -190,10 +190,10 @@
     ],
     "education": [
       {
-        "school": "澳大利亚悉尼大学",
+        "school": "University of Sydney",
         "school_logo": "static/image/education2.png",
         "degree": "Bachelor with Dalyell Scholar，Majors in Computer Science, Financial Mathematics and Statistics",
-        "duration": "2024年2月 - 2026年",
+        "duration": "2024 Feb - 2026 Jun",
         "notes": [
           "Anticipated Early Graduation: June 2026"
         ],
@@ -209,7 +209,7 @@
         "school": "Guanghua School of Management, Peking University",
         "school_logo": "static/image/education3.png",
         "degree": "Bachelor of Business Administration，Study Artificial Intelligence, Innovation and Entrepreneurship",
-        "duration": "2025年2月 - 2025年7月",
+        "duration": "2025 Feb - 2025 Jul",
         "notes": [
           "Visiting Undergraduate Student #2025_Spring"
         ],
@@ -222,32 +222,32 @@
         ]
       },
       {
-        "school": "上海交通大学",
+        "school": "Shanghai Jiao Tong University",
         "school_logo": "static/image/education4.png",
         "degree": "International Summer School，Stochastic Process and Mathematical Finance",
-        "duration": "2024年12月 - 2025年1月"
+        "duration": "2024 Dec - 2025 Jan"
       },
       {
-        "school": "北京大学",
+        "school": "Peking University",
         "school_logo": "static/image/education5.png",
         "degree": "National Graduate Summer School，AI and Swarm Intelligence",
-        "duration": "2024年7月 - 2024年8月",
+        "duration": "2024 Jul - 2024 Aug",
         "notes": [
           "Funded by the Graduate Education Innovation Program, Jointly organized by the School of Intelligence Science and Technology and the Graduate School of Peking University"
         ]
       },
       {
-        "school": "深圳高级中学",
+        "school": "Shenzhen Senior High School",
         "school_logo": "static/image/education6.png",
         "degree": "High School Diploma",
-        "duration": "2020年9月 - 2023年7月"
+        "duration": "2020 Sep - 2023 Jul"
       }
     ],
     "projects": [
       {
         "company": "AskSia.ai",
         "title": "AI Product Manager",
-        "duration": "2024年9月 - 2025年1月",
+        "duration": "2024 Sep - 2025 Jan",
         "description": [
           "Responsible for planning the roadmap of SuperSia (advanced version), designing and optimizing the core features and technical architecture. These efforts contributed to a fourfold increase in revenue by enhancing product functionality and driving customer adoption."
         ],
@@ -263,7 +263,7 @@
       {
         "company": "Empathetic AI",
         "title": "Founding Member of Technical Staff",
-        "duration": "2024年4月 - 2024年7月",
+        "duration": "2024 Apr - 2024 Jul",
         "description": [
           "Successfully recruited and led a high-performing technical team, driving key technical innovations in NLP, while being invited to participate in National AI Industry Day and achieving 3rd place nationwide in Australia’s AI Sprint, along with overseeing brand promotion and maintenance efforts."
         ],
@@ -279,8 +279,8 @@
       {
         "company": "ChatDev",
         "title": "R&D",
-        "duration": "2023年9月 - 2024年3月",
-        "affiliation": "关联机构: Modelbest",
+        "duration": "2023 Sep - 2024 Mar",
+        "affiliation": "Affiliation: Modelbest",
         "affiliation_logo": "static/image/organization1.jpg",
         "description": [
           "Our open-source repositories regularly ranks at the top of the Github Trending list. In a short span of just over a month since its launch, it has impressively garnered more than 10k+ stars."
@@ -292,7 +292,7 @@
       },
       {
         "title": "StratLingo AI",
-        "duration": "2024年1月 - 2024年2月",
+        "duration": "2024 Jan - 2024 Feb",
         "description": [
           "AI+Game (pausing)"
         ],
@@ -306,12 +306,12 @@
       },
       {
         "title": "SID Student Center",
-        "duration": "2020年12月 - 2023年6月",
-        "affiliation": "关联机构: Shenzhen Senior High School",
+        "duration": "2020 Dec - 2023 Jun",
+        "affiliation": "Affiliation: Shenzhen Senior High School",
         "affiliation_logo": "static/image/organization2.jpg",
         "highlights": [
           {
-            "title": "信息聚合 | SID 学生信息平台测试版本正式启用",
+            "title": "Information Aggregation | SID Student Information Platform (Beta) Officially Launched",
             "image": "/static/image/projects4.jpg",
             "link": "https://mp.weixin.qq.com/s/fYlIKXFZN-787b5v_bHd-Q"
           }
@@ -319,35 +319,27 @@
       },
       {
         "title": "Hequn AI",
-        "duration": "2023年2月 - 2023年5月",
+        "duration": "2023 Feb - 2023 May",
         "description": [
           "RL, MCTS"
         ]
       },
       {
         "title": "Bitcoin price prediction",
-        "duration": "2021年7月 - 2021年8月",
+        "duration": "2021 Jul - 2021 Aug",
         "description": [
           "LSTM"
         ]
       }
     ],
-    "volunteer": [
-      "FoundationAgents 创始成员 (MetaGPT)",
-      "悉尼大学 AI&DL 课程助教",
-      "CBAIA 研究员",
-      "NeurIPS / ICLR 审稿人",
-      "WAIC 世界人工智能大会工作人员",
-      "小红书 Influencer"
-    ],
-    "skills": ["人工智能 (AI)", "研究与开发 (R&D)", "创新创业"],
+    "skills": ["Artificial Intelligence (AI)", "Research & Development (R&D)", "Innovation & Entrepreneurship"],
     "certificates": [
       {
         "title": "Silver Medal",
         "issuer": "Kaggle",
         "certificate_logo": "static/image/certificates1.jpg",
         "type": "certificates",
-        "date": "2024年7月",
+        "date": "2024 Jul",
         "credential_id": "Alpha4AGI",
         "highlights": [
           {
@@ -363,7 +355,7 @@
         "issuer": "GRE® General Test",
         "certificate_logo": "static/image/certificates2.jpg",
         "type": "certificates",
-        "date": "2023年12月",
+        "date": "2023 Dec",
         "credential_id": "90964154",
         "highlights": [
           {
@@ -378,7 +370,7 @@
         "issuer": "the University of Sydney",
         "certificate_logo": "static/image/education2.png",
         "type": "honors",
-        "date": "2024年2月",
+        "date": "2024 Feb",
         "affiliation": "University of Sydney",
         "description": [
           "Dalyell Scholar streams",
@@ -390,7 +382,7 @@
         "issuer": "Tsinghua University",
         "certificate_logo": "static/image/work4.jpg",
         "type": "honors",
-        "date": "2023年12月",
+        "date": "2023 Dec",
         "affiliation": "Tsinghua University",
         "highlights": [
           {
@@ -405,7 +397,7 @@
     "publications": [
       {
         "title": "Kimi K2: Open Agentic Intelligence",
-        "year": "2025年7月28日",
+        "year": "2025 Jul 28",
         "description": [
           "We introduce Kimi K2, a Mixture-of-Experts (MoE) large language model with 32 billion activated parameters and 1 trillion total parameters. We propose the MuonClip optimizer, which improves upon Muon with a novel QK-clip technique to address training instability while enjoying the advanced token efficiency of Muon. Based on MuonClip, K2 was pre-trained on 15.5 trillion tokens with zero loss spike. During post-training, K2 undergoes a multi-stage post-training process, highlighted by a large-scale agentic data synthesis pipeline and a joint reinforcement learning (RL) stage, where the model improves its capabilities through interactions with real and synthetic environments.",
           "Kimi K2 achieves state-of-the-art performance among open-source non-thinking models, with strengths in agentic capabilities. Notably, K2 obtains 66.1 on Tau2-Bench, 76.5 on ACEBench (En), 65.8 on SWE-Bench Verified, and 47.3 on SWE-Bench Multilingual -- surpassing most open and closed-sourced baselines in non-thinking settings. It also exhibits strong capabilities in coding, mathematics, and reasoning tasks, with a score of 53.7 on LiveCodeBench v6, 49.5 on AIME 2025, 75.1 on GPQA-Diamond, and 27.1 on OJBench, all without extended thinking. These results position Kimi K2 as one of the most capable open-source large language models to date, particularly in software engineering and agentic tasks. We release our base and post-trained model checkpoints to facilitate future research and applications of agentic intelligence."
@@ -414,7 +406,7 @@
       },
       {
         "title": "A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence",
-        "year": "2025年7月28日",
+        "year": "2025 Jul 28",
         "description": [
           "Large Language Models (LLMs) have demonstrated strong capabilities but remain fundamentally static, unable to adapt their internal parameters to novel tasks, evolving knowledge domains, or dynamic interaction contexts. As LLMs are increasingly deployed in open-ended, interactive environments, this static nature has become a critical bottleneck, necessitating agents that can adaptively reason, act, and evolve in real time. This paradigm shift -- from scaling static models to developing self-evolving agents -- has sparked growing interest in architectures and methods enabling continual learning and adaptation from data, interactions, and experiences. This survey provides the first systematic and comprehensive review of self-evolving agents, organized around three foundational dimensions -- what to evolve, when to evolve, and how to evolve. We examine evolutionary mechanisms across agent components (e.g., models, memory, tools, architecture), categorize adaptation methods by stages (e.g., intra-test-time, inter-test-time), and analyze the algorithmic and architectural designs that guide evolutionary adaptation (e.g., scalar rewards, textual feedback, single-agent and multi-agent systems). Additionally, we analyze evaluation metrics and benchmarks tailored for self-evolving agents, highlight applications in domains such as coding, education, and healthcare, and identify critical challenges and research directions in safety, scalability, and co-evolutionary dynamics. By providing a structured framework for understanding and designing self-evolving agents, this survey establishes a roadmap for advancing adaptive agentic systems in both research and real-world deployments, ultimately shedding lights to pave the way for the realization of Artificial Super Intelligence (ASI), where agents evolve autonomously, performing at or beyond human-level intelligence across a wide array of tasks."
         ],
@@ -422,7 +414,7 @@
       },
       {
         "title": "xbench: Tracking Agents Productivity Scaling With Profession-Aligned Real-World Evaluations",
-        "year": "2025年5月25日",
+        "year": "2025 May 25",
         "description": [
           "We introduce xbench, a dynamic, profession-aligned evaluation suite designed to bridge the gap between AI agent capabilities and real-world productivity. While existing benchmarks often focus on isolated technical skills, they may not accurately reflect the economic value agents deliver in professional settings. To address this, xbench targets commercially significant domains with evaluation tasks defined by professors, creating metrics that strongly correlate with productivity value, predicting Technology-Market Fit (TMF), and tracking product capabilities over time.",
           "As our initial implementations, we present two benchmarks: Recruitment and Marketing. For Recruitment, we collect 50 tasks from authentic headhunting business scenarios to evaluate agents' abilities in company mapping, information retrieval, and talent sourcing. For Marketing, we focus on the search for influencers, assessing agents on 50 advertiser requirements and searching for 836 candidate influencers."
@@ -431,7 +423,7 @@
       },
       {
         "title": "Advances and Challenges in Foundation Agents: From Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems",
-        "year": "2025年4月1日",
+        "year": "2025 Apr 1",
         "description": [
           "The advent of large language models (LLMs) has catalyzed a transformative shift in artificial intelligence, paving the way for advanced intelligent agents capable of sophisticated reasoning, robust perception, and versatile action across diverse domains. As these agents increasingly drive AI research and practical applications, their design, evaluation, and continuous improvement present intricate, multifaceted challenges. This survey provides a comprehensive overview, framing intelligent agents within a modular, brain-inspired architecture that integrates principles from cognitive science, neuroscience, and computational research. We structure our exploration into four interconnected parts. First, we delve into the modular foundation of intelligent agents, systematically mapping their cognitive, perceptual, and operational modules onto analogous human brain functionalities, and elucidating core components such as memory, world modeling, reward processing, and emotion-like systems. Second, we discuss self-enhancement and adaptive evolution mechanisms, exploring how agents autonomously refine their capabilities, adapt to dynamic environments, and achieve continual learning through automated optimization paradigms, including emerging AutoML and LLM-driven optimization strategies. Third, we examine collaborative and evolutionary multi-agent systems, investigating the collective intelligence emerging from agent interactions, cooperation, and societal structures, highlighting parallels to human social dynamics. Finally, we address the critical imperative of building safe, secure, and beneficial AI systems, emphasizing intrinsic and extrinsic security threats, ethical alignment, robustness, and practical mitigation strategies necessary for trustworthy real-world deployment."
         ],
@@ -439,7 +431,7 @@
       },
       {
         "title": "SC-MCTS*: Interpretable Contrastive Monte Carlo Tree Search Reasoning",
-        "year": "Arxiv · 2024年10月2日",
+        "year": "Arxiv · 2024 Oct 2",
         "description": [
           "A novel Monte Carlo Tree Search (MCTS) reasoning algorithm for Large Language Models (LLMs), significantly improves both reasoning accuracy and speed. Our motivation comes from: 1. Previous MCTS LLM reasoning works often overlooked its biggest drawback--slower speed compared to CoT; 2. Previous research mainly used MCTS as a tool for LLM reasoning on various tasks with limited quantitative analysis or ablation studies of its components from reasoning interpretability perspective. 3. The reward model is the most crucial component in MCTS, however previous work has rarely conducted in-depth study or improvement of MCTS's reward models. Thus, we conducted extensive ablation studies and quantitative analysis on components of MCTS, revealing the impact of each component on the MCTS reasoning performance of LLMs. Building on this, (i) we designed a highly interpretable reward model based on the principle of contrastive decoding and (ii) achieved an average speed improvement of 51.9% per node using speculative decoding. Additionally, (iii) we improved UCT node selection strategy and backpropagation used in previous works, resulting in significant performance improvement. We outperformed o1-mini by an average of 17.4% on the Blocksworld multi-step reasoning dataset using Llama-3.1-70B with SC-MCTS*."
         ],
@@ -447,7 +439,7 @@
       },
       {
         "title": "ChatDev: Communicative Agents for Software Development",
-        "year": "Association for Computational Linguistics · 2024年6月5日",
+        "year": "Association for Computational Linguistics · 2024 Jun 5",
         "description": [
           "A chat-powered software development framework in which specialized agents driven by large language models (LLMs) are guided in what to communicate (via chat chain) and how to communicate (via communicative dehallucination). These agents actively contribute to the design, coding, and testing phases through unified language-based communication, with solutions derived from their multi-turn dialogues. We found their utilization of natural language is advantageous for system design, and communicating in programming language proves helpful in debugging. This paradigm demonstrates how linguistic communication facilitates multi-agent collaboration, establishing language as a unifying bridge for autonomous task-solving among LLM agents. The code and data are available at https://github.com/OpenBMB/ChatDev."
         ],

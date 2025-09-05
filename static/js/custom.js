@@ -109,7 +109,6 @@
         renderEducation();
         renderSkills();
         renderProjects();
-        renderVolunteer();
         renderPublications();
         renderCertificates();
         renderOrganizations();
@@ -165,16 +164,16 @@
         
         // Since personal.details is not in the current JSON structure,
         // use fallback values or hide these fields
-        $('#personal-phone').text(personal.phone || '暂无');
-        $('#personal-age').text(personal.age || '暂无');
-        $('#personal-education').text(personal.education_summary || '暂无');
-        $('#personal-freelance').text(personal.freelance_status || '暂无');
+        $('#personal-phone').text(personal.phone);
+        $('#personal-age').text(personal.age);
+        $('#personal-education').text(personal.education_summary);
+        $('#personal-freelance').text(personal.freelance_status);
         
         // Update email from contacts
         if (personal.contacts && personal.contacts.email) {
             $('#personal-email').text(personal.contacts.email);
         } else {
-            $('#personal-email').text('暂无');
+            $('#personal-email').text('No email available');
         }
     }
 
@@ -187,15 +186,12 @@
 
         // Sidebar social links
         if (personal.contacts) {
-            let socialHtml = '<li><span>关注我们：</span></li>';
+            let socialHtml = '<li><span>Follow Us:</span></li>';
             if (personal.contacts.linkedin) {
                 socialHtml += `<li><a href="${personal.contacts.linkedin}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>`;
             }
             if (personal.contacts.github) {
                 socialHtml += `<li><a href="${personal.contacts.github}" target="_blank"><i class="fab fa-github"></i></a></li>`;
-            }
-            if (personal.contacts.google_scholar) {
-                socialHtml += `<li><a href="${personal.contacts.google_scholar}" target="_blank"><i class="fas fa-graduation-cap"></i></a></li>`;
             }
             $('#sidebar-social').html(socialHtml);
         }
@@ -223,7 +219,7 @@
         experiences.forEach((exp, index) => {
             const isLeft = index % 2 === 0;
             const side = isLeft ? 'left' : 'right';
-            const isCurrent = exp.duration && exp.duration.includes('至今');
+            const isCurrent = exp.duration && exp.duration.includes('Currently');
             const currentClass = isCurrent ? ' current' : '';
             
             experienceHtml += `
@@ -351,7 +347,7 @@
         let horizontalHtml = '';
         
         education.forEach((edu, index) => {
-            const isCurrent = edu.duration.includes('至今') || edu.duration.includes('预计');
+            const isCurrent = edu.duration.includes('Currently') || edu.duration.includes('Expected');
             const currentClass = isCurrent ? ' education-timeline-current' : '';
             
             horizontalHtml += `
@@ -417,20 +413,20 @@
             const imagePath = `static/image/${imageIndex}.png`;
             
             // 根据技能名称判断类别
-            let category = '技术技能';
+            let category = 'Technical Skills';
             if (skill.toLowerCase().includes('python') || skill.toLowerCase().includes('java') || 
                 skill.toLowerCase().includes('javascript') || skill.toLowerCase().includes('c++') ||
                 skill.toLowerCase().includes('sql') || skill.toLowerCase().includes('html') ||
                 skill.toLowerCase().includes('css') || skill.toLowerCase().includes('react') ||
                 skill.toLowerCase().includes('vue') || skill.toLowerCase().includes('node')) {
-                category = '编程语言';
-            } else if (skill.toLowerCase().includes('ai') || skill.toLowerCase().includes('机器学习') ||
-                       skill.toLowerCase().includes('深度学习') || skill.toLowerCase().includes('神经网络') ||
+                category = 'Programming Languages';
+            } else if (skill.toLowerCase().includes('ai') || skill.toLowerCase().includes('machine learning') ||
+                       skill.toLowerCase().includes('deep learning') || skill.toLowerCase().includes('neural network') ||
                        skill.toLowerCase().includes('tensorflow') || skill.toLowerCase().includes('pytorch')) {
-                category = '人工智能';
-            } else if (skill.toLowerCase().includes('项目管理') || skill.toLowerCase().includes('团队协作') ||
-                       skill.toLowerCase().includes('沟通') || skill.toLowerCase().includes('领导力')) {
-                category = '软技能';
+                category = 'Artificial Intelligence';
+            } else if (skill.toLowerCase().includes('project management') || skill.toLowerCase().includes('team collaboration') ||
+                       skill.toLowerCase().includes('communication') || skill.toLowerCase().includes('leadership')) {
+                category = 'Soft Skills';
             }
             
             skillsHtml += `
@@ -527,31 +523,6 @@
         $('#projects-grid').html(projectsHtml);
     }
 
-    function renderVolunteer() {
-        const volunteer = resumeData.volunteer;
-        if (!volunteer || !volunteer.length) return;
-
-        // Render volunteer as service items
-        let volunteerHtml = '';
-        volunteer.slice(0, 4).forEach((vol, index) => {
-            volunteerHtml += `
-                <div class="col-md-6 col-sm-6 mb-4">
-                    <div class="single-service">
-                        <div class="single-service-img">
-                            <i class="fas fa-hands-helping text-primary"></i>
-                        </div>
-                        <div class="service-content">
-                            <h6>${vol.org}</h6>
-                            <p class="text-primary">${vol.role}</p>
-                            <p class="text-muted">${vol.period}</p>
-                        </div>
-                    </div>
-                </div>
-            `;
-        });
-
-        $('#volunteer-list').html(volunteerHtml);
-    }
 
     function renderPublications() {
         const publications = resumeData.publications;
@@ -573,7 +544,7 @@
                         <div class="publication-info">
                             <h3 class="publication-title">${pub.title}</h3>
                             <div class="publication-year">
-                                <i class="fas fa-calendar-alt"></i>
+                                <i class="fas fa-clock"></i>
                                 <span>${pub.year}</span>
                             </div>
                         </div>
@@ -586,14 +557,14 @@
                         ${hasLongDescription ? `
                             <button class="publication-toggle-btn" onclick="togglePublicationDescription(${index})">
                                 <i class="fas fa-chevron-down"></i>
-                                <span>展开详情</span>
+                                <span>Expand Details</span>
                             </button>
                         ` : ''}
                         ${pub.links ? `
                             <div class="publication-links">
                                 <a href="${pub.links}" target="_blank" class="publication-link">
                                     <i class="fas fa-external-link-alt"></i>
-                                    <span>查看</span>
+                                    <span>View</span>
                                 </a>
                             </div>
                         ` : ''}
@@ -623,7 +594,7 @@
                             <h3 class="certificate-title">${cert.title}</h3>
                             <div class="certificate-issuer">${cert.issuer}</div>
                         </div>
-                        <div class="certificate-type">${cert.type === 'certificates' ? '资格认证' : '荣誉奖项'}</div>
+                        <div class="certificate-type">${cert.type === 'certificates' ? 'Certifications' : 'Awards'}</div>
                     </div>
                     
                     <div class="certificate-body">
@@ -667,7 +638,7 @@
                                             ${highlight.url ? `
                                                 <a href="${highlight.url}" target="_blank" class="highlight-link">
                                                     <i class="fas fa-external-link-alt"></i>
-                                                    查看详情
+                                                    View Details
                                                 </a>
                                             ` : ''}
                                         </div>
@@ -722,7 +693,7 @@
         const personal = resumeData.personal;
         if (!personal) return;
 
-        $('#footer-name').text(personal.location || '地址信息');
+        $('#footer-name').text(personal.location || 'Address Information');
         if (personal.contacts && personal.contacts.email) {
             $('#footer-contacts').attr('href', `mailto:${personal.contacts.email}`).text(personal.contacts.email);
         }
@@ -742,12 +713,12 @@
             // Expand
             descriptionElement.classList.remove('collapsed');
             toggleButton.classList.add('expanded');
-            toggleButton.querySelector('span').textContent = '收起详情';
+            toggleButton.querySelector('span').textContent = 'Collapse Details';
         } else {
             // Collapse
             descriptionElement.classList.add('collapsed');
             toggleButton.classList.remove('expanded');
-            toggleButton.querySelector('span').textContent = '展开详情';
+            toggleButton.querySelector('span').textContent = 'Collapse Details';
         }
     }
 
