@@ -221,21 +221,7 @@
           }
         ]
       },
-      {
-        "school": "Shanghai Jiao Tong University",
-        "school_logo": "static/image/education4.png",
-        "degree": "International Summer School，Stochastic Process and Mathematical Finance",
-        "duration": "2024 Dec - 2025 Jan"
-      },
-      {
-        "school": "Peking University",
-        "school_logo": "static/image/education5.png",
-        "degree": "National Graduate Summer School，AI and Swarm Intelligence",
-        "duration": "2024 Jul - 2024 Aug",
-        "notes": [
-          "Funded by the Graduate Education Innovation Program, Jointly organized by the School of Intelligence Science and Technology and the Graduate School of Peking University"
-        ]
-      },
+      
       {
         "school": "Shenzhen Senior High School",
         "school_logo": "static/image/education6.png",

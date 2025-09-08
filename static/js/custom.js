@@ -217,90 +217,77 @@
         let experienceHtml = '';
         
         experiences.forEach((exp, index) => {
-            const isLeft = index % 2 === 0;
-            const side = isLeft ? 'left' : 'right';
             const isCurrent = exp.duration && exp.duration.includes('Currently');
             const currentClass = isCurrent ? ' current' : '';
             
             experienceHtml += `
-                <div class="timeline-item ${side}${currentClass}">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-company-info">
-                                ${exp.company_logo ? `
-                                    <div class="timeline-company-logo">
-                                        <img src="${exp.company_logo}" alt="${exp.company}" onerror="this.style.display='none'">
-                                    </div>
-                                ` : ''}
-                                <div class="timeline-company-details">
+                <div class="experience-card${currentClass}">
+                    <div class="experience-header">
+                        ${exp.company_logo ? `
+                            <div class="experience-logo">
+                                <img src="${exp.company_logo}" alt="${exp.company}" onerror="this.style.display='none'">
+                            </div>
+                        ` : ''}
+                        <div class="experience-info">
+                            <h3 class="experience-company">${exp.company}</h3>
+                            ${exp.location ? `
+                                <div class="experience-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>${exp.location}</span>
+                                </div>
+                            ` : ''}
+                        </div>
+                    </div>
+                    
+                    ${exp.roles && exp.roles.length > 0 ? `
+                        <div class="experience-roles">
+                            ${exp.roles.map(role => `
+                                <div class="role-card">
                                     <div class="role-header">
-                                        <h3 class="timeline-company">${exp.company}</h3>
+                                        <h4 class="role-title">${role.title}</h4>
+                                        ${role.type ? `<span class="role-type">${role.type}</span>` : ''}
                                     </div>
-                                    
-                                    ${exp.location ? `
-                                        <div class="timeline-location">
-                                            <i class="fas fa-map-marker-alt"></i>
-                                            <span>${exp.location}</span>
+                                    <div class="role-duration">
+                                        <i class="fas fa-clock"></i>
+                                        <span>${role.duration}</span>
+                                    </div>
+                                    <div class="role-description">
+                                        ${role.description ? role.description.map(item => `<div class="role-bullet">• ${item}</div>`).join('') : ''}
+                                    </div>
+                                    ${role.highlights && role.highlights.length > 0 ? `
+                                        <div class="role-highlights">
+                                            ${role.highlights.map(highlight => `
+                                                <div class="role-highlight">
+                                                    ${highlight.image ? `
+                                                        <div class="highlight-image">
+                                                            <img src="${highlight.image}" alt="${highlight.title}" onerror="this.style.display='none'">
+                                                        </div>
+                                                    ` : '<i class="fas fa-file-alt"></i>'}
+                                                    <div class="highlight-content">
+                                                        <span class="highlight-title">${highlight.title}</span>
+                                                        ${highlight.type ? `<span class="highlight-type">${highlight.type}</span>` : ''}
+                                                    </div>
+                                                    ${highlight.url ? `<a href="${highlight.url}" target="_blank" class="highlight-link"><i class="fas fa-external-link-alt"></i></a>` : ''}
+                                                </div>
+                                            `).join('')}
                                         </div>
                                     ` : ''}
                                 </div>
-                            </div>
+                            `).join('')}
                         </div>
-
-                        
-                        
-                        ${exp.roles && exp.roles.length > 0 ? `
-                            <div class="timeline-roles">
-                                ${exp.roles.map(role => `
-                                    <div class="role-item">
-                                        <div class="role-header">
-                                            <h3 class="timeline-company">${role.title}</h3>
-                                            <div class="role-type">${role.type}</div>
-                                        </div>
-                                        <div class="role-duration">
-                                            <i class="fas fa-clock"></i>
-                                            <span>${role.duration}</span>
-                                        </div>
-                                        <div class="role-description">
-                                            ${role.description ? role.description.map(item => `<div class="role-bullet">• ${item}</div>`).join('') : ''}
-                                        </div>
-                                        ${role.highlights && role.highlights.length > 0 ? `
-                                            <div class="role-highlights">
-                                                ${role.highlights.map(highlight => `
-                                                    <div class="role-highlight">
-                                                        ${highlight.image ? `
-                                                            <div class="highlight-image">
-                                                                <img src="${highlight.image}" alt="${highlight.title}" onerror="this.style.display='none'">
-                                                            </div>
-                                                        ` : '<i class="fas fa-file-alt"></i>'}
-                                                        <div class="highlight-content">
-                                                            <span class="highlight-title">${highlight.title}</span>
-                                                            ${highlight.type ? `<span class="highlight-type">${highlight.type}</span>` : ''}
-                                                        </div>
-                                                        ${highlight.url ? `<a href="${highlight.url}" target="_blank" class="highlight-link"><i class="fas fa-external-link-alt"></i></a>` : ''}
-                                                    </div>
-                                                `).join('')}
-                                            </div>
-                                        ` : ''}
-                                    </div>
-                                `).join('')}
-                            </div>
-                        ` : `
-                        <div class="timeline-roles">
-                            <div class="role-item">
+                    ` : `
+                        <div class="experience-roles">
+                            <div class="role-card">
                                 <div class="role-header">
-                                    <h3 class="timeline-company">${exp.title}</h3>
-                                    ${exp.type ? `
-                                        <div class="role-type">${exp.type}</div>
-                                    ` : ''}
+                                    <h4 class="role-title">${exp.title}</h4>
+                                    ${exp.type ? `<span class="role-type">${exp.type}</span>` : ''}
                                 </div>
                                 <div class="role-duration">
                                     <i class="fas fa-clock"></i>
                                     <span>${exp.duration}</span>
                                 </div>
                                 ${exp.description_title ? `
-                                    <div class="timeline-description-title">
+                                    <div class="experience-description-title">
                                         <span>${exp.description_title}</span>
                                     </div>
                                 ` : ''}
@@ -327,16 +314,12 @@
                                 ` : ''}
                             </div>
                         </div>
-
-                        `}
-                        
-                       
-                    </div>
+                    `}
                 </div>
             `;
         });
         
-        $('#experience-timeline').html(experienceHtml);
+        $('#experience-cards').html(experienceHtml);
     }
 
     function renderEducation() {
@@ -989,7 +972,7 @@ $(document).ready(function() {
                 .main-menu-area ul li a.active,
                 #nav_header a.active,
                 #nav_header li.current a {
-                    color: #FF630E !important;
+                    color: #1154FD !important;
                     font-weight: 600 !important;
                     text-decoration: none !important;
                 }
@@ -1002,7 +985,7 @@ $(document).ready(function() {
                 
                 /* hover效果 */
                 #nav_header a:hover {
-                    color: #FF630E !important;
+                    color: #1154FD !important;
                 }
                 
                 /* 调试样式 */
@@ -1096,7 +1079,7 @@ function initSimpleNavigation() {
             
             /* 高亮样式 */
             #nav_header a.nav-highlight-simple {
-                color: #FF630E !important;
+                color: #1154FD !important;
                 font-weight: bold !important;
             }
             
