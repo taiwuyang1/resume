@@ -1179,7 +1179,7 @@ function initSimpleNavigation() {
 
 // 简单高亮更新
 function updateSimpleHighlight(scrollTop) {
-    const sections = ['home', 'about', 'work-experience', 'qualification-authentication', 'skill', 'educational', 'testimonial', 'my-projects', 'publications'];
+    const sections = ['home', 'about', 'work-experience', 'publications', 'awards', 'organizations'];
     let current = '';
     
     // 页面顶部默认首页

@@ -2878,7 +2878,7 @@
         }
         
         .organization-item {
-            background: rgba(255, 255, 255, 0.05);
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             backdrop-filter: blur(5px);
             border: 1px solid linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             border-radius: 15px;
@@ -2896,7 +2896,7 @@
             animation: fadeInUp 0.6s ease forwards;
         }
         
-        .organization-item:nth-child(1) { animation-delay: 0.1s; }
+        /* .organization-item:nth-child(1) { animation-delay: 0.1s; }
         .organization-item:nth-child(2) { animation-delay: 0.15s; }
         .organization-item:nth-child(3) { animation-delay: 0.2s; }
         .organization-item:nth-child(4) { animation-delay: 0.25s; }
@@ -2926,7 +2926,7 @@
         
         .organization-item:hover::before {
             transform: scale(1);
-        }
+        } */
         
         .organization-logo {
             width: 60px;
@@ -3145,11 +3145,11 @@
                                 <!-- <li><a onclick="menuclick12()" href="#qualification-authentication">Qualifications</a></li> -->
                                 <!-- <li><a onclick="menuclick12()" href="#skill">Skills</a></li> -->
                                 <!-- <li><a onclick="menuclick12()" href="#educational">Education</a></li> -->
-                                <li><a onclick="menuclick12()" href="#testimonial">Publications</a></li>
+                                <li><a onclick="menuclick12()" href="#publications">Publications</a></li>
                                 <!-- <li><a onclick="menuclick12()" href="#my-projects">Projects</a></li>
                                 <li><a onclick="menuclick12()" href="#publications">Publications</a></li> -->
                                 <li><a onclick="menuclick12()" href="#awards">Awards</a></li>
-                                <li><a onclick="menuclick12()" href="#authentication">Authentication</a></li>
+                                <li><a onclick="menuclick12()" href="#organizations">Organizations</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -3291,22 +3291,7 @@
                                <!-- Experience cards will be dynamically inserted -->
                            </div>
                        </div>
-                   </div>
-
-                   <!-- Certificates Section -->
-                   <div class="content-section mb-5" id="qualification-authentication">
-                        <div class="section-title section-title2 text-center mb-4">
-                            <h2><span class="line">Qualifications & Awards</span></h2>
-                            <h4>
-                                Achieved Certificates, Certifications & Honors
-                            </h4>
-                        </div>
-                       <div id="certificates-grid" class="certificates-container">
-                           <!-- Certificates will be dynamically inserted -->
-                       </div>
-                   </div>
-
-                  
+                   </div>                 
 
                    <!-- Skills Section -->
                    <!-- <div class="content-section mb-5" id="skill">
@@ -3343,8 +3328,8 @@
         </div>
     </section> -->
     <!-- testimonial-slider -->
-    <section id="testimonial" class="testimonial-area section-padding " style="padding-top: 0;">
-        <div class="container">
+    <section id="publications" class="testimonial-area section-padding">
+        <div class="container" style="max-width: 100%;">
             <div class="row">
                 <div class="section-title text-center">
                     <h2><span>Publications</span></h2>
@@ -3352,10 +3337,10 @@
                 </div>
             </div>
             <div class="row pt-60">
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-6">
                     <div id="papersList"></div>
                 </div>
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-lg-6">
                     <!--end project area-->
                     <div id="chart" style="width: 100%; height: 80vh; "></div>
                     
@@ -3367,6 +3352,22 @@
                         }
                     }
                     </style>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="awards" class="about-section section-padding">
+    <!-- Certificates Section -->
+        <div class="container" >
+            <div class="content-section mb-5" >
+                <div class="section-title section-title2 text-center mb-4">
+                    <h2><span class="line">Awards</span></h2>
+                    <h4>
+                        Achieved Certificates, Certifications & Honors
+                    </h4>
+                </div>
+                <div id="certificates-grid" class="certificates-container">
                 </div>
             </div>
         </div>
@@ -3393,7 +3394,7 @@
     </section> -->
 
     <!--start project area-->
-    <section class="project-area-cul" id="publications">
+    <!-- <section class="project-area-cul" id="publications">
         <div class="project-bg" style="background-image: url(static/image/bg3.png);"></div>
         <div class="background-overlay bg-1"></div>
         <div class="container-two">
@@ -3406,8 +3407,24 @@
             <div class="row mb-5">
                 <div class="col-12">
                     <div id="publications-container"  class="publications-container">
-                        <!-- Publications will be dynamically inserted -->
+                        
                     </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    <section class="project-area-cul" id="organizations">
+        <div class="container" >
+            <div class="content-section mb-5" >
+                <div class="section-title section-title2 text-center mb-4">
+                    <h2><span class="line">organizations</span></h2>
+                    <h4>
+                        A global elite ecosystem of top university AI talent and entrepreneurs, bridging academia, industry, and investment to shape the future.
+                    </h4>
+                </div>
+                <div id="organizations-grid" class="organizations-container">
+                    <!-- Organizations will be dynamically inserted -->
                 </div>
             </div>
         </div>
@@ -3463,7 +3480,9 @@
                 coordinates: [116.3238511822621, 39.9886814876792],
                 people: ['Dahai Li']
               }
-            ]
+            ],
+            url: "https://arxiv.org/abs/2307.07924v5",
+            image: "https://media.licdn.com/dms/image/sync/v2/D5627AQFYuUSpxUCpoA/articleshare-shrink_160/articleshare-shrink_160/0/1717867155864?e=1757473200&v=beta&t=x9I6uFAljvUG-BeywWrP4kh_8PN1J-mv1Z73iXExMcs"
           },
           {
             id: 'paper_002',
@@ -3500,8 +3519,10 @@
                 coordinates: [113.47463983063324, 22.892720634468017],
                 people: ['Xuming Hu']
               }
-            ]
-          },
+            ],
+            url: "https://arxiv.org/abs/2410.01707v3",
+            image: "https://media.licdn.com/dms/image/sync/v2/D5627AQE8vMNaGMKRzw/articleshare-shrink_160/articleshare-shrink_160/0/1739901591293?e=1757473200&v=beta&t=qTxX7raWlpZA1b-khGJmPAbiz1sXTR44G8cux2DbQYk"
+            },
           {
             id: 'paper_003',
             name: 'Advances and Challenges in Foundation Agents',
@@ -3602,13 +3623,15 @@
                 coordinates: [-122.08523837141722, 37.42292319974112],
                 people: ['Chi Wang']
               }
-            ]
+            ],
+            url: "https://arxiv.org/pdf/2504.01990"
           },
           // 在PAPERS数组的最后添加第四篇论文
           {
             id: 'paper_004',
             name: 'A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence',
             color: '#FF0087',  // 金色
+            url: "https://arxiv.org/abs/2507.21046",
             institutions: [
                 {
                 name: 'CMU',
@@ -3691,6 +3714,7 @@
                 id: 'paper_005',
                 name: 'SE-Agent: Self-Evolution Trajectory Optimization in Multi-Step Reasoning with LLM-Based Agents',
                 color: '#FFBF00',  // 热粉色
+                url: "https://arxiv.org/abs/2508.02085v4",
                 institutions: [
                     {
                     name: 'THU',
@@ -4338,62 +4362,55 @@
             }
           },
           series: [
-            // 论文机构连线 - 简化版本
-            ...(() => {
-              const lines = [];
-              
-              
-              PAPERS.forEach((paper, paperIndex) => {
-                const institutions = paper.institutions;
-                if (institutions.length < 2) {
-                  return;
-                }
-
-                const connections = [];
-  
-                // 找到参与人员最多的机构作为主要机构
-                const mainInstitution = institutions.reduce((max, current) => 
-                    current.people.length > max.people.length ? current : max
-                );
-                
-                // 从主要机构向其他机构连线
-                institutions.filter(inst => inst !== mainInstitution).forEach(inst => {
-                    connections.push({
+            // 论文机构连线 - 默认显示所有论文的连线
+            {
+              type: 'lines3D',
+              name: 'Paper Connections',
+              coordinateSystem: 'globe',
+              data: (() => {
+                const lines = [];
+                PAPERS.forEach(paper => {
+                  if (paper.institutions.length >= 2) {
+                    const mainInstitution = paper.institutions.reduce((max, current) => 
+                      current.people.length > max.people.length ? current : max
+                    );
+                    
+                    paper.institutions.filter(inst => inst !== mainInstitution).forEach(inst => {
+                      lines.push({
                         coords: [
-                            [mainInstitution.coordinates[0], mainInstitution.coordinates[1], 0.1],
-                            [inst.coordinates[0], inst.coordinates[1], 0.1]
-                        ]
+                          [mainInstitution.coordinates[0], mainInstitution.coordinates[1], 0.1],
+                          [inst.coordinates[0], inst.coordinates[1], 0.1]
+                        ],
+                        lineStyle: {
+                          color: paper.color,
+                          width: 3,
+                          opacity: 0.8
+                        },
+                        effect: {
+                          show: true,
+                          period: 4,
+                          trailLength: 0.1,
+                          color: paper.color,
+                          symbolSize: 8
+                        }
+                      });
                     });
+                  }
                 });
-                
-                if (connections.length > 0) {
-                  const lineSeries = {
-                    type: 'lines3D',
-                    name: paper.name,
-                    coordinateSystem: 'globe',
-                    zlevel: 10,  // 添加zlevel确保渲染顺序
-                    show: true,  // 确保连线可见
-                    effect: {
-                      show: true,
-                      period: 0,
-                      trailWidth: 0,
-                      trailLength: 0,
-                      trailOpacity: 0,
-                      trailColor: paper.color
-                    },
-                    lineStyle: {
-                      width: 2,
-                      color: paper.color,
-                      opacity: 0.6
-                    },
-                    data: connections
-                  };
-                  lines.push(lineSeries);
-                } 
-              });
-              
-              return lines;
-            })(),
+                return lines;
+              })(),
+              lineStyle: {
+                width: 3,
+                opacity: 0.8
+              },
+              effect: {
+                show: true,
+                period: 4,
+                trailLength: 0.1,
+                symbolSize: 8
+              },
+              z: 50
+            },
             
             // 图钉样式的标记点
             {
@@ -4550,25 +4567,92 @@
 
 
 
-        // 论文聚焦功能
-        // 动态生成论文内容
-        // 动态生成论文内容
+// 生成组织图片内容
+function generateOrganizationsContent() {
+    const organizationsGrid = document.getElementById('organizations-grid');
+    if (!organizationsGrid) return;
+    
+    // 组织图片列表 - 根据你的图片文件名
+    const organizations = [
+        { name: 'Organization 1', image: '1.jpg' },
+        { name: 'Organization 2', image: '2.jpg' },
+        { name: 'Organization 3', image: '3.jpg' },
+        { name: 'Organization 4', image: '4.jpg' },
+        { name: 'Organization 5', image: '5.jpg' },
+        { name: 'Organization 6', image: '6.jpg' },
+        { name: 'Organization 7', image: '7.jpg' },
+        { name: 'Organization 8', image: '8.jpg' },
+        { name: 'Organization 9', image: '9.png' },
+        { name: 'Organization 10', image: '10.jpg' },
+        { name: 'Organization 11', image: '11.jpg' },
+        { name: 'Organization 12', image: '12.jpg' },
+        { name: 'Organization 13', image: '13.jpg' },
+        { name: 'Organization 14', image: '14.jpg' },
+        { name: 'Organization 15', image: '15.jpg' },
+        { name: 'Organization 16', image: '16.jpg' },
+        { name: 'Organization 17', image: '17.jpg' },
+        { name: 'Organization 18', image: '18.jpg' }
+    ];
+    
+    organizationsGrid.innerHTML = organizations.map(org => `
+        <div class="organization-item">
+            <img src="static/image/Organizations/${org.image}" 
+                 alt="${org.name}" 
+                 class="organization-image"
+                 onerror="this.style.display='none'">
+        </div>
+    `).join('');
+}
+
+// 论文聚焦功能
+// 动态生成论文内容
+// 动态生成论文内容
 function generatePapersContent() {
     const papersList = document.getElementById('papersList');
     if (!papersList) return;
     
+    // 默认选中所有论文
+    selectedPapers.clear();
+    PAPERS.forEach(paper => {
+        selectedPapers.add(paper.id);
+    });
+    
     papersList.innerHTML = PAPERS.map((paper, index) => `
-        <div class="paper-item" data-paper-id="${paper.id}">
-            <div class="paper-header" onclick="togglePaperDetails('${paper.id}')">
+        <div class="paper-item" data-paper-id="${paper.id}" style="margin-bottom: 10px;">
+            <div class="paper-header">
                 <div class="paper-title">
-                    <h3>${paper.name}</h3>
+                    <div style="display: flex; align-items: center; gap: 10px;margin-bottom: 10px">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <input type="checkbox" 
+                                   id="checkbox-${paper.id}" 
+                                   class="paper-checkbox" 
+                                   data-paper-id="${paper.id}"
+                                   style="width: 18px; height: 18px; cursor: pointer;"
+                                   checked
+                                   onchange="togglePaperConnections('${paper.id}')">
+                        </div>
+                        ${paper.image ? `
+                            <img src="${paper.image}" alt="${paper.name}" style="height: 50px; border-radius: 10px;">
+                        `:``}
+                        ${paper.url ? `
+                            <div style="display: flex; align-items: center; gap: 0px;">
+                                <h3>${paper.name}</h3>
+                                <a href="${paper.url}" target="_blank" class="highlight-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                
+                                </a>
+                            </div>
+                        ` : `
+                            <h3>${paper.name}</h3>
+                        `}
+                    </div>
                     <div class="paper-meta">
-                        <span class="paper-color" style="background-color: ${paper.color};"></span>
                         <span class="institution-count">${paper.institutions.length} institutions</span>
                         <span class="people-count">${paper.institutions.reduce((sum, inst) => sum + inst.people.length, 0)} researchers</span>
                     </div>
+
                 </div>
-                <div class="paper-toggle">
+                <div class="paper-toggle" onclick="togglePaperDetails('${paper.id}')">
                     <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
@@ -4587,6 +4671,114 @@ function generatePapersContent() {
             </div>
         </div>
     `).join('');
+    
+    // 论文内容生成完成，地球已经在初始化时显示了所有数据
+}
+
+// 存储当前选中的论文ID
+let selectedPapers = new Set();
+
+// 切换论文连线的显示
+function togglePaperConnections(paperId) {
+    const checkbox = document.getElementById(`checkbox-${paperId}`);
+    const isChecked = checkbox.checked;
+    
+    if (isChecked) {
+        selectedPapers.add(paperId);
+    } else {
+        selectedPapers.delete(paperId);
+    }
+    
+    // 更新地球上的连线
+    updateGlobeConnections();
+}
+
+// 更新地球上的连线和点显示
+function updateGlobeConnections() {
+    if (typeof chart === 'undefined' || !chart) {
+        console.log('Chart not initialized yet');
+        return;
+    }
+    
+    // 生成当前选中论文的连线数据
+    const lines = [];
+    // 生成当前选中论文的点数据
+    const points = [];
+    
+    selectedPapers.forEach(paperId => {
+        const paper = PAPERS.find(p => p.id === paperId);
+        if (!paper) return;
+        
+        // 添加该论文的所有机构点
+        paper.institutions.forEach(inst => {
+            points.push({
+                name: inst.name,
+                value: [inst.coordinates[0], inst.coordinates[1], 0],
+                itemStyle: {
+                    color: paper.color,
+                    borderColor: '#E8E8E8',
+                    borderWidth: 2,
+                    shadowBlur: 10,
+                    shadowColor: paper.color + '80'
+                }
+            });
+        });
+        
+        // 如果机构数量大于1，生成连线
+        if (paper.institutions.length >= 2) {
+            // 找到参与人员最多的机构作为主要机构
+            const mainInstitution = paper.institutions.reduce((max, current) => 
+                current.people.length > max.people.length ? current : max
+            );
+            
+            // 从主要机构向其他机构连线
+            paper.institutions.filter(inst => inst !== mainInstitution).forEach(inst => {
+                lines.push({
+                    coords: [
+                        [mainInstitution.coordinates[0], mainInstitution.coordinates[1], 0.1],
+                        [inst.coordinates[0], inst.coordinates[1], 0.1]
+                    ],
+                    lineStyle: {
+                        color: paper.color,
+                        width: 3,
+                        opacity: 0.8
+                    },
+                    effect: {
+                        show: true,
+                        period: 4,
+                        trailLength: 0.1,
+                        color: paper.color,
+                        symbolSize: 8
+                    }
+                });
+            });
+        }
+    });
+    
+    // 更新图表配置
+    const currentOption = chart.getOption();
+    
+    // 更新连线和点系列
+    const updatedSeries = currentOption.series.map(series => {
+        if (series.type === 'lines3D') {
+            return {
+                ...series,
+                data: lines
+            };
+        }
+        if (series.type === 'scatter3D') {
+            return {
+                ...series,
+                data: points
+            };
+        }
+        return series;
+    });
+    
+    // 应用更新
+    chart.setOption({
+        series: updatedSeries
+    });
 }
 
 // 根据坐标获取地点名称
@@ -4668,6 +4860,7 @@ function highlightPaperOnGlobe(paperId) {
 // 页面加载完成后自动生成论文内容
 document.addEventListener('DOMContentLoaded', () => {
     generatePapersContent();
+    generateOrganizationsContent();
     
     // 添加键盘快捷键支持
     document.addEventListener('keydown', (e) => {
