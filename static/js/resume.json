@@ -16,11 +16,14 @@
         "location": "Beijing, China · Hybrid",
         "duration": "8 months",
         "company_logo": "static/image/work8.jpg",
+        "link": "https://www.linkedin.com/company/moonshot-ai-linkedin/",
         "roles": [
           {
             "title": "Agentic Staff",
+            "link": "https://www.linkedin.com/company/moonshot-ai-linkedin/",
             "type": "Full-time",
             "duration": "2025 Aug - Present · 2 months",
+            "description_title": "Update(Kimi-K2-0905) : Enhances Agentic Coding & Supports 256K Context",
             "description": [
               "Accepting full-time offer",
               "Product Engineer & Researcher"
@@ -29,15 +32,17 @@
               {
                 "title": "Kimi K2: Open Agentic Intelligence",
                 "type": "Tech Report",
-                "image": "https://media.licdn.com/dms/image/v2/D562DAQEIYC10LiNgnA/profile-treasury-image-shrink_160_160/B56ZjQJDlSG4Ak-/0/1755838693305?e=1757473200&v=beta&t=OCWeCOZtZeFw7WvYUyZIG3UagQYjeVne1r1-m06Fz-o",
+                "image": "static/image/1755838693305.jpg",
                 "url": "https://arxiv.org/pdf/2507.20534"
               }
             ]
           },
           {
-            "title": "Member of Agent Team",
+            "title": "Internship Trainee @Kimi.ai",
             "type": "Internship",
+            "link": "https://www.linkedin.com/company/moonshot-ai-linkedin/",
             "duration": "2025 Feb - 2025 Aug · 7 months",
+            "description_title": "Member of Agent Team",
             "description": [
               "Foundation Model → Agentic Model (Kimi-K2)",
               "End-to-end RL Deep Research Agent (Kimi-Researcher)",
@@ -48,7 +53,7 @@
               {
                 "title": "Kimi-Researcher: End-to-End RL Training for Emerging Agentic Capabilities",
                 "type": "Tech Blog",
-                "image": "https://media.licdn.com/dms/image/sync/v2/D5627AQFhlgvCPLTrkw/articleshare-shrink_160/B56ZeOKnBTHEAk-/0/1750436836146?e=1757473200&v=beta&t=4EMERlNgCyEnSBExsmGuoqtQlq9jpSetlu5I4ki1Nko",
+                "image": "static/image/1750436836146.png",
                 "url": "https://moonshotai.github.io/Kimi-Researcher/"
               }
             ]
@@ -59,6 +64,7 @@
         "company": "HSG",
         "company_logo": "static/image/work7.jpg",
         "title": "AI Researcher",
+        "link": "https://www.linkedin.com/company/hong-shan/",
         "type": "Freelance",
         "location": "Beijing, China · Remote",
         "duration": "2025 Apr - Present · 6 months",
@@ -72,7 +78,7 @@
             "title": "xbench: Tracking Agents Productivity Scaling with Profession-Aligned Real-World Evaluations",
             "type": "xbench.org/reports",
             "url": "https://arxiv.org/pdf/2506.13651v1",
-            "image": "https://media.licdn.com/dms/image/v2/D562DAQF2bTAQa2BKPg/profile-treasury-image-shrink_160_160/B56ZjQGci_IEAo-/0/1755838010627?e=1757473200&v=beta&t=xyrznxayZoafgsE-nc2COnheA0K8QVeEsfVJOoobSFo"
+            "image": "static/image/1755838010627.jpg"
           }
         ]
       },
@@ -81,6 +87,7 @@
         "company_logo": "static/image/work6.jpg",
         "title": "Research Engineer",
         "type": "Contract",
+        "link": "https://www.linkedin.com/company/tencentglobal/",
         "location": "Guangdong, China · Remote",
         "duration": "2025 Feb - 2025 Apr · 3 months",
         "description_title": "IEG Research Talent Program",
@@ -92,27 +99,53 @@
           {
             "title": "DNA",
             "type": "xbench.org/reports",
-            "image": "https://media.licdn.com/dms/image/v2/D562DAQHskNeFR7R7LA/profile-treasury-image-shrink_160_160/B56Zix684RHAAo-/0/1755331678821?e=1757473200&v=beta&t=K8ImleOm1paSNvqNhzB-kt03Gz0KBeoYOpim58UBg6k"
+            "image": "static/image/1755331678821.jpg"
           }
         ]
       },
       {
         "company": "Shanghai AI Laboratory",
+        "location": "Beijing, China · Hybrid",
+        "duration": "实习 · 9 months",
         "company_logo": "static/image/work5.jpg",
-        "title": "Research Intern # National Laboratory",
-        "type": "Internship",
-        "location": "Shanghai, China · On-site",
-        "duration": "2024 Aug - 2025 Feb · 7 months",
-        "description_title": "Supervised by Prof, Wanli Ouyang and mentored by Dr. Shuyue Hu",
-        "description": [
-          "Focus on LLM Collective Intelligence",
-          "Collaborated research in field of LLM Reasoning"
-        ],
-        "highlights": [
+        "link": "https://www.linkedin.com/company/%E4%B8%8A%E6%B5%B7%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AE%9E%E9%AA%8C%E5%AE%A4/",
+        "roles": [
           {
-            "title": "SC-MCTS*: Interpretable Contrastive Monte Carlo Tree Search Reasoning",
-            "url": "https://arxiv.org/abs/2410.01707v3",
-            "image": "https://media.licdn.com/dms/image/sync/v2/D5627AQE8vMNaGMKRzw/articleshare-shrink_160/articleshare-shrink_160/0/1739901591293?e=1757473200&v=beta&t=qTxX7raWlpZA1b-khGJmPAbiz1sXTR44G8cux2DbQYk"
+            "title": "Research Collaborator @FoundationAgents",
+            "link": "https://www.linkedin.com/company/%E4%B8%8A%E6%B5%B7%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AE%9E%E9%AA%8C%E5%AE%A4/",
+            "type": "Full-time",
+            "duration": "2024 Oct - 2025 April · 7 months",
+            "description_title": "Initiated and co-led the collaboration with Prof. Tongliang Liu (Director, Sydney AI Centre)",
+            "description": [
+              "Key contributor and author of a large-scale collaborative research paper involving 40+ researchers from Stanford, Yale, UIUC, Google DeepMind, Microsoft Research, Argonne National Laboratory, Mila – Quebec AI Institute, and others.",
+              "Contributing to the paper’s research direction and owning its core technical content."
+            ],
+            "highlights": [
+              {
+                "title": "Advances and Challenges in Foundation Agents",
+                "type": "From Brain-Inspired Intelligence to Evolutionary, Collaborative, and Safe Systems",
+                "image": "static/image/1757214794664.jpg",
+                "url": "https://arxiv.org/pdf/2504.01990"
+              }
+            ]
+          },
+          {
+            "title": "Research Affiliate @OpenScienceLab",
+            "type": "Internship",
+            "link": "https://www.linkedin.com/company/%E4%B8%8A%E6%B5%B7%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%AE%9E%E9%AA%8C%E5%AE%A4/",
+            "duration": "2024 Aug - 2025 Feb · 7 months",
+            "description_title": "Supervised by Prof. Wanli Ouyang",
+            "description": [
+              "Focus on LLM Collective Intelligence",
+              "Collaborated research in field of LLM Reasoning"
+            ],
+            "highlights": [
+              {
+                "title": "SC-MCTS*: Interpretable Contrastive Monte Carlo Tree Search Reasoning",
+                "image": "static/image/1739901591293.png",
+                "url": "https://arxiv.org/abs/2410.01707v3"
+              }
+            ]
           }
         ]
       },
@@ -120,6 +153,7 @@
         "company": "Tsinghua University",
         "company_logo": "static/image/work4.jpg",
         "title": "Research Assistant @THUNLP",
+        "link": "https://www.linkedin.com/school/tsinghua-university/",
         "type": "Full-time",
         "location": "Beijing, China · On-site",
         "duration": "2023 Sep - 2024 Mar · 7 months",
@@ -132,37 +166,39 @@
           {
             "title": "ChatDev: Communicative Agents for Software Development",
             "url": "https://arxiv.org/abs/2307.07924v5",
-            "image": "https://media.licdn.com/dms/image/sync/v2/D5627AQFYuUSpxUCpoA/articleshare-shrink_160/articleshare-shrink_160/0/1717867155864?e=1757473200&v=beta&t=x9I6uFAljvUG-BeywWrP4kh_8PN1J-mv1Z73iXExMcs"
+            "image": "static/image/1757183486268.jpg"
           }
         ]
       },
       {
         "company": "Modelbest",
         "company_logo": "static/image/work3.jpg",
+        "link": "https://www.linkedin.com/company/modelbest/",
         "title": "Algorithm Engineer",
         "type": "Internship",
         "location": "Beijing, China · Hybrid",
         "duration": "Sep 2023 – Jan 2024 · 5 months",
         "description_title": "Joint Internship with TsinghuaNLP",
         "description": [
-          "Conducted regular technical sharing sessions with company engineers and researchers, honored as a 'ModelBest Scholar' for outstanding contributions",
+          "Conducted regular technical sharing sessions with company engineers and researchers, honored as a ModelBest Scholar",
           "Assisted in the development of a SaaS product on [Website] https://chatdev.modelbest.cn/"
         ],
         "highlights": [
           {
             "title": "GitHub - OpenBMB/ChatDev: Create Customized Software using Natural Language Idea (through LLM-powered Multi-Agent Collaboration)",
             "url": "https://github.com/OpenBMB/ChatDev",
-            "image": "https://media.licdn.com/dms/image/sync/v2/D4D27AQFS26v23upimQ/articleshare-shrink_160/B4DZkK7xOrH4As-/0/1756825065039?e=1757473200&v=beta&t=85gHrqnMGd6bvdCd2qUgiwxV_gLT89KniypLeO-17lg"
+            "image": "static/image/1756825065039.png"
           },
           {
             "title": "ChatDev - SaaS",
             "url": "https://chatdev.modelbest.cn/",
-            "image": "https://media.licdn.com/dms/image/v2/D562DAQFVuCigdYa3Ow/profile-treasury-image-shrink_160_160/profile-treasury-image-shrink_160_160/0/1719366077180?e=1757473200&v=beta&t=4s4E35FQes9tItDmSuC0TphcHfm-D21bKn3da1_se7E"
+            "image": "static/image/1719366077180.jpg"
           }
         ]
       },
       {
         "company": "NIP Group",
+        "link": "https://www.linkedin.com/company/nipgroup/",
         "company_logo": "static/image/work2.jpg",
         "title": "Esports Assistant Coach @eStarPro",
         "type": "Freelance",
@@ -175,6 +211,7 @@
       {
         "company": "Chinese Go Association",
         "company_logo": "static/image/work1.jpg",
+        "link": "https://www.linkedin.com/company/chinese-go-association/",
         "title": "Go Player",
         "type": "Full-time",
         "location": "China",
@@ -183,7 +220,7 @@
         "highlights": [
           {
             "title": "Go Dan Certificate",
-            "image": "https://media.licdn.com/dms/image/v2/D562DAQGLMyfTC7SyeA/profile-treasury-image-shrink_160_160/profile-treasury-image-shrink_160_160/0/1709708463359?e=1757473200&v=beta&t=hCLLpm_iOXp_sO_nChi54aGYaosuKJjmGBL4H42ETh4"
+            "image": "static/image/1709708463359.jpg"
           }
         ]
       }

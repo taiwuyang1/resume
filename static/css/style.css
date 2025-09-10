@@ -3225,7 +3225,6 @@ p {
 }
 
 .role-duration i {
-    margin-right: 8px;
     color: #1154FD;
 }
 
@@ -3271,7 +3270,7 @@ p {
 .role-highlight .highlight-image {
     width: 40px;
     height: 40px;
-    margin-right: 12px;
+    margin-right: 0;
     border-radius: 6px;
     overflow: hidden;
     background: rgba(17, 84, 253, 0.08);

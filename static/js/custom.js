@@ -229,7 +229,7 @@
                             </div>
                         ` : ''}
                         <div class="experience-info">
-                            <h3 class="experience-company">${exp.company}</h3>
+                            <h3 class="experience-company"><a class="experience-company" href="${exp.link}" target="_blank">${exp.company}</a></h3>
                             ${exp.location ? `
                                 <div class="experience-location">
                                     <i class="fas fa-map-marker-alt"></i>
@@ -244,13 +244,18 @@
                             ${exp.roles.map(role => `
                                 <div class="role-card">
                                     <div class="role-header">
-                                        <h4 class="role-title">${role.title}</h4>
+                                        <h4 class="role-title"><a class="role-title" href="${role.link}" target="_blank">${role.title}</a></h4>
                                         ${role.type ? `<span class="role-type">${role.type}</span>` : ''}
                                     </div>
                                     <div class="role-duration">
                                         <i class="fas fa-clock"></i>
                                         <span>${role.duration}</span>
                                     </div>
+                                    ${role.description_title ? `
+                                    <div class="experience-description-title">
+                                        <span>${role.description_title}</span>
+                                    </div>
+                                ` : ''}
                                     <div class="role-description">
                                         ${role.description ? role.description.map(item => `<div class="role-bullet">• ${item}</div>`).join('') : ''}
                                     </div>
@@ -279,7 +284,7 @@
                         <div class="experience-roles">
                             <div class="role-card">
                                 <div class="role-header">
-                                    <h4 class="role-title">${exp.title}</h4>
+                                    <h4 class="role-title"><a class="role-title" href="${exp.link}" target="_blank">${exp.title}</a></h4>
                                     ${exp.type ? `<span class="role-type">${exp.type}</span>` : ''}
                                 </div>
                                 <div class="role-duration">
