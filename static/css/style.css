@@ -2807,6 +2807,221 @@ p {
     color: #fff;
 }
 
+/* Interests Section Styles */
+.interests-section {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.interest-item {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.interest-item:hover {
+    transform: translateY(-5px);
+}
+
+.interest-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(17, 84, 253, 0.2);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.interest-image-wrapper:hover {
+    box-shadow: 0 15px 30px rgba(17, 84, 253, 0.3);
+    border-color: rgba(17, 84, 253, 0.5);
+}
+
+.interest-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    border-radius: 15px;
+}
+
+.interest-image-wrapper:hover .interest-image {
+    transform: scale(1.05);
+}
+
+.clickable-image {
+    cursor: pointer;
+}
+
+.interest-info {
+    padding: 0 15px;
+}
+
+.interest-info h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Modal Styles */
+.image-modal {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 999999 !important;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+}
+
+.modal-close {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    z-index: 10;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.modal-image-container {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+#modalImage {
+    max-width: 100%;
+    max-height: 60vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: white;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal-info {
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+.modal-info h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.modal-info p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .interest-image-wrapper {
+        height: 250px;
+        margin-bottom: 15px;
+    }
+    
+    .interest-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .modal-content {
+        max-width: 95vw;
+        max-height: 85vh;
+    }
+    
+    #modalImage {
+        max-height: 60vh;
+    }
+    
+    .modal-info {
+        padding: 20px;
+    }
+    
+    .modal-info h3 {
+        font-size: 1.5rem;
+    }
+    
+    .modal-info p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .interest-image-wrapper {
+        height: 220px;
+        margin-bottom: 10px;
+    }
+    
+    .interest-info h3 {
+        font-size: 1rem;
+    }
+    
+    .interest-info {
+        padding: 0 10px;
+    }
+}
+
 .personal-quote {
     padding: 20px;
     background: rgba(78, 205, 196, 0.05);

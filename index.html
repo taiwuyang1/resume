@@ -3150,6 +3150,7 @@
                                 <li><a onclick="menuclick12()" href="#publications">Publications</a></li> -->
                                 <li><a onclick="menuclick12()" href="#awards">Awards</a></li>
                                 <li><a onclick="menuclick12()" href="#organizations">Organizations</a></li>
+                                <li><a onclick="menuclick12()" href="#interests">Interests</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -3420,6 +3421,100 @@
                 </div>
                 <div id="organizations-grid" class="organizations-container">
                     <!-- Organizations will be dynamically inserted -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="interests-section section-padding" id="interests">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title section-title2 text-center mb-5">
+                        <h2><span class="line">Interests</span></h2>
+                        <h4>
+                            Pursuing Excellence Through Passion and Dedication
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-lg-6 col-md-6 col-12 mb-4">
+                    <div class="interest-item">
+                        <div class="interest-image-wrapper">
+                            <img src="static/image/chinese-go.jpg" 
+                                 alt="Chinese Go" 
+                                 class="interest-image clickable-image"
+                                 data-title="Chinese Go (Board Game)"
+                                 data-description="Strategic thinking and ancient wisdom through the game of Go">
+                        </div>
+                        <div class="interest-info">
+                            <h3>Chinese Go (Board Game)</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-12 mb-4">
+                    <div class="interest-item">
+                        <div class="interest-image-wrapper">
+                            <img src="static/image/calligraphy.jpg" 
+                                 alt="Calligraphy" 
+                                 class="interest-image clickable-image"
+                                 data-title="Calligraphy"
+                                 data-description="The art of beautiful writing and mindful expression">
+                        </div>
+                        <div class="interest-info">
+                            <h3>Calligraphy</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-12 mb-4">
+                    <div class="interest-item">
+                        <div class="interest-image-wrapper">
+                            <img src="static/image/e-sports.jpg" 
+                                 alt="E-Sports" 
+                                 class="interest-image clickable-image"
+                                 data-title="E-Sports"
+                                 data-description="Competitive gaming and digital athletics">
+                        </div>
+                        <div class="interest-info">
+                            <h3>E-Sports</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 col-md-6 col-12 mb-4">
+                    <div class="interest-item">
+                        <div class="interest-image-wrapper">
+                            <img src="static/image/pop-music.jpg" 
+                                 alt="Pop Music" 
+                                 class="interest-image clickable-image"
+                                 data-title="Pop Music"
+                                 data-description="Contemporary music and creative expression">
+                        </div>
+                        <div class="interest-info">
+                            <h3>Pop Music</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Image Modal for enlargement -->
+        <div class="image-modal" id="imageModal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-image-container">
+                    <img src="" alt="" id="modalImage">
+                    <div class="modal-info">
+                        <h3 id="modalTitle"></h3>
+                    </div>
                 </div>
             </div>
         </div>

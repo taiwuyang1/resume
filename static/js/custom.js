@@ -1179,7 +1179,7 @@ function initSimpleNavigation() {
 
 // 简单高亮更新
 function updateSimpleHighlight(scrollTop) {
-    const sections = ['home', 'about', 'work-experience', 'publications', 'awards', 'organizations'];
+    const sections = ['home', 'about', 'work-experience', 'publications', 'awards', 'organizations', 'interests'];
     let current = '';
     
     // 页面顶部默认首页
@@ -1274,7 +1274,84 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Interests Image Modal Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const clickableImages = document.querySelectorAll('.clickable-image');
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalClose = document.getElementById('modalClose');
+    const modalBackdrop = document.querySelector('.modal-backdrop');
 
+    console.log('Found clickable images:', clickableImages.length); // Debug log
 
+    // Open modal when clicking on interest images
+    clickableImages.forEach(image => {
+        image.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Image clicked:', this.src); // Debug log
+            
+            const imageSrc = this.src;
+            const title = this.getAttribute('data-title');
+            const description = this.getAttribute('data-description');
+            
+            console.log('Setting modal image src to:', imageSrc);
+            console.log('Title:', title);
+            console.log('Description:', description);
+            
+            // Set modal content
+            modalImage.src = imageSrc;
+            modalTitle.textContent = title || 'Interest';
+            
+            // 先锁定页面滚动
+            document.body.style.overflow = 'hidden';
+            
+            // Show modal with simple styles
+            imageModal.style.display = 'flex';
+            imageModal.style.opacity = '0';
+            
+            // Add animation
+            setTimeout(() => {
+                imageModal.style.opacity = '1';
+            }, 50);
+        });
+    });
 
+    // Close modal function
+    function closeModal() {
+        imageModal.style.opacity = '0';
+        setTimeout(() => {
+            imageModal.style.display = 'none';
+            // 恢复页面正常滚动状态
+            document.body.style.overflow = '';
+        }, 300);
+    }
+
+    // Close modal when clicking close button
+    if (modalClose) {
+        modalClose.addEventListener('click', closeModal);
+    }
+
+    // Close modal when clicking backdrop
+    if (modalBackdrop) {
+        modalBackdrop.addEventListener('click', closeModal);
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && imageModal && imageModal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+
+    // Prevent modal content click from closing modal
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent) {
+        modalContent.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    }
+});
 
