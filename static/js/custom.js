@@ -1206,8 +1206,73 @@ function updateSimpleHighlight(scrollTop) {
     }
 }
 
-
-
+// QR Code Popup Mobile Interaction
+document.addEventListener('DOMContentLoaded', function() {
+    const socialBtnsHover = document.querySelectorAll('.social-btn-hover');
+    
+    socialBtnsHover.forEach(btn => {
+        let touchTimeout;
+        
+        // Touch events for mobile
+        btn.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            
+            // Clear any existing active states
+            socialBtnsHover.forEach(b => b.classList.remove('active'));
+            
+            // Add active class to show popup
+            this.classList.add('active');
+            
+            // Set timeout to hide popup after 3 seconds
+            touchTimeout = setTimeout(() => {
+                this.classList.remove('active');
+            }, 3000);
+        });
+        
+        // Touch end event
+        btn.addEventListener('touchend', function(e) {
+            e.preventDefault();
+        });
+        
+        // Click event for mobile (fallback)
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Toggle active state
+            if (this.classList.contains('active')) {
+                this.classList.remove('active');
+                clearTimeout(touchTimeout);
+            } else {
+                // Clear other active states
+                socialBtnsHover.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Auto-hide after 3 seconds
+                touchTimeout = setTimeout(() => {
+                    this.classList.remove('active');
+                }, 3000);
+            }
+        });
+    });
+    
+    // Hide popup when clicking outside (for mobile)
+    document.addEventListener('touchstart', function(e) {
+        if (!e.target.closest('.social-btn-hover')) {
+            socialBtnsHover.forEach(btn => {
+                btn.classList.remove('active');
+            });
+        }
+    });
+    
+    // Hide popup when clicking outside (for desktop)
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.social-btn-hover')) {
+            socialBtnsHover.forEach(btn => {
+                btn.classList.remove('active');
+            });
+        }
+    });
+});
 
 
 
