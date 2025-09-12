@@ -35,7 +35,7 @@
             } else {
                 $('html, body').animate({
                     'scrollTop' : 0,
-                },700);
+                },50);
             }
             return false;
         });
@@ -82,7 +82,7 @@
     function scrollToTop() {
         $('html, body').animate({
             scrollTop: 0
-        }, 700);
+        }, 300);
     }
     
     // Resume data loading and rendering functions
@@ -717,7 +717,7 @@ function initCustomNavigation() {
         stickyThreshold: 100,
         scrollTopThreshold: 400,
         sectionOffset: 120,
-        animationDuration: 800,
+        animationDuration: 50,
         activeClassName: 'active',
         stickyClassName: 'sticky',
         sections: [
@@ -1164,7 +1164,7 @@ function initSimpleNavigation() {
             if ($target.length) {
                 $('html, body').animate({
                     scrollTop: $target.offset().top - 100
-                }, 800);
+                }, 50);
             }
         }
     });
