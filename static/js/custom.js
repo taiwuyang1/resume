@@ -102,17 +102,17 @@
     }
 
     function renderAllSections() {
-        renderHeader();
-        renderSidebar();
+        // renderHeader();
+        // renderSidebar();
         renderAbout();
         renderExperience();
-        renderEducation();
-        renderSkills();
-        renderProjects();
-        renderPublications();
+        // renderEducation();
+        // renderSkills();
+        // renderProjects();
+        // renderPublications();
         renderCertificates();
-        renderOrganizations();
-        renderFooter();
+        // renderOrganizations();
+        // renderFooter();
     }
 
     function renderHeader() {
@@ -184,17 +184,6 @@
         $('#sidebar-location').text(personal.location || '');
         $('#sidebar-email').text(personal.contacts?.email || 'Email not available');
 
-        // Sidebar social links
-        if (personal.contacts) {
-            let socialHtml = '<li><span>Follow Us:</span></li>';
-            if (personal.contacts.linkedin) {
-                socialHtml += `<li><a href="${personal.contacts.linkedin}" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>`;
-            }
-            if (personal.contacts.github) {
-                socialHtml += `<li><a href="${personal.contacts.github}" target="_blank"><i class="fab fa-github"></i></a></li>`;
-            }
-            $('#sidebar-social').html(socialHtml);
-        }
     }
 
     function renderAbout() {
@@ -210,7 +199,7 @@
         console.log('About section merged with header - personal data rendered in renderHeader()');
     }
 
-        function renderExperience() {
+    function renderExperience() {
         const experiences = resumeData.experience;
         if (!experiences || !experiences.length) return;
 

@@ -3112,12 +3112,6 @@
                     </a>
                 </div>
                 <div class="mobile-menu"></div>
-                <div class="contact-info">
-                    <ul>
-                        <li><i class="fa fa-envelope"></i> <span id="sidebar-email">Loading...</span></li>
-                        <li><i class="fas fa-phone-alt"></i> <span id="sidebar-location">Loading...</span></li>
-                    </ul>
-                </div>
                 <div class="social-icon">
                     <ul id="sidebar-social">
                         <!-- Social links will be dynamically inserted -->
@@ -3212,12 +3206,19 @@
                     <div class="section-title section-title2 text-start">
                         <h2><span>About Me</span></h2>
                         <h4 id="personal-location">
-                            <p style="font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">I’m <span style="color: #FFF;">Hongzhang Liu</span>, a Member of Agentic Staff at Moonshot AI, completing my bachelor’s on a two-year accelerated track at the University of Sydney.</p>
-    <p style="margin: 15px 0;font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">Alongside the degree, I have co-founded two AI startups and subsequently conducted research internships at Shanghai AI Laboratory and Tencent Game, focus on LLM Multi-Agent System within Collective Intelligence.</p>
-    <p style="font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">Prior to this, I was a full-time research assistant at TsinghuaNLP Group and ModelBest Inc., supervised by Professors Zhiyuan Liu and Chen Qian. I'm deeply grateful for the mentorship and support from all my experiences.</p>
+                            <p style="font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">I’m <span style="color: #FFF;">Hongzhang Liu</span>, 
+                                an Agentic Staff Member at <a href="https://www.moonshot.ai/" target="_blank">Moonshot AI</a></p>
+    <p style="margin: 15px 0;font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">
+        I am completing an accelerated two-year Bachelor's degree as a Dalyell Scholar at the University of Sydney <img style="width: 30px; height: 30px;" src="/static//image/education2.png" alt="" srcset=""> , including a visiting semester at Peking University <img style="width: 30px; height: 30px;" src="/static//image/education5.png" alt="" srcset="">
+        Alongside my studies, I co-founded three AI startups and subsequently completed research internships at <a href="https://www.shlab.org.cn/" target="_blank" >Shanghai AI Laboratory</a> and <a href="https://game.qq.com" target="_blank" >Tencent Games</a>.
+    </p>
+    <p style="font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">
+        Prior to university, I worked as a full-time Research Assistant at <a href="https://nlp.csai.tsinghua.edu.cn/" target="_blank" >THUNLP</a> <img style="width: 30px; height: 30px;" src="/static//image/work4.jpg" alt="" srcset=""> and <a href="https://modelbest.cn/" target="_blank" >ModelBest Inc</a>.
+        where I was fortunate to be supervised by Professors <a href="https://scholar.google.com/citations?user=dT0v5u0AAAAJ&hl=en" target="_blank">Zhiyuan Liu</a> and <a href="https://qianc62.github.io/" target="_blank">Chen Qian</a>.
+    </p>
                         </h4>
                         <div style="font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;margin-top: 10px;">
-                            🌟 AI revolution needs your lens—connect & co-create!
+                            🌟 The AI revolution needs diverse perspectives—let’s connect and co-create!
                         </div>
                     </div>
                     <!-- <div class="mb-3">
@@ -3420,7 +3421,6 @@
                     </h4>
                 </div>
                 <div id="organizations-grid" class="organizations-container">
-                    <!-- Organizations will be dynamically inserted -->
                 </div>
             </div>
         </div>
@@ -3546,750 +3546,460 @@
 
     <script>
         const chart = echarts.init(document.getElementById('chart'));
-    
-        // 重构后的数据结构 - 以论文为中心
 
-        const PAPERS = [
-          {
-            id: 'paper_001',
-            name: 'ChatDev: Communicative Agents for Software Development',
-            color: '#80FFA5',  // 霓虹绿
-            institutions: [
-              {
-                name: 'THU',
-                coordinates: [116.32384991852342, 39.99868106652632],
-                people: ['Chen Qian', 'Wei Liu', 'Nuo Chen', 'Yufan Dang', 'Jiahao Li', 'Weize Chen', 'Yusheng Su', 'Xin Cong', 'Juyuan Xu', 'Zhiyuan Liu', 'Maosong Sun']
-              },
-              {
-                name: 'BUPT',
-                coordinates: [116.3537907809373, 39.95862932419374],
-                people: ['Cheng Yang']
-              },
-              {
-                name: 'Modelbest Inc',
-                coordinates: [116.3238511822621, 39.9886814876792],
-                people: ['Dahai Li']
-              }
-            ],
-            url: "https://arxiv.org/abs/2307.07924v5",
-            image: "static/image/1757183486268.jpg"
-          },
-          {
-            id: 'paper_002',
-            name: 'SC-MCTS*: Interpretable Contrastive Monte Carlo Tree Search Reasoning',
-            color: '#00DDFF',  // 霓虹蓝
-            institutions: [
-              {
-                name: 'USYD',
-                coordinates: [151.18674333914214, -33.8882526663799],
-                people: ['Zitian Gao', 'Boye Niu']
-              },
-              {
-                name: 'PKU',
-                coordinates: [116.3038958921363, 39.988719110435646],
-                people: ['Xuzheng He']
-              },
-              {
-                name: 'Xiaohongshu Inc',
-                coordinates: [121.47549797745022, 31.231959998113442],
-                people: ['Haotian Xu']
-              },
-              {
-                name: 'THU',
-                coordinates: [116.32384991852342, 39.99868106652632],
-                people: ['Aiwei Liu', 'Lijie Wen']
-              },
-              {
-                name: 'HKUST',
-                coordinates: [114.26348472691717, 22.337693078420834],
-                people: ['Xuming Hu']
-              },
-              {
-                name: 'HKUST(GZ)',
-                coordinates: [113.47463983063324, 22.892720634468017],
-                people: ['Xuming Hu']
-              }
-            ],
-            url: "https://arxiv.org/abs/2410.01707v3",
-            image: "static/image/1739901591293.png"
+        // 最新论文数据
+        const LATEST_PAPERS = [
+            {
+                name: 'Kimi K2: Open Agentic Intelligence',
+                color: '#80FFA5',
+                url: 'https://arxiv.org/pdf/2507.20534',
+                image: 'static/image/paper/1.png',
+                description: 'Moonshot AI'
             },
-          {
-            id: 'paper_003',
-            name: 'Advances and Challenges in Foundation Agents',
-            color: '#37A2FF',  // 霓虹粉
-            institutions: [
-            //   {
-            //     name: 'MetaGPT',
-            //     coordinates: [116.32384991852342, 39.99868106652632], // 使用清华大学的坐标作为参考
-            //     people: ['Jiayi Zhang', 'Jinlin Wang', 'Sirui Hong', 'Yuheng Cheng', 'Jiaqi Chen', 'Zhaoyang Yu', 'Fengwei Teng', 'Jiawei Xu', 'Jinyu Xiang', 'Yizhang Lin', 'Xinbing Liang', 'Chenglin Wu']
-            //   },
-              {
-                name: 'UdeM',
-                coordinates: [-73.61380213356637, 45.505758360943126],
-                people: ['Bang Liu', 'Suyuchen Wang', 'Xiaoqiang Wang', 'Huan Zhang', 'Haochen Shi', 'Dekun Wu', 'Glen Berseth', 'Jianyun Nie']
-              },
-              {
-                name: 'Mila',
-                coordinates: [-73.61358237418472, 45.53091759831601],
-                people: ['Bang Liu', 'Suyuchen Wang', 'Xiaoqiang Wang', 'Huan Zhang', 'Haochen Shi', 'Dekun Wu', 'Glen Berseth']
-              },
-              {
-                name: 'NTU',
-                coordinates: [103.77695981692212, 1.297949629041062],
-                people: ['Xinfeng Li', 'Xiaojun Jia']
-              },
-              {
-                name: 'ANL',
-                coordinates: [-87.97886970317622, 41.718458853197646],
-                people: ['Tanjin He', 'Ian Foster', 'Logan Ward']
-              },
-              {
-                name: 'USYD',
-                coordinates: [151.18674333914214, -33.8882526663799],
-                people: ['Tongliang Liu']
-              },
-              {
-                name: 'PSU',
-                coordinates: [-77.85988694554236, 40.79841631843238],
-                people: ['Shaokun Zhang', 'Qingyun Wu']
-              },
-              {
-                name: 'MSRA',
-                coordinates: [121.45544111974577, 31.161941852222117],
-                people: ['Kaitao Song']
-              },
-              {
-                name: 'UIUC',
-                coordinates: [-88.22414121857803, 40.10836048584704],
-                people: ['Kunlun Zhu', 'Haibo Jin', 'Haohan Wang', 'Jiaxuan You']
-              },
-              {
-                name: 'HKUST',
-                coordinates: [114.26348472691717, 22.337693078420834],
-                people: ['Jiayi Zhang', 'Yuyu Luo', 'Peiyan Zhang', 'Boyan Li', 'Qiang Yang']
-              },
-              {
-                name: 'USC',
-                coordinates: [-118.28510627461773, 34.02253861057259],
-                people: ['Ollie Liu']
-              },
-              {
-                name: 'Yale',
-                coordinates: [-72.92228945901758, 41.31654194158776],
-                people: ['Xiangru Tang']
-              },
-              {
-                name: 'Stanford',
-                coordinates: [-122.170070732172, 37.42789001165107],
-                people: ['Xiao-Liang Qi']
-              },
-              {
-                name: 'UGA',
-                coordinates: [-83.37209160957403, 33.94245508146127],
-                people: ['Tianming Liu']
-              },
-              {
-                name: 'OSU',
-                coordinates: [-83.02784397868213, 40.0062696679814],
-                people: ['Yu Su', 'Huan Sun', 'Yu Gu']
-              },
-              {
-                name: 'KAUST',
-                coordinates: [39.10471490562654, 22.310085243297934],
-                people: ['Mingchen Zhuge']
-              },
-              {
-                name: 'Duke',
-                coordinates: [-78.93794965367996, 36.00153860790702],
-                people: ['Jian Pei']
-              },
-              {
-                name: 'PolyU',
-                coordinates: [114.17947945014585, 22.30499658865872],
-                people: ['Qiang Yang']
-              },
-              {
-                name: 'Google DeepMind',
-                coordinates: [-122.08523837141722, 37.42292319974112],
-                people: ['Chi Wang']
-              }
-            ],
-            url: "https://arxiv.org/pdf/2504.01990"
-          },
-          // 在PAPERS数组的最后添加第四篇论文
-          {
-            id: 'paper_004',
-            name: 'A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence',
-            color: '#FF0087',  // 金色
-            url: "https://arxiv.org/abs/2507.21046",
-            institutions: [
-                {
-                name: 'CMU',
-                coordinates: [-80.03574984040954, 40.85104279488761],
-                people: ['Yixiong Fang']
-                },
-                {
-                name: 'Fudan',
-                coordinates: [121.49556283744273, 31.301989031911095],
-                people: ['Yuhang Zhou']
-                },
-                {
-                name: 'OSU',
-                coordinates: [-123.2816662883074, 44.56196255547998],
-                people: ['Huazheng Wang']
-                },
-                {
-                name: 'PSU',
-                coordinates: [-77.85940414797278, 40.79844068403629],
-                people: ['Yiran Wu', 'Shaokun Zhang', 'Qingyun Wu']
-                },
-                {
-                name: 'Princeton',
-                coordinates: [-74.65404393394782, 40.343830154939106],
-                people: ['Jiayi Geng', 'Shilong Liu', 'Jiahao Qiu', 'Hongru Wang', 'Mengdi Wang']
-                },
-                {
-                name: 'Princeton AI Lab',
-                coordinates: [-74.65404393394782, 40.343830154939106], // 使用普林斯顿大学的坐标
-                people: ['Jiahao Qiu', 'Mengdi Wang']
-                },
-                {
-                name: 'SJTU',
-                coordinates: [121.43411099033615, 31.025357983961758],
-                people: ['Xinzhe Juan', 'Dongrui Liu', 'Qihan Ren']
-                },
-                {
-                name: 'CUHK',
-                coordinates: [114.22234831732194, 22.42555938718811],
-                people: ['Hongru Wang', 'Han Xiao', 'Minda Hu']
-                },
-                {
-                name: 'HKUST(GZ)',
-                coordinates: [113.47463983063324, 22.892720634468017],
-                people: ['Jiayi Zhang']
-                },
-                {
-                name: 'HKU',
-                coordinates: [114.13678740176961, 22.283307487271074],
-                people: ['Mengkang Hu']
-                },
-                {
-                name: 'THU',
-                coordinates: [116.32384991852342, 39.99868106652632],
-                people: ['Huan-ang Gao', 'Xuan Qi']
-                },
-                {
-                name: 'UCSD',
-                coordinates: [-117.23368458689144, 32.8814382749731],
-                people: ['Qiwen Zhao']
-                },
-                {
-                name: 'UCSB',
-                coordinates: [-119.84820671383329, 34.41414874444878],
-                people: ['Wenyue Hua']
-                },
-                {
-                name: 'UIUC',
-                coordinates: [-88.22414121857803, 40.10836048584704],
-                people: ['Cheng Qian', 'Zhenhailong Wang', 'Heng Ji']
-                },
-                {
-                name: 'UMich',
-                coordinates: [-83.73762774607053, 42.27726404499664],
-                people: ['Xinzhe Juan']
-                }
-            ]
-            },
-            {
-                id: 'paper_005',
-                name: 'SE-Agent: Self-Evolution Trajectory Optimization in Multi-Step Reasoning with LLM-Based Agents',
-                color: '#FFBF00',  // 热粉色
-                url: "https://arxiv.org/abs/2508.02085v4",
-                institutions: [
-                    {
-                    name: 'THU',
-                    coordinates: [116.32384991852342, 39.99868106652632],
-                    people: ['Jiaye Lin']
-                    },
-                    // {
-                    // name: 'StepFun',
-                    // coordinates: [116.32384991852342, 39.99868106652632], // 使用清华大学的坐标作为参考
-                    // people: ['Yifu Guo', 'Daxin Jiang', 'Binxing Jiao', 'Chen Hu']
-                    // },
-                    {
-                    name: 'UofT',
-                    coordinates: [-79.39476514844485, 43.663626674666446],
-                    people: ['Yuzhen Han']
-                    },
-                    {
-                    name: 'PKU',
-                    coordinates: [116.30570223444941, 39.98806383791698],
-                    people: ['Sen Hu', 'Hongzhang Liu', 'Ronghao Chen']
-                    },
-                    {
-                    name: 'UCAS',
-                    coordinates: [116.68304045570052, 40.408271682221155],
-                    people: ['Ziyi Ni', 'Licheng Wang', 'Huacan Wang']
-                    },
-                    {
-                    name: 'CASIA',
-                    coordinates: [116.39106778666869, 40.004460547656535],
-                    people: ['Ziyi Ni']
-                    },
-                    {
-                    name: 'UCR',
-                    coordinates: [-117.32725974083831, 33.973927906911506],
-                    people: ['Mingguang Chen']
-                    },
-                    {
-                    name: 'USYD',
-                    coordinates: [151.18669799876687, -33.88776163517484],
-                    people: ['Hongzhang Liu']
-                    },
-                    {
-                    name: 'UMN',
-                    coordinates: [-93.22749246867592, 44.97418730750411],
-                    people: ['Yangfan He']
-                    }
-                ]
-                }
-        ];
-        // 去重的机构列表（用于标记点显示）
-        // const INSTITUTIONS = [
-        // {
-        //     name: 'Tsinghua University',
-        //     coordinates: [116.32384991852342, 39.99868106652632],
-        //     papers: ['paper_001', 'paper_002', 'paper_004', 'paper_005']
-        //   },
-        //   {
-        //     name: 'BUPT',
-        //     coordinates: [116.3537907809373, 39.95862932419374],
-        //     papers: ['paper_001']
-        //   },
-        //   {
-        //     name: 'Modelbest Inc',
-        //     coordinates: [116.3238511822621, 39.9886814876792],
-        //     papers: ['paper_001']
-        //   },
-        //   {
-        //     name: 'The University of Sydney',
-        //     coordinates: [151.18674333914214, -33.8882526663799],
-        //     papers: ['paper_002', 'paper_003']
-        //   },
-        //   {
-        //     name: 'Peking University (PKU)',
-        //     coordinates: [116.3038958921363, 39.988719110435646],
-        //     papers: ['paper_002', 'paper_005']
-        //   },
-        //   {
-        //     name: 'Xiaohongshu Inc',
-        //     coordinates: [121.47549797745022, 31.231959998113442],
-        //     papers: ['paper_002']
-        //   },
-        //   {
-        //     name: 'The Hong Kong University of Science and Technology',
-        //     coordinates: [114.26348472691717, 22.337693078420834],
-        //     papers: ['paper_002', 'paper_003']
-        //   },
-        //   {
-        //     name: 'The Hong Kong University of Science and Technology (Guangzhou)',
-        //     coordinates: [113.47463983063324, 22.892720634468017],
-        //     papers: ['paper_002', 'paper_004']
-        //   },
-        //   {
-        //     name: 'Université de Montréal',
-        //     coordinates: [-73.61380213356637, 45.505758360943126],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'Mila - Quebec AI Institute',
-        //     coordinates: [-73.61358237418472, 45.53091759831601],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'Nanyang Technological University',
-        //     coordinates: [103.77695981692212, 1.297949629041062],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'Argonne National Laboratory',
-        //     coordinates: [-87.97886970317622, 41.718458853197646],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'Penn State University',
-        //     coordinates: [-77.85988694554236, 40.79841631843238],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'Microsoft Research Asia',
-        //     coordinates: [121.45544111974577, 31.161941852222117],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'University of Illinois at Urbana-Champaign',
-        //     coordinates: [-88.22414121857803, 40.10836048584704],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'University of Southern California',
-        //     coordinates: [-118.28510627461773, 34.02253861057259],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'Yale University',
-        //     coordinates: [-72.92228945901758, 41.31654194158776],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'Stanford University',
-        //     coordinates: [-122.170070732172, 37.42789001165107],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'University of Georgia',
-        //     coordinates: [-83.37209160957403, 33.94245508146127],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'The Ohio State University',
-        //     coordinates: [-83.02784397868213, 40.0062696679814],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'King Abdullah University of Science and Technology',
-        //     coordinates: [39.10471490562654, 22.310085243297934],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'Duke University',
-        //     coordinates: [-78.93794965367996, 36.00153860790702],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'The Hong Kong Polytechnic University',
-        //     coordinates: [114.17947945014585, 22.30499658865872],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'Google DeepMind',
-        //     coordinates: [-122.08523837141722, 37.42292319974112],
-        //     papers: ['paper_003']
-        //   },
-        //   {
-        //     name: 'Carnegie Mellon University',
-        //     coordinates: [-80.03574984040954, 40.85104279488761],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'Fudan University',
-        //     coordinates: [121.49556283744273, 31.301989031911095],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'Oregon State University',
-        //     coordinates: [-123.2816662883074, 44.56196255547998],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'Pennsylvania State University',
-        //     coordinates: [-77.85940414797278, 40.79844068403629],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'Princeton University',
-        //     coordinates: [-74.65404393394782, 40.343830154939106],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'Princeton AI Lab',
-        //     coordinates: [-74.65404393394782, 40.343830154939106],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'Shanghai Jiao Tong University',
-        //     coordinates: [121.43411099033615, 31.025357983961758],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'The Chinese University of Hong Kong',
-        //     coordinates: [114.22234831732194, 22.42555938718811],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'The University of Hong Kong',
-        //     coordinates: [114.13678740176961, 22.283307487271074],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'University of California, San Diego',
-        //     coordinates: [-117.23368458689144, 32.8814382749731],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'University of California, Santa Barbara',
-        //     coordinates: [-119.84820671383329, 34.41414874444878],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'University of Illinois Urbana-Champaign',
-        //     coordinates: [-88.22855259032981, 40.0987238573499],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'University of Michigan',
-        //     coordinates: [-83.73762774607053, 42.27726404499664],
-        //     papers: ['paper_004']
-        //   },
-        //   {
-        //     name: 'University of Toronto (UofT)',
-        //     coordinates: [-79.39476514844485, 43.663626674666446],
-        //     papers: ['paper_005']
-        //   },
-        //   {
-        //     name: 'University of Chinese Academy of Sciences (UCAS)',
-        //     coordinates: [116.68304045570052, 40.408271682221155],
-        //     papers: ['paper_005']
-        //   },
-        //   {
-        //     name: 'Chinese Academy of Sciences Institute of Automation (CASIA)',
-        //     coordinates: [116.39106778666869, 40.004460547656535],
-        //     papers: ['paper_005']
-        //   },
-        //   {
-        //     name: 'University of California, Riverside (UCR)',
-        //     coordinates: [-117.32725974083831, 33.973927906911506],
-        //     papers: ['paper_005']
-        //   },
-        //   {
-        //     name: 'University of Sydney (USYD)',
-        //     coordinates: [151.18669799876687, -33.88776163517484],
-        //     papers: ['paper_005']
-        //   },
-        //   {
-        //     name: 'University of Minnesota (UMN)',
-        //     coordinates: [-93.22749246867592, 44.97418730750411],
-        //     papers: ['paper_005']
-        //   }
-        // ];
+            {
+                name: 'A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence',
+                color: '#00DDFF',
+                url: 'https://arxiv.org/pdf/2507.21046',
+                image: 'static/image/paper/2.png',
+                description: '',
+                data: [
+                    {
+                        name: 'Princeton',
+                        value: [-74.6551, 40.3431],
+                    },
+                    {
+                        name: 'THU',
+                        value: [116.3264, 40.0000],
+                    },
+                    {
+                        name: 'CMU',
+                        value: [-79.9428, 40.4433],
+                    },
+                    {
+                        name: 'USYD',
+                        value: [151.1873, -33.8886],
+                    },
+                    {
+                        name: 'SJTU',
+                        value: [121.4360, 31.0253],
+                    },
+                    {
+                        name: 'PSU',
+                        value: [-77.8599, 40.7982],
+                    },
+                    {
+                        name: 'Umich',
+                        value: [-83.7382, 42.2780],
+                    },
+                    {
+                        name: 'OSU',
+                        value: [-83.0309, 40.0142],
+                    },
+                    {
+                        name: 'CUHK',
+                        value: [114.2068, 22.4196],
+                    },
+                    {
+                        name: 'FDU',
+                        value: [121.5037, 31.2984],
+                    },
+                    {
+                        name: 'HKUST(GZ)',
+                        value: [113.6500, 22.7369],
+                    },
+                    {
+                        name: 'HKU',
+                        value: [114.1370, 22.2830],
+                    },
+                    {
+                        name: 'UCSB',
+                        value: [-119.8489, 34.4140],
+                    },
+                    {
+                        name: 'UCSD',
+                        value: [-117.2340, 32.8801],
+                    },
+                    {
+                        name: 'UIUC',
+                        value: [-88.2272, 40.1020],
+                    }
+                ]
+            },
+            {
+                name: 'xbench: Tracking Agents Productivity Scaling With Profession-Aligned Real-World Evaluations',
+                color: '#37A2FF',
+                url: 'https://arxiv.org/pdf/2506.13651',
+                image: 'static/image/paper/3.png',
+                description: '',
+                data: [
+                    {
+                        name: 'HSG',
+                        value: [116.4763, 39.9087],
+                    },
+                    {
+                        name: 'CMU',
+                        value: [-79.9428, 40.4433],
+                    },
+                    {
+                        name: 'FDU',
+                        value: [121.5037, 31.2984],
+                    },
+                    {
+                        name: 'IC',
+                        value: [-0.1749, 51.4988],
+                    },
+                    {
+                        name: 'MIT',
+                        value: [-71.0942, 42.3601],
+                    },
+                    {
+                        name: 'NUS',
+                        value: [103.7766, 1.2966],
+                    },
+                    {
+                        name: 'PKU',
+                        value: [116.3059, 39.9869],
+                    },
+                    {
+                        name: 'SJTU',
+                        value: [121.4360, 31.0253],
+                    },
+                    {
+                        name: 'Stanford',
+                        value: [-122.1697, 37.4275],
+                    },
+                    {
+                        name: 'CUHK(SZ)',
+                        value: [114.0579, 22.5425],
+                    },
+                    {
+                        name: 'OSU',
+                        value: [-83.0309, 40.0142],
+                    },
+                    {
+                        name: 'THU',
+                        value: [116.3264, 39.9987],
+                    },
+                    {
+                        name: 'UCAS',
+                        value: [116.3956, 39.9075],
+                    },
+                    {
+                        name: 'Oxford',
+                        value: [-1.2544, 51.7548],
+                    },
+                    {
+                        name: 'Upenn',
+                        value: [-75.1932, 39.9522],
+                    },
+                    {
+                        name: 'USTC',
+                        value: [117.2615, 31.8386],
+                    },
+                    {
+                        name: 'USYD',
+                        value: [151.1873, -33.8886],
+                    },
+                    {
+                        name: 'UofT',
+                        value: [-79.3957, 43.6629],
+                    },
+                    {
+                        name: 'Yale',
+                        value: [-72.9223, 41.3163],
+                    }
 
-        const INSTITUTIONS = [
-        {
-            name: 'THU',
-            coordinates: [116.32384991852342, 39.99868106652632],
-            papers: ['paper_001', 'paper_002', 'paper_004', 'paper_005']
-          },
-          {
-            name: 'BUPT',
-            coordinates: [116.3537907809373, 39.95862932419374],
-            papers: ['paper_001']
-          },
-          {
-            name: 'Modelbest Inc',
-            coordinates: [116.3238511822621, 39.9886814876792],
-            papers: ['paper_001']
-          },
-          {
-            name: 'USYD',
-            coordinates: [151.18674333914214, -33.8882526663799],
-            papers: ['paper_002', 'paper_003']
-          },
-          {
-            name: 'PKU',
-            coordinates: [116.3038958921363, 39.988719110435646],
-            papers: ['paper_002', 'paper_005']
-          },
-          {
-            name: 'Xiaohongshu Inc',
-            coordinates: [121.47549797745022, 31.231959998113442],
-            papers: ['paper_002']
-          },
-          {
-            name: 'HKUST',
-            coordinates: [114.26348472691717, 22.337693078420834],
-            papers: ['paper_002', 'paper_003']
-          },
-          {
-            name: 'HKUST(GZ)',
-            coordinates: [113.47463983063324, 22.892720634468017],
-            papers: ['paper_002', 'paper_004']
-          },
-          {
-            name: 'UdeM',
-            coordinates: [-73.61380213356637, 45.505758360943126],
-            papers: ['paper_003']
-          },
-          {
-            name: 'Mila',
-            coordinates: [-73.61358237418472, 45.53091759831601],
-            papers: ['paper_003']
-          },
-          {
-            name: 'NTU',
-            coordinates: [103.77695981692212, 1.297949629041062],
-            papers: ['paper_003']
-          },
-          {
-            name: 'ANL',
-            coordinates: [-87.97886970317622, 41.718458853197646],
-            papers: ['paper_003']
-          },
-          {
-            name: 'PSU',
-            coordinates: [-77.85988694554236, 40.79841631843238],
-            papers: ['paper_003']
-          },
-          {
-            name: 'MSRA',
-            coordinates: [121.45544111974577, 31.161941852222117],
-            papers: ['paper_003']
-          },
-          {
-            name: 'UIUC',
-            coordinates: [-88.22414121857803, 40.10836048584704],
-            papers: ['paper_003']
-          },
-          {
-            name: 'USC',
-            coordinates: [-118.28510627461773, 34.02253861057259],
-            papers: ['paper_003']
-          },
-          {
-            name: 'Yale',
-            coordinates: [-72.92228945901758, 41.31654194158776],
-            papers: ['paper_003']
-          },
-          {
-            name: 'Stanford',
-            coordinates: [-122.170070732172, 37.42789001165107],
-            papers: ['paper_003']
-          },
-          {
-            name: 'UGA',
-            coordinates: [-83.37209160957403, 33.94245508146127],
-            papers: ['paper_003']
-          },
-          {
-            name: 'OSU',
-            coordinates: [-83.02784397868213, 40.0062696679814],
-            papers: ['paper_003']
-          },
-          {
-            name: 'KAUST',
-            coordinates: [39.10471490562654, 22.310085243297934],
-            papers: ['paper_003']
-          },
-          {
-            name: 'Duke',
-            coordinates: [-78.93794965367996, 36.00153860790702],
-            papers: ['paper_003']
-          },
-          {
-            name: 'PolyU',
-            coordinates: [114.17947945014585, 22.30499658865872],
-            papers: ['paper_003']
-          },
-          {
-            name: 'Google DeepMind',
-            coordinates: [-122.08523837141722, 37.42292319974112],
-            papers: ['paper_003']
-          },
-          {
-            name: 'CMU',
-            coordinates: [-80.03574984040954, 40.85104279488761],
-            papers: ['paper_004']
-          },
-          {
-            name: 'Fudan',
-            coordinates: [121.49556283744273, 31.301989031911095],
-            papers: ['paper_004']
-          },
-          {
-            name: 'OSU',
-            coordinates: [-123.2816662883074, 44.56196255547998],
-            papers: ['paper_004']
-          },
-          {
-            name: 'PSU',
-            coordinates: [-77.85940414797278, 40.79844068403629],
-            papers: ['paper_004']
-          },
-          {
-            name: 'Princeton',
-            coordinates: [-74.65404393394782, 40.343830154939106],
-            papers: ['paper_004']
-          },
-          {
-            name: 'Princeton AI Lab',
-            coordinates: [-74.65404393394782, 40.343830154939106],
-            papers: ['paper_004']
-          },
-          {
-            name: 'SJTU',
-            coordinates: [121.43411099033615, 31.025357983961758],
-            papers: ['paper_004']
-          },
-          {
-            name: 'CUHK',
-            coordinates: [114.22234831732194, 22.42555938718811],
-            papers: ['paper_004']
-          },
-          {
-            name: 'HKU',
-            coordinates: [114.13678740176961, 22.283307487271074],
-            papers: ['paper_004']
-          },
-          {
-            name: 'UCSD',
-            coordinates: [-117.23368458689144, 32.8814382749731],
-            papers: ['paper_004']
-          },
-          {
-            name: 'UCSB',
-            coordinates: [-119.84820671383329, 34.41414874444878],
-            papers: ['paper_004']
-          },
-          {
-            name: 'UIUC',
-            coordinates: [-88.22855259032981, 40.0987238573499],
-            papers: ['paper_004']
-          },
-          {
-            name: 'UMich',
-            coordinates: [-83.73762774607053, 42.27726404499664],
-            papers: ['paper_004']
-          },
-          {
-            name: 'UofT',
-            coordinates: [-79.39476514844485, 43.663626674666446],
-            papers: ['paper_005']
-          },
-          {
-            name: 'UCAS',
-            coordinates: [116.68304045570052, 40.408271682221155],
-            papers: ['paper_005']
-          },
-          {
-            name: 'CASIA',
-            coordinates: [116.39106778666869, 40.004460547656535],
-            papers: ['paper_005']
-          },
-          {
-            name: 'UCR',
-            coordinates: [-117.32725974083831, 33.973927906911506],
-            papers: ['paper_005']
-          },
-          {
-            name: 'USYD',
-            coordinates: [151.18669799876687, -33.88776163517484],
-            papers: ['paper_005']
-          },
-          {
-            name: 'UMN',
-            coordinates: [-93.22749246867592, 44.97418730750411],
-            papers: ['paper_005']
-          }
-        ];
+                ]
+            },
+            {
+                name: 'Advances and Challenges in Foundation Agents',
+                color: '#FF0087',
+                url: 'https://arxiv.org/pdf/2504.01990',
+                image: 'static/image/paper/4.png',
+                description: '',
+                data: [
+                    {
+                        name: 'MetaGPT',
+                        value: [114.0579, 22.5431],
+                    },
+                    {
+                        name: 'Montréal',
+                        value: [-73.6132, 45.5048],
+                    },
+                    {
+                        name: 'Mila',
+                        value: [-73.6207, 45.5265],
+                    },
+                    {
+                        name: 'NTU',
+                        value: [103.6831, 1.3483],
+                    },
+                    {
+                        name: '🇺🇸 Argonne National Laboratory',
+                        value: [-87.9820, 41.7094],
+                    },
+                    {
+                        name: 'USYD',
+                        value: [151.1873, -33.8886],
+                    },
+                    {
+                        name: 'PSU',
+                        value: [-77.8599, 40.7982],
+                    },
+                    {
+                        name: 'MSRA',
+                        value: [116.3264, 39.9890],
+                    },
+                    {
+                        name: 'UIUC',
+                        value: [-88.2272, 40.1020],
+                    },
+                    {
+                        name: 'HKUST',
+                        value: [114.2655, 22.3364],
+                    },
+                    {
+                        name: 'USC',
+                        value: [-118.2851, 34.0224],
+                    },
+                    {
+                        name: 'Yale',
+                        value: [-72.9223, 41.3163],
+                    },
+                    {
+                        name: 'Stanford',
+                        value: [-122.1697, 37.4275],
+                    },
+                    {
+                        name: 'UGA',
+                        value: [-83.3773, 33.9480],
+                    },
+                    {
+                        name: 'OSU',
+                        value: [-83.0309, 40.0142],
+                    },
+                    {
+                        name: 'KAUST',
+                        value: [39.1034, 22.3082],
+                    },
+                    {
+                        name: 'Duke',
+                        value: [-78.9382, 36.0014],
+                    },
+                    {
+                        name: 'PolyU',
+                        value: [114.1795, 22.3036],
+                    },
+                    {
+                        name: 'Google DeepMind',
+                        value: [-0.1270, 51.5194],
+                    }
+                ]
+            },
+            {
+                name: 'ChatDev: Communicative Agents for Software Development',
+                color: '#FF6B35',
+                url: 'https://arxiv.org/pdf/2307.07924',
+                image: 'static/image/paper/5.png',
+                description: '',
+                data: [
+                    {
+                        name: 'THU',
+                        value: [116.3264, 40.0000],
+                    },
+                    {
+                        name: 'USYD',
+                        value: [151.1873, -33.8886],
+                    },
+                    {
+                        name: 'BUPT',
+                        value: [116.3563, 39.9634],
+                    },
+                    {
+                        name: 'Modelbest Inc.',
+                        value: [116.3100, 39.9800],
+                    }
+                ]
+            },
+            {
+                name: 'SC-MCTS*: Interpretable Contrastive Monte Carlo Tree Search Reasoning',
+                color: '#9C27B0',
+                url: 'https://arxiv.org/pdf/2410.01707',
+                image: 'static/image/paper/6.png',
+                description: '',
+                data: [
+                    {
+                        name: 'USYD',
+                        value: [151.1873, -33.8886],
+                    },
+                    {
+                        name: 'PKU',
+                        value: [116.3059, 39.9869],
+                    },
+                    {
+                        name: 'Xiaohongshu Inc.',
+                        value: [121.4737, 31.2304],
+                    },
+                    {
+                        name: '🇨🇳 Shanghai AI Laboratory',
+                        value: [121.4438, 31.1745],
+                    },
+                    {
+                        name: 'THU',
+                        value: [116.3264, 40.0000],
+                    },
+                    {
+                        name: 'HKUST(GZ)',
+                        value: [113.6500, 22.7369],
+                    },
+                    {
+                        name: 'HKUST',
+                        value: [114.2655, 22.3364],
+                    }
+                ]
+            },
+            {
+                name: 'SE-Agent: Self-Evolution Trajectory Optimization in Multi-Step Reasoning with LLM-Based Agents',
+                color: '#FF9800',
+                url: 'https://arxiv.org/pdf/2508.02085',
+                image: 'static/image/paper/7.png',
+                description: '',
+                data: [
+                    {
+                        name: 'THU',
+                        value: [116.3264, 40.0000],
+                    },
+                    {
+                        name: 'StepFun',
+                        value: [121.4500, 31.1900],
+                    },
+                    {
+                        name: 'UofT',
+                        value: [-79.3957, 43.6629],
+                    },
+                    {
+                        name: 'PKU',
+                        value: [116.3059, 39.9869],
+                    },
+                    {
+                        name: 'UCAS',
+                        value: [116.3956, 39.9075],
+                    },
+                    {
+                        name: 'CASIA',
+                        value: [116.3300, 39.9900],
+                    },
+                    {
+                        name: 'UCR',
+                        value: [-117.3281, 33.9737],
+                    },
+                    {
+                        name: 'USYD',
+                        value: [151.1873, -33.8886],
+                    },
+                    {
+                        name: 'UMN',
+                        value: [-93.2277, 44.9740],
+                    }
+                ]
+            },
+            {
+                name: 'GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging',
+                color: '#4CAF50',
+                url: 'https://arxiv.org/pdf/2508.18993',
+                image: 'static/image/paper/8.png',
+                description: '',
+                data: [
+                    {
+                        name: 'UCAS',
+                        value: [116.3956, 39.9075],
+                    },
+                    {
+                        name: 'CASIA',
+                        value: [116.3300, 39.9900],
+                    },
+                    {
+                        name: 'BUPT',
+                        value: [116.3563, 39.9634],
+                    },
+                    {
+                        name: 'NUS',
+                        value: [103.7766, 1.2966],
+                    },
+                    {
+                        name: 'StepFun',
+                        value: [121.4500, 31.1900],
+                    },
+                    {
+                        name: 'HKUST',
+                        value: [114.2655, 22.3364],
+                    },
+                    {
+                        name: 'SDU',
+                        value: [117.0609, 36.6761],
+                    },
+                    {
+                        name: 'PINAI',
+                        value: [-122.4194, 37.7749],
+                    },
+                    {
+                        name: 'USYD',
+                        value: [151.1873, -33.8886],
+                    },
+                    {
+                        name: 'PKU',
+                        value: [116.3059, 39.9869],
+                    },
+                    {
+                        name: 'USTC',
+                        value: [117.2615, 31.8386],
+                    }
+                ]
+            }
+        ];
+
+        // 基于LATEST_PAPERS生成PAPERS和INSTITUTIONS数据
+        const PAPERS = LATEST_PAPERS.map((paper, index) => ({
+            id: `paper_${String(index + 1).padStart(3, '0')}`,
+            name: paper.name,
+            color: paper.color,
+            url: paper.url,
+            image: paper.image,
+            description: paper.description || '',
+            institutions: paper.data ? paper.data.map(item => ({
+                name: item.name,
+                coordinates: item.value
+            })) : [] // 如果没有data字段，设为空数组
+        }));
+
+        // 从PAPERS中提取所有机构信息并去重
+        const INSTITUTIONS = [];
+        const institutionMap = new Map();
+        
+        PAPERS.forEach(paper => {
+            if (paper.institutions && paper.institutions.length > 0) {
+                paper.institutions.forEach(inst => {
+                    const key = `${inst.name}_${inst.coordinates[0]}_${inst.coordinates[1]}`;
+                    if (!institutionMap.has(key)) {
+                        institutionMap.set(key, {
+                            name: inst.name,
+                            coordinates: inst.coordinates,
+                            papers: [paper.id]
+                        });
+                    } else {
+                        const existing = institutionMap.get(key);
+                        if (!existing.papers.includes(paper.id)) {
+                            existing.papers.push(paper.id);
+                        }
+                    }
+                });
+            }
+        });
+        
+        // 转换为数组
+        institutionMap.forEach(value => {
+            INSTITUTIONS.push(value);
+        });
 
         // 数据处理 - 确保坐标格式正确
         const data = INSTITUTIONS.map(p => ({
@@ -4328,21 +4038,6 @@
                     <div style="background: #ffffff; padding: 16px;">
                         <div style="
                         display: flex;
-                        align-items: center;
-                        margin-bottom: 12px;
-                        color: #1154FD;
-                        font-size: 14px;
-                        font-weight: 600;
-                        padding: 8px 12px;
-                        background: rgba(17, 84, 253, 0.1);
-                        border-radius: 6px;
-                        border-left: 4px solid #1154FD;
-                        ">
-                        <span style="margin-right: 8px; font-size: 16px;">📚</span>
-                        <span>Publications (${papers.length})</span>
-                        </div>
-                        <div style="
-                        display: flex;
                         flex-direction: column;
                         gap: 10px;
                         ">`;
@@ -4352,11 +4047,6 @@
                     const paper = PAPERS.find(p => p.id === paperId);
                     
                     if (paper) {
-                        // 找到当前机构在这篇论文中的参与人员
-                        const paperInstitution = paper.institutions.find(inst => inst.name === institutionName);
-                        const paperPeople = paperInstitution ? paperInstitution.people : [];
-                        console.log('paperInstitution', paperInstitution);
-                        
                         html += `
                         <div style="
                             background: linear-gradient(135deg, rgba(17, 84, 253, 0.08), rgba(17, 84, 253, 0.05));
@@ -4366,44 +4056,15 @@
                             font-size: 13px;
                             font-weight: 500;
                             border: 1px solid rgba(17, 84, 253, 0.2);
-                            border-left: 4px solid #1154FD;
+                            border-left: 4px solid ${paper.color};
                             box-shadow: 0 2px 8px rgba(17, 84, 253, 0.1);
                         ">
                             <div style="
                             font-weight: 600;
-                            margin-bottom: 8px;
-                            color: #1154FD;
+                            color: ${paper.color};
                             font-size: 14px;
                             ">${paper.name}</div>
-                            <div style="
-                            color: #495057;
-                            font-size: 12px;
-                            margin-top: 6px;
-                            ">`;
-                        
-                        if (paperPeople.length > 0) {
-                        html += `<span style="color: #1154FD; font-weight: 600;">Participants (${paperPeople.length}): </span>`;
-                        paperPeople.forEach((person, index) => {
-                            html += `<span style="
-                            color: #ffffff;
-                            padding: 4px 8px;
-                            border-radius: 6px;
-                            font-size: 11px;
-                            display: inline-block;
-                            margin: 2px;
-                            background: linear-gradient(135deg, #1154FD, #0d47a1);
-                            border: 1px solid rgba(255, 255, 255, 0.2);
-                            box-shadow: 0 1px 3px rgba(17, 84, 253, 0.3);
-                            ">${person}</span>`;
-                            if (index < paperPeople.length - 1) {
-                            html += ' ';
-                            }
-                        });
-                        } else {
-                            html += `<span style="color: #6c757d; font-style: italic;">No personnel information available</span>`;
-                        }
-                        
-                        html += `</div></div>`;
+                        </div>`;
                     }
                     });
                     html += `</div></div>`;
@@ -4461,9 +4122,8 @@
                 const lines = [];
                 PAPERS.forEach(paper => {
                   if (paper.institutions.length >= 2) {
-                    const mainInstitution = paper.institutions.reduce((max, current) => 
-                      current.people.length > max.people.length ? current : max
-                    );
+                    // 简单选择第一个机构作为主要机构
+                    const mainInstitution = paper.institutions[0];
                     
                     paper.institutions.filter(inst => inst !== mainInstitution).forEach(inst => {
                       lines.push({
@@ -4557,10 +4217,28 @@
                 // 标签的渲染优先级，确保始终在最前面
                 renderMode: 'always'
               },
-              data: data.map(point => ({
-                name: point.name,
-                value: [point.value[0], point.value[1], 0]
-              }))
+              data: (() => {
+                const points = [];
+                PAPERS.forEach(paper => {
+                  // 只显示有数据的论文的机构点
+                  if (paper.institutions && paper.institutions.length > 0) {
+                    paper.institutions.forEach(inst => {
+                      points.push({
+                        name: inst.name,
+                        value: [inst.coordinates[0], inst.coordinates[1], 0],
+                        itemStyle: {
+                          color: paper.color,
+                          borderColor: '#E8E8E8',
+                          borderWidth: 2,
+                          shadowBlur: 10,
+                          shadowColor: paper.color + '80'
+                        }
+                      });
+                    });
+                  }
+                });
+                return points;
+              })()
             }
           ]
         };
@@ -4664,32 +4342,44 @@ function generateOrganizationsContent() {
     
     // 组织图片列表 - 根据你的图片文件名
     const organizations = [
-        { name: 'Organization 1', image: '1.jpg' },
-        { name: 'Organization 2', image: '2.jpg' },
-        { name: 'Organization 3', image: '3.jpg' },
-        { name: 'Organization 4', image: '4.jpg' },
-        { name: 'Organization 5', image: '5.jpg' },
-        { name: 'Organization 6', image: '6.jpg' },
-        { name: 'Organization 7', image: '7.jpg' },
-        { name: 'Organization 8', image: '8.jpg' },
-        { name: 'Organization 9', image: '9.png' },
-        { name: 'Organization 10', image: '10.jpg' },
-        { name: 'Organization 11', image: '11.jpg' },
-        { name: 'Organization 12', image: '12.jpg' },
-        { name: 'Organization 13', image: '13.jpg' },
-        { name: 'Organization 14', image: '14.jpg' },
-        { name: 'Organization 15', image: '15.jpg' },
-        { name: 'Organization 16', image: '16.jpg' },
-        { name: 'Organization 17', image: '17.jpg' },
-        { name: 'Organization 18', image: '18.jpg' }
+        { name: '麻省理工学院华人创业者协会(MIT CEO)', image: '1.png' },
+        { name: '清华大学通用人工智能研究会(THUAGI)', image: '2.jpg' },
+        { name: 'U8-Nexters 全球创新网络', image: '3.png' },
+        { name: '伯克利华人创业者协会（ACE）', image: '4.png' },
+        { name: '中国高智商俱乐部（胜寒）', image: '5.png' },
+        { name: '始智 AI Wisemodl', image: '6.png' },
+        { name: '智谱 AI TIME', image: '7.jpg' },
+        { name: '清华创业学会', image: '8.jpg' },
+        { name: '特工宇宙', image: '9.png' },
+        { name: '观猹', image: '10.jpg' },
+        { name: '清华互联网产品研究协会（五道口产品观察）', image: '11.jpg' },
+        { name: 'CBAIA', image: '12.png' },
+        { name: '弦计划', image: '13.png' },
+        { name: 'IntelliPro Group', image: '14.png' },
+        { name: '北京大学人工智能创新协会（SAIIC）', image: '15.jpg' },
+        { name: '北京大学创新学社 - AI 俱乐部', image: '16.jpg' },
+        { name: '极客实验室', image: '17.jpg' },
+        { name: '北京大学算法协会', image: '18.jpg' },
+        { name: '北大燕聚', image: '19.jpg' },
+        { name: '剑桥人工智能学会', image: '20.jpg' },
+        { name: '北京大学咨询学会（PCA）', image: '21.png' },
+        { name: '北大 linux', image: '22.png' },
+        { name: 'OpenBMB', image: '23.png' },
+        { name: 'FoundationAgents', image: '24.png' },
+        { name: 'NICE学术', image: '25.jpg' },
+        { name: '（澳洲）华人 AI 协会', image: '26.png' },
+        { name: 'IASEI', image: '27.png' }
     ];
     
     organizationsGrid.innerHTML = organizations.map(org => `
         <div class="organization-item">
-            <img src="static/image/Organizations/${org.image}" 
-                 alt="${org.name}" 
-                 class="organization-image"
-                 onerror="this.style.display='none'">
+            <div class="organization-image-wrapper">
+                <img src="static/image/Organizations/${org.image}" 
+                     alt="${org.name}" 
+                     class="organization-image"
+                     onerror="this.parentElement.style.background='rgba(255,255,255,0.1)'; this.style.display='none';">
+            </div>
+            <p title="${org.name}">${org.name}</p>
         </div>
     `).join('');
 }
@@ -4701,14 +4391,16 @@ function generatePapersContent() {
     const papersList = document.getElementById('papersList');
     if (!papersList) return;
     
-    // 默认选中所有论文
+    // 默认选中所有有数据的论文
     selectedPapers.clear();
     PAPERS.forEach(paper => {
-        selectedPapers.add(paper.id);
+        if (paper.institutions && paper.institutions.length > 0) {
+            selectedPapers.add(paper.id);
+        }
     });
     
     papersList.innerHTML = PAPERS.map((paper, index) => `
-        <div class="paper-item" data-paper-id="${paper.id}" style="margin-bottom: 10px;">
+        <div class="paper-item" data-paper-id="${paper.id}" style="margin-bottom: 10px; ${paper.institutions.length === 0 ? 'opacity: 0.6; background: rgba(255,255,255,0.02);' : ''}">
             <div class="paper-header">
                 <div class="paper-title">
                     <div style="display: flex; align-items: center; gap: 10px;margin-bottom: 10px">
@@ -4717,28 +4409,24 @@ function generatePapersContent() {
                                    id="checkbox-${paper.id}" 
                                    class="paper-checkbox" 
                                    data-paper-id="${paper.id}"
-                                   style="width: 18px; height: 18px; cursor: pointer;"
-                                   checked
+                                   style="width: 18px; height: 18px; cursor: ${paper.institutions.length > 0 ? 'pointer' : 'not-allowed'};"
+                                   ${paper.institutions.length > 0 ? 'checked' : 'disabled'}
                                    onchange="togglePaperConnections('${paper.id}')">
                         </div>
                         ${paper.image ? `
-                            <img src="${paper.image}" alt="${paper.name}" style="height: 50px; border-radius: 10px;">
+                            <img src="${paper.image}" alt="${paper.name}" class="paper-image">
                         `:``}
                         ${paper.url ? `
                             <div style="display: flex; align-items: center; gap: 0px;">
-                                <h3>${paper.name}</h3>
-                                <a href="${paper.url}" target="_blank" class="highlight-link">
+                                <h3>${paper.name}<a href="${paper.url}" target="_blank" class="highlight-link" style="display: inline-block;">
                                     <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </h3>
                                 
-                                </a>
                             </div>
                         ` : `
                             <h3>${paper.name}</h3>
                         `}
-                    </div>
-                    <div class="paper-meta">
-                        <span class="institution-count">${paper.institutions.length} institutions</span>
-                        <span class="people-count">${paper.institutions.reduce((sum, inst) => sum + inst.people.length, 0)} researchers</span>
                     </div>
 
                 </div>
@@ -4747,15 +4435,9 @@ function generatePapersContent() {
                 </div>
             </div>
             <div class="paper-details" id="details-${paper.id}">
-                <div class="institutions-grid">
+                <div class="institutions-tags">
                     ${paper.institutions.map(inst => `
-                        <div class="institution-card">
-                            <h4>${inst.name}</h4>
-                            <p class="location">${getLocationName(inst.coordinates)}</p>
-                            <div class="people-list">
-                                ${inst.people.map(person => `<span class="person">${person}</span>`).join('')}
-                            </div>
-                        </div>
+                        <span class="institution-tag">${inst.name}</span>
                     `).join('')}
                 </div>
             </div>
@@ -4816,10 +4498,8 @@ function updateGlobeConnections() {
         
         // 如果机构数量大于1，生成连线
         if (paper.institutions.length >= 2) {
-            // 找到参与人员最多的机构作为主要机构
-            const mainInstitution = paper.institutions.reduce((max, current) => 
-                current.people.length > max.people.length ? current : max
-            );
+            // 简单选择第一个机构作为主要机构
+            const mainInstitution = paper.institutions[0];
             
             // 从主要机构向其他机构连线
             paper.institutions.filter(inst => inst !== mainInstitution).forEach(inst => {

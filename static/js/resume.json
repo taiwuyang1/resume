@@ -61,14 +61,14 @@
         ]
       },
       {
-        "company": "HSG",
+        "company": "HongShan - fka.Sequoia China",
         "company_logo": "static/image/work7.jpg",
         "title": "AI Researcher",
         "link": "https://www.linkedin.com/company/hong-shan/",
         "type": "Freelance",
         "location": "Beijing, China · Remote",
         "duration": "2025 Apr - Present · 6 months",
-        "description_title": "Affiliate to xbench team to HongShan - fka.Sequoia China",
+        "description_title": "Affiliate to xbench team",
         "description": [
           "Core author of paper (xbench - arXiv: 2506.13651), a “Evergreen” Benchmark for AI Agents",
           "Developing dynamic evaluations that track both general intelligence and real-world utility"
@@ -98,7 +98,6 @@
         "highlights": [
           {
             "title": "DNA",
-            "type": "xbench.org/reports",
             "image": "static/image/1755331678821.jpg"
           }
         ]
