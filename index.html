@@ -4164,7 +4164,7 @@
                     alpha: 40,               // 调整垂直角度，让美国更居中
                     beta: 380,              // 调整水平角度，让地球默认显示美国视角
                     autoRotate: true,
-                    autoRotateSpeed: 2,
+                    autoRotateSpeed: -2,
                     // 鼠标悬停时停止旋转
                     autoRotateAfterStill: 10,    // 设为0，鼠标离开立即恢复旋转
                     damping: 0.8,                // 添加阻尼效果，让旋转更平滑
@@ -4271,9 +4271,9 @@
                         // 控制标签可见范围，让标签在更大的角度范围内可见
                         visibleRange: {
                             // 垂直角度范围：-90到90度（从南极到北极）
-                            vertical: [-90, 90],
+                            vertical: [-360, 360],
                             // 水平角度范围：-180到180度（整个水平面）
-                            horizontal: [-180, 180]
+                            horizontal: [-360, 360]
                         },
                         // 设置标签的透明度渐变，让边缘的标签逐渐变透明
                         opacity: 1,
@@ -4324,7 +4324,7 @@
                             alpha: 40,               // 调整垂直角度，让美国更居中
                             beta: 380,              // 调整水平角度，让地球默认显示美国视角
                             autoRotate: true,
-                            autoRotateSpeed: 2,
+                            autoRotateSpeed: -2,
                             // 鼠标悬停时停止旋转
                             autoRotateAfterStill: 10,    // 设为0，鼠标离开立即恢复旋转
                             damping: 0.8,                // 添加阻尼效果，让旋转更平滑
@@ -4700,6 +4700,11 @@
         document.addEventListener('DOMContentLoaded', () => {
             generatePapersContent();
             generateOrganizationsContent();
+
+            // 延迟更新地球连接，确保selectedPapers已经设置完成
+            setTimeout(() => {
+                updateGlobeConnections();
+            }, 1000);
 
             // 添加键盘快捷键支持
             document.addEventListener('keydown', (e) => {
