@@ -563,6 +563,10 @@ p {
     color: #130f40
 }
 
+#personal-location a {
+    font-size: 20px;
+}
+
 .header-toggle-btn {
     display: none;
     margin-top: 10px;
