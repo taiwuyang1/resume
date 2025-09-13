@@ -29,17 +29,17 @@
         /*---------------------------------------------------
             Scroll Area - 使用新的滚动方法
         ----------------------------------------------------*/
-        $('.scroll-area').click(function(){
+        $('.scroll-area').click(function () {
             if (window.scrollToPageTop) {
                 window.scrollToPageTop();
             } else {
                 $('html, body').animate({
-                    'scrollTop' : 0,
-                },50);
+                    'scrollTop': 0,
+                }, 50);
             }
             return false;
         });
-        
+
         // 移除重复的滚动监听器，使用全局的那个
 
         /*---------------------------------------------------
@@ -53,7 +53,7 @@
         ==================================================================*/
 
         let menuToggle = document.querySelector('.menuToggle');
-        if(menuToggle) {
+        if (menuToggle) {
             menuToggle.onclick = function () {
                 menuToggle.classList.toggle('active');
             }
@@ -73,18 +73,18 @@
 
         // Load resume data when page is ready
         loadResumeData();
-        
+
         // 简单直接的导航功能
         initSimpleNavigation();
     });
-    
+
     // 回到顶部函数
     function scrollToTop() {
         $('html, body').animate({
             scrollTop: 0
         }, 300);
     }
-    
+
     // Resume data loading and rendering functions
     let resumeData = {};
 
@@ -122,17 +122,17 @@
         // Update avatar - use placeholder if not specified
         const avatarSrc = personal.avatar ? `static/picture/${personal.avatar}` : 'static/picture/placeholder.jpg';
         $('#header-avatar').attr('src', avatarSrc);
-        
+
         // Update name and title
         $('#header-name').text(personal.name || 'Loading...');
         // Get title from the first experience entry if not in personal
         const firstJob = resumeData.experience && resumeData.experience[0];
         const title = personal.title || (firstJob ? `${firstJob.role} @ ${firstJob.company}` : 'Loading...');
         $('#header-title').text(title);
-        
+
         // Update location
         $('#header-location span').text(personal.location || 'Loading...');
-        
+
         // Update intro
         $('#header-intro').text(personal.intro || 'Loading...');
 
@@ -140,7 +140,7 @@
         if (personal.contacts) {
             let socialHtml = '';
             const contacts = personal.contacts;
-            
+
             if (contacts.google_scholar) {
                 socialHtml += `<a href="${contacts.google_scholar}" target="_blank"><i class="fas fa-graduation-cap"></i></a>`;
                 $('#google-scholar-link').attr('href', contacts.google_scholar);
@@ -155,20 +155,20 @@
                 socialHtml += `<a href="mailto:${contacts.email}"><i class="fas fa-envelope"></i></a>`;
                 $('#personal-email').text(contacts.email);
             }
-            
+
             $('#header-contacts').html(socialHtml);
         }
 
         // Update personal details in the unified section
         $('#personal-name').text(personal.name || 'Loading...');
-        
+
         // Since personal.details is not in the current JSON structure,
         // use fallback values or hide these fields
         $('#personal-phone').text(personal.phone);
         $('#personal-age').text(personal.age);
         $('#personal-education').text(personal.education_summary);
         $('#personal-freelance').text(personal.freelance_status);
-        
+
         // Update email from contacts
         if (personal.contacts && personal.contacts.email) {
             $('#personal-email').text(personal.contacts.email);
@@ -193,7 +193,7 @@
         // Since we merged Hero and About sections, renderAbout now only handles
         // remaining content that wasn't moved to the header section.
         // Most personal info is now handled in renderHeader()
-        
+
         // The about section now mainly contains the content sections
         // (experience, education, etc.) which are handled by their own render functions
         console.log('About section merged with header - personal data rendered in renderHeader()');
@@ -204,11 +204,11 @@
         if (!experiences || !experiences.length) return;
 
         let experienceHtml = '';
-        
+
         experiences.forEach((exp, index) => {
             const isCurrent = exp.duration && exp.duration.includes('Currently');
             const currentClass = isCurrent ? ' current' : '';
-            
+
             experienceHtml += `
                 <div class="experience-card${currentClass}">
                     <div class="experience-header">
@@ -312,7 +312,7 @@
                 </div>
             `;
         });
-        
+
         $('#experience-cards').html(experienceHtml);
     }
 
@@ -322,11 +322,11 @@
 
         // Generate horizontal card layout (流程图样式)
         let horizontalHtml = '';
-        
+
         education.forEach((edu, index) => {
             const isCurrent = edu.duration.includes('Currently') || edu.duration.includes('Expected');
             const currentClass = isCurrent ? ' education-timeline-current' : '';
-            
+
             horizontalHtml += `
                 <div class="education-timeline-item-horizontal${currentClass}">
                     <div class="education-timeline-card-horizontal">
@@ -383,29 +383,29 @@
         if (!skills || !skills.length) return;
 
         let skillsHtml = '';
-        
+
         skills.forEach((skill, index) => {
             // 根据索引选择对应的图片
             const imageIndex = (index % 3) + 1;
             const imagePath = `static/image/${imageIndex}.png`;
-            
+
             // 根据技能名称判断类别
             let category = 'Technical Skills';
-            if (skill.toLowerCase().includes('python') || skill.toLowerCase().includes('java') || 
+            if (skill.toLowerCase().includes('python') || skill.toLowerCase().includes('java') ||
                 skill.toLowerCase().includes('javascript') || skill.toLowerCase().includes('c++') ||
                 skill.toLowerCase().includes('sql') || skill.toLowerCase().includes('html') ||
                 skill.toLowerCase().includes('css') || skill.toLowerCase().includes('react') ||
                 skill.toLowerCase().includes('vue') || skill.toLowerCase().includes('node')) {
                 category = 'Programming Languages';
             } else if (skill.toLowerCase().includes('ai') || skill.toLowerCase().includes('machine learning') ||
-                       skill.toLowerCase().includes('deep learning') || skill.toLowerCase().includes('neural network') ||
-                       skill.toLowerCase().includes('tensorflow') || skill.toLowerCase().includes('pytorch')) {
+                skill.toLowerCase().includes('deep learning') || skill.toLowerCase().includes('neural network') ||
+                skill.toLowerCase().includes('tensorflow') || skill.toLowerCase().includes('pytorch')) {
                 category = 'Artificial Intelligence';
             } else if (skill.toLowerCase().includes('project management') || skill.toLowerCase().includes('team collaboration') ||
-                       skill.toLowerCase().includes('communication') || skill.toLowerCase().includes('leadership')) {
+                skill.toLowerCase().includes('communication') || skill.toLowerCase().includes('leadership')) {
                 category = 'Soft Skills';
             }
-            
+
             skillsHtml += `
                 <div class="skill-card">
                     <div class="skill-image" style="background-image: url('${imagePath}')"></div>
@@ -415,7 +415,7 @@
                 </div>
             `;
         });
-        
+
         $('#skills-tags').html(skillsHtml);
     }
 
@@ -507,14 +507,14 @@
 
         let pubsHtml = '';
         publications.forEach((pub, index) => {
-            const descriptionText = pub.description && pub.description.length > 0 ? 
-                pub.description.map(desc => `<p>${desc}</p>`).join('') : 
+            const descriptionText = pub.description && pub.description.length > 0 ?
+                pub.description.map(desc => `<p>${desc}</p>`).join('') :
                 '<p>暂无描述</p>';
-            
+
             // 检查描述是否较长，需要展开收起功能
-            const hasLongDescription = pub.description && pub.description.length > 0 && 
+            const hasLongDescription = pub.description && pub.description.length > 0 &&
                 (pub.description.join('').length > 400 || pub.description.length > 2);
-            
+
             pubsHtml += `
                 <div class="publication-card">
                     <div class="publication-header">
@@ -627,7 +627,7 @@
                 </div>
             `;
         });
-        
+
         $('#certificates-grid').html(certsHtml);
     }
 
@@ -679,13 +679,13 @@
     // Make functions available globally
     window.loadResumeData = loadResumeData;
     window.togglePublicationDescription = togglePublicationDescription;
-    
+
     // Publication description toggle function
     function togglePublicationDescription(index) {
         const descriptionElement = document.getElementById(`pub-desc-${index}`);
         const toggleButton = descriptionElement.nextElementSibling;
         const isCollapsed = descriptionElement.classList.contains('collapsed');
-        
+
         if (isCollapsed) {
             // Expand
             descriptionElement.classList.remove('collapsed');
@@ -701,7 +701,7 @@
 
 }(jQuery));
 
-function menuclick12(){
+function menuclick12() {
     $(".sidebar-wrap").removeClass("sidebar-opened");
 }
 
@@ -721,7 +721,7 @@ function initCustomNavigation() {
         activeClassName: 'active',
         stickyClassName: 'sticky',
         sections: [
-            'home', 'about', 'work-experience', 'qualification-authentication', 
+            'home', 'about', 'work-experience', 'qualification-authentication',
             'skill', 'educational', 'my-projects', 'publications-container'
         ]
     };
@@ -742,14 +742,14 @@ function initCustomNavigation() {
     // 设置滚动监听
     function setupScrollMonitor() {
         $(window).off('scroll.customNav');
-        
+
         // 使用原生JavaScript添加passive滚动监听器
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (scrollTimer) clearTimeout(scrollTimer);
-            
+
             handleScrollEffects();
-            
-            scrollTimer = setTimeout(function() {
+
+            scrollTimer = setTimeout(function () {
                 isScrolling = false;
             }, 100);
         }, { passive: true });
@@ -758,13 +758,13 @@ function initCustomNavigation() {
     // 处理滚动效果
     function handleScrollEffects() {
         const scrollPosition = $(window).scrollTop();
-        
+
         // 处理导航栏固定
         toggleHeaderFixed(scrollPosition);
-        
+
         // 处理回到顶部按钮
         toggleScrollTopButton(scrollPosition);
-        
+
         // 处理导航高亮
         updateNavigationHighlight(scrollPosition);
     }
@@ -773,12 +773,12 @@ function initCustomNavigation() {
     function toggleHeaderFixed(scrollPos) {
         const $header = $(NAV_CONFIG.headerSelector);
         const shouldBeFixed = scrollPos >= NAV_CONFIG.stickyThreshold;
-        
+
         if (shouldBeFixed) {
             if (!$header.hasClass(NAV_CONFIG.stickyClassName)) {
                 $header.addClass(NAV_CONFIG.stickyClassName);
                 console.log('✅ Header fixed at scroll:', scrollPos, 'Classes:', $header.attr('class'));
-                
+
                 // 强制应用样式
                 $header.css({
                     'position': 'fixed',
@@ -794,7 +794,7 @@ function initCustomNavigation() {
             if ($header.hasClass(NAV_CONFIG.stickyClassName)) {
                 $header.removeClass(NAV_CONFIG.stickyClassName);
                 console.log('❌ Header unfixed at scroll:', scrollPos);
-                
+
                 // 移除强制样式，恢复原始样式
                 $header.css({
                     'position': '',
@@ -812,7 +812,7 @@ function initCustomNavigation() {
     // 切换回到顶部按钮显示
     function toggleScrollTopButton(scrollPos) {
         const $scrollBtn = $(NAV_CONFIG.scrollTopButtonSelector);
-        
+
         if (scrollPos > NAV_CONFIG.scrollTopThreshold) {
             $scrollBtn.fadeIn(300);
         } else {
@@ -823,7 +823,7 @@ function initCustomNavigation() {
     // 更新导航高亮
     function updateNavigationHighlight(scrollPos) {
         const activeSection = findActiveSection(scrollPos);
-        
+
         if (activeSection !== currentActiveSection) {
             clearAllHighlights();
             setActiveHighlight(activeSection);
@@ -836,27 +836,27 @@ function initCustomNavigation() {
     function findActiveSection(scrollPos) {
         let activeSection = '';
         const viewportHeight = $(window).height();
-        
+
         // 如果在页面顶部，默认高亮首页
         if (scrollPos < 200) {
             return 'home';
         }
-        
+
         // 遍历所有sections寻找当前可见的
         for (let i = 0; i < NAV_CONFIG.sections.length; i++) {
             const sectionId = NAV_CONFIG.sections[i];
             const $section = $('#' + sectionId);
-            
+
             if ($section.length > 0) {
                 const sectionTop = $section.offset().top - NAV_CONFIG.sectionOffset;
                 const sectionBottom = sectionTop + $section.outerHeight();
-                
+
                 // 检查section是否在视口中
                 if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
                     activeSection = sectionId;
                     break;
                 }
-                
+
                 // 如果滚动位置在section范围内的中间部分，优先选择
                 const sectionMiddle = sectionTop + ($section.outerHeight() / 2);
                 if (scrollPos >= sectionTop && scrollPos <= sectionMiddle + 100) {
@@ -864,13 +864,13 @@ function initCustomNavigation() {
                 }
             }
         }
-        
+
         return activeSection;
     }
 
     // 清除所有高亮
     function clearAllHighlights() {
-        $(NAV_CONFIG.navLinksSelector).each(function() {
+        $(NAV_CONFIG.navLinksSelector).each(function () {
             $(this).removeClass(NAV_CONFIG.activeClassName);
             $(this).parent().removeClass('current');
         });
@@ -884,7 +884,7 @@ function initCustomNavigation() {
                 // 使用原有的CSS类
                 $targetLink.addClass(NAV_CONFIG.activeClassName);
                 $targetLink.parent().addClass('current');
-                
+
                 console.log('🔥 Highlighted section:', sectionId, 'Link text:', $targetLink.text(), 'Has active class:', $targetLink.hasClass('active'));
             } else {
                 console.warn('⚠️ Target link not found for section:', sectionId);
@@ -894,9 +894,9 @@ function initCustomNavigation() {
 
     // 设置平滑滚动
     function setupSmoothScrolling() {
-        $(NAV_CONFIG.navLinksSelector).off('click.customNav').on('click.customNav', function(e) {
+        $(NAV_CONFIG.navLinksSelector).off('click.customNav').on('click.customNav', function (e) {
             e.preventDefault();
-            
+
             const targetId = $(this).attr('href');
             if (targetId && targetId.startsWith('#')) {
                 const $target = $(targetId);
@@ -910,10 +910,10 @@ function initCustomNavigation() {
     // 执行平滑滚动
     function performSmoothScroll($target) {
         const targetTop = $target.offset().top - NAV_CONFIG.sectionOffset;
-        
+
         $('html, body').stop().animate({
             scrollTop: targetTop
-        }, NAV_CONFIG.animationDuration, 'swing', function() {
+        }, NAV_CONFIG.animationDuration, 'swing', function () {
             // 滚动完成后的回调
             console.log('Scrolled to:', $target.attr('id'));
         });
@@ -926,14 +926,14 @@ function initCustomNavigation() {
     }
 
     // 公共方法：手动滚动到顶部
-    window.scrollToPageTop = function() {
+    window.scrollToPageTop = function () {
         $('html, body').stop().animate({
             scrollTop: 0
         }, NAV_CONFIG.animationDuration, 'swing');
     };
 
     // 公共方法：手动更新导航
-    window.refreshNavigation = function() {
+    window.refreshNavigation = function () {
         const currentScrollPos = $(window).scrollTop();
         handleScrollEffects();
     };
@@ -943,7 +943,7 @@ function initCustomNavigation() {
 }
 
 // 添加对应的CSS类和调试功能
-$(document).ready(function() {
+$(document).ready(function () {
     // 添加自定义样式到head
     if (!$('#custom-nav-styles').length) {
         $('<style id="custom-nav-styles">')
@@ -989,44 +989,44 @@ $(document).ready(function() {
                 }
             `)
             .appendTo('head');
-        
+
         console.log('Custom navigation styles added');
     }
-    
+
     // 添加调试功能
-    window.debugNavigation = function() {
+    window.debugNavigation = function () {
         console.log('=== Navigation Debug Info ===');
         console.log('Header element:', $('#header-area')[0]);
         console.log('Header classes:', $('#header-area').attr('class'));
         console.log('Nav links:', $('#nav_header a').length);
         console.log('Current active:', $('#nav_header .active, #nav_header .current').length);
-        
+
         // 显示所有导航链接的详细信息
-        $('#nav_header a').each(function(index) {
+        $('#nav_header a').each(function (index) {
             console.log(`Link ${index}:`, $(this).text(), 'href:', $(this).attr('href'), 'classes:', $(this).attr('class'));
         });
-        
+
         // 临时高亮所有导航链接
         $('#nav_header a').addClass('debug-highlight');
         setTimeout(() => {
             $('#nav_header a').removeClass('debug-highlight');
         }, 2000);
     };
-    
+
     // 测试高亮功能
-    window.testHighlight = function(sectionId) {
+    window.testHighlight = function (sectionId) {
         console.log('Testing highlight for:', sectionId);
         const $link = $('#nav_header a[href="#' + sectionId + '"]');
         console.log('Found link:', $link[0]);
-        
+
         // 清除所有高亮
         $('#nav_header a').removeClass('active');
         $('#nav_header li').removeClass('current');
-        
+
         // 设置高亮
         $link.addClass('active');
         $link.parent().addClass('current');
-        
+
         console.log('After highlight - Link classes:', $link.attr('class'));
         console.log('After highlight - Li classes:', $link.parent().attr('class'));
     };
@@ -1035,11 +1035,11 @@ $(document).ready(function() {
 // ========== 超级简单的导航实现 ==========
 function initSimpleNavigation() {
     console.log('🚀 Simple Navigation Starting...');
-    
+
     // 移除可能冲突的类
     $('#header-area').removeClass('fixed');
     console.log('Removed conflicting "fixed" class');
-    
+
     // 确保页面可以滚动
     $('html, body').css({
         'overflow-y': 'auto',
@@ -1047,7 +1047,7 @@ function initSimpleNavigation() {
         'max-height': 'none'
     });
     console.log('Fixed scroll settings for html and body');
-    
+
     // 立即应用样式 - 使用更强的选择器
     $('<style id="super-sticky-styles">')
         .text(`
@@ -1084,53 +1084,53 @@ function initSimpleNavigation() {
             }
         `)
         .appendTo('head');
-    
+
     // 多种方式监听滚动事件
     let isSticky = false;
     let lastScrollTop = 0;
-    
+
     // 方法1: jQuery window scroll
-    $(window).on('scroll.stickyNav', function() {
+    $(window).on('scroll.stickyNav', function () {
         handleScroll('jQuery');
     });
-    
+
     // 方法2: 原生JavaScript scroll
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         handleScroll('Native');
     }, { passive: true });
-    
+
     // 方法3: document scroll
-    $(document).on('scroll.stickyNav', function() {
+    $(document).on('scroll.stickyNav', function () {
         handleScroll('Document');
     });
-    
+
     // 方法4: 鼠标滚轮事件作为备选
-    $(window).on('mousewheel wheel DOMMouseScroll', function(e) {
+    $(window).on('mousewheel wheel DOMMouseScroll', function (e) {
         setTimeout(() => {
             handleScroll('MouseWheel');
         }, 10);
     });
-    
+
     // 方法5: 触摸事件作为备选
-    $(window).on('touchmove', function(e) {
+    $(window).on('touchmove', function (e) {
         setTimeout(() => {
             handleScroll('TouchMove');
         }, 10);
     });
-    
+
     // 方法6: 定时器检查滚动位置变化
-    setInterval(function() {
+    setInterval(function () {
         const currentScrollTop = $(window).scrollTop();
         if (currentScrollTop !== lastScrollTop) {
             handleScroll('Timer');
             lastScrollTop = currentScrollTop;
         }
     }, 100);
-    
+
     function handleScroll(source) {
         const scrollTop = $(window).scrollTop();
         const $header = $('#header-area');
-        
+
         // 处理sticky导航
         if (scrollTop > 100) {
             if (!isSticky) {
@@ -1143,10 +1143,10 @@ function initSimpleNavigation() {
                 isSticky = false;
             }
         }
-        
+
         // 导航高亮
         updateSimpleHighlight(scrollTop);
-        
+
         // 回到顶部按钮
         if (scrollTop > 400) {
             $('.scroll-area').fadeIn();
@@ -1154,9 +1154,9 @@ function initSimpleNavigation() {
             $('.scroll-area').fadeOut();
         }
     };
-    
+
     // 平滑滚动
-    $('#nav_header a').click(function(e) {
+    $('#nav_header a').click(function (e) {
         e.preventDefault();
         const target = $(this).attr('href');
         if (target && target.startsWith('#')) {
@@ -1168,14 +1168,14 @@ function initSimpleNavigation() {
             }
         }
     });
-    
+
 }
 
 // 简单高亮更新
 function updateSimpleHighlight(scrollTop) {
     const sections = ['home', 'about', 'work-experience', 'publications', 'awards', 'organizations', 'interests'];
     let current = '';
-    
+
     // 页面顶部默认首页
     if (scrollTop < 200) {
         current = 'home';
@@ -1192,7 +1192,7 @@ function updateSimpleHighlight(scrollTop) {
             }
         });
     }
-    
+
     // 更新高亮
     $('#nav_header a').removeClass('nav-highlight-simple');
     if (current) {
@@ -1203,7 +1203,7 @@ function updateSimpleHighlight(scrollTop) {
 // QR Code functionality with enhanced mobile support
 
 // Interests Image Modal Functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const clickableImages = document.querySelectorAll('.clickable-image');
     const imageModal = document.getElementById('imageModal');
     const modalImage = document.getElementById('modalImage');
@@ -1215,31 +1215,31 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Open modal when clicking on interest images
     clickableImages.forEach(image => {
-        image.addEventListener('click', function(e) {
+        image.addEventListener('click', function (e) {
             e.preventDefault();
             e.stopPropagation();
-            
+
             console.log('Image clicked:', this.src); // Debug log
-            
+
             const imageSrc = this.src;
             const title = this.getAttribute('data-title');
             const description = this.getAttribute('data-description');
-            
+
             console.log('Setting modal image src to:', imageSrc);
             console.log('Title:', title);
             console.log('Description:', description);
-            
+
             // Set modal content
             modalImage.src = imageSrc;
             modalTitle.textContent = title || 'Interest';
-            
+
             // 先锁定页面滚动
             document.body.style.overflow = 'hidden';
-            
+
             // Show modal with simple styles
             imageModal.style.display = 'flex';
             imageModal.style.opacity = '0';
-            
+
             // Add animation
             setTimeout(() => {
                 imageModal.style.opacity = '1';
@@ -1268,7 +1268,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && imageModal && imageModal.style.display === 'flex') {
             closeModal();
         }
@@ -1277,74 +1277,74 @@ document.addEventListener('DOMContentLoaded', function() {
     // Prevent modal content click from closing modal
     const modalContent = document.querySelector('.modal-content');
     if (modalContent) {
-        modalContent.addEventListener('click', function(e) {
+        modalContent.addEventListener('click', function (e) {
             e.stopPropagation();
         });
     }
 });
 
 // QR Code Display Functionality
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const hover1Btn = document.querySelector('.social-btn-hover1');
     const hover2Btn = document.querySelector('.social-btn-hover2');
     const img1 = document.querySelector('.profile-card .img1');
     const img2 = document.querySelector('.profile-card .img2');
-    
+
     if (!hover1Btn || !hover2Btn || !img1 || !img2) {
         console.log('QR Code elements not found');
         return;
     }
-    
+
     let activeQR = null;
     let touchTimer = null;
-    
+
     // Function to show QR code
     function showQR(targetImg, buttonElement) {
         // Hide the other QR code first
         if (activeQR && activeQR !== targetImg) {
             hideQR(activeQR);
         }
-        
+
         targetImg.style.opacity = '1';
         targetImg.style.visibility = 'visible';
         buttonElement.classList.add('show-qr');
         activeQR = targetImg;
-        
+
         console.log('Showing QR:', targetImg.className);
     }
-    
+
     // Function to hide QR code
     function hideQR(targetImg) {
         if (targetImg) {
             targetImg.style.opacity = '0';
             targetImg.style.visibility = 'hidden';
         }
-        
+
         // Remove show-qr class from both buttons
         hover1Btn.classList.remove('show-qr');
         hover2Btn.classList.remove('show-qr');
-        
+
         if (activeQR === targetImg) {
             activeQR = null;
         }
-        
+
         console.log('Hiding QR:', targetImg ? targetImg.className : 'null');
     }
-    
+
     // Function to hide all QR codes
     function hideAllQR() {
         hideQR(img1);
         hideQR(img2);
     }
-    
+
     // Desktop hover events
-    hover1Btn.addEventListener('mouseenter', function() {
+    hover1Btn.addEventListener('mouseenter', function () {
         if (window.innerWidth > 768) { // Only on desktop
             showQR(img1, hover1Btn);
         }
     });
-    
-    hover1Btn.addEventListener('mouseleave', function() {
+
+    hover1Btn.addEventListener('mouseleave', function () {
         if (window.innerWidth > 768) { // Only on desktop
             setTimeout(() => {
                 if (!hover1Btn.matches(':hover')) {
@@ -1353,14 +1353,14 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         }
     });
-    
-    hover2Btn.addEventListener('mouseenter', function() {
+
+    hover2Btn.addEventListener('mouseenter', function () {
         if (window.innerWidth > 768) { // Only on desktop
             showQR(img2, hover2Btn);
         }
     });
-    
-    hover2Btn.addEventListener('mouseleave', function() {
+
+    hover2Btn.addEventListener('mouseleave', function () {
         if (window.innerWidth > 768) { // Only on desktop
             setTimeout(() => {
                 if (!hover2Btn.matches(':hover')) {
@@ -1369,50 +1369,50 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 100);
         }
     });
-    
+
     // Mobile touch events
-    hover1Btn.addEventListener('touchstart', function(e) {
+    hover1Btn.addEventListener('touchstart', function (e) {
         e.preventDefault();
         clearTimeout(touchTimer);
-        
+
         if (activeQR === img1) {
             // If already showing, hide it
             hideQR(img1);
         } else {
             // Show this QR and hide others
             showQR(img1, hover1Btn);
-            
+
             // Auto hide after 3 seconds
             touchTimer = setTimeout(() => {
                 hideQR(img1);
             }, 3000);
         }
     });
-    
-    hover2Btn.addEventListener('touchstart', function(e) {
+
+    hover2Btn.addEventListener('touchstart', function (e) {
         e.preventDefault();
         clearTimeout(touchTimer);
-        
+
         if (activeQR === img2) {
             // If already showing, hide it
             hideQR(img2);
         } else {
             // Show this QR and hide others
             showQR(img2, hover2Btn);
-            
+
             // Auto hide after 3 seconds
             touchTimer = setTimeout(() => {
                 hideQR(img2);
             }, 3000);
         }
     });
-    
+
     // Click events for better mobile compatibility
-    hover1Btn.addEventListener('click', function(e) {
+    hover1Btn.addEventListener('click', function (e) {
         if (window.innerWidth <= 768) {
             e.preventDefault();
             clearTimeout(touchTimer);
-            
+
             if (activeQR === img1) {
                 hideQR(img1);
             } else {
@@ -1423,12 +1423,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-    
-    hover2Btn.addEventListener('click', function(e) {
+
+    hover2Btn.addEventListener('click', function (e) {
         if (window.innerWidth <= 768) {
             e.preventDefault();
             clearTimeout(touchTimer);
-            
+
             if (activeQR === img2) {
                 hideQR(img2);
             } else {
@@ -1439,25 +1439,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
-    
+
     // Hide QR when clicking outside
-    document.addEventListener('click', function(e) {
+    document.addEventListener('click', function (e) {
         if (!e.target.closest('.profile-card')) {
             hideAllQR();
             clearTimeout(touchTimer);
         }
     });
-    
+
     // Hide QR when touching outside (mobile)
-    document.addEventListener('touchstart', function(e) {
+    document.addEventListener('touchstart', function (e) {
         if (!e.target.closest('.profile-card')) {
             hideAllQR();
             clearTimeout(touchTimer);
         }
     });
-    
+
     // Keyboard accessibility
-    hover1Btn.addEventListener('keydown', function(e) {
+    hover1Btn.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             if (activeQR === img1) {
@@ -1469,8 +1469,8 @@ document.addEventListener('DOMContentLoaded', function() {
             hideQR(img1);
         }
     });
-    
-    hover2Btn.addEventListener('keydown', function(e) {
+
+    hover2Btn.addEventListener('keydown', function (e) {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             if (activeQR === img2) {
@@ -1482,25 +1482,25 @@ document.addEventListener('DOMContentLoaded', function() {
             hideQR(img2);
         }
     });
-    
+
     // Global escape key handler
-    document.addEventListener('keydown', function(e) {
+    document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape') {
             hideAllQR();
             clearTimeout(touchTimer);
         }
     });
-    
+
     // Handle window resize
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
         hideAllQR();
         clearTimeout(touchTimer);
     });
-    
+
     // Make buttons focusable for keyboard navigation
     hover1Btn.setAttribute('tabindex', '0');
     hover2Btn.setAttribute('tabindex', '0');
-    
+
     console.log('QR Code functionality initialized');
 });
 

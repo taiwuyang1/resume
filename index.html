@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <title>Personal Resume</title>
     <!--favicon-->
-    
+
     <!--bootstrap css-->
     <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
     <!--owl carousel css-->
@@ -28,22 +28,23 @@
     <link rel="stylesheet" type="text/css" href="static/css/style.css">
     <!--responsive css-->
     <link rel="stylesheet" type="text/css" href="static/css/responsive.css">
-    
+
     <!-- Custom styles for card-based layout -->
     <style>
         /* Prevent horizontal scrolling */
-        html, body {
+        html,
+        body {
             overflow-x: hidden;
             max-width: 100%;
             overflow-y: auto;
         }
-        
+
         /* Unified Profile Layout Styles */
         .profile-image-wrap {
             text-align: center;
             margin-bottom: 2rem;
         }
-        
+
         .profile-main-image {
             width: 280px;
             height: 280px;
@@ -52,19 +53,19 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease;
         }
-        
+
         .profile-main-image:hover {
             transform: scale(1.05);
             border-color: rgba(255, 255, 255, 0.5);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         }
-        
+
         .unified-profile-info {
             padding: 2rem 0;
             position: relative;
             z-index: 1;
         }
-        
+
         .hero-name {
             color: #fff;
             font-size: 2.5rem;
@@ -72,25 +73,25 @@
             margin-bottom: 0.5rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
+
         .hero-title {
             color: rgba(255, 255, 255, 0.9);
             font-size: 1.5rem;
             font-weight: 500;
             margin-bottom: 1rem;
         }
-        
+
         .hero-location {
             color: rgba(255, 255, 255, 0.8);
             font-size: 1.1rem;
             margin-bottom: 1rem;
         }
-        
+
         .hero-location i {
             margin-right: 0.5rem;
             color: #ff6b6b;
         }
-        
+
         .hero-intro {
             color: rgba(255, 255, 255, 0.8);
             font-size: 1.1rem;
@@ -98,14 +99,14 @@
             font-style: italic;
             margin-bottom: 2rem;
         }
-        
+
         .hero-social {
             display: flex;
             justify-content: center;
             gap: 1rem;
             margin-bottom: 2rem;
         }
-        
+
         .hero-social a {
             display: inline-flex;
             align-items: center;
@@ -120,7 +121,7 @@
             transition: all 0.3s ease;
             backdrop-filter: blur(5px);
         }
-        
+
         .hero-social a:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateY(-3px);
@@ -128,32 +129,32 @@
             color: #fff;
             text-decoration: none;
         }
-        
+
         .hero-buttons {
             display: flex;
             justify-content: center;
             gap: 1rem;
             flex-wrap: wrap;
         }
-        
+
         .hero-buttons .default-buton a {
             padding: 0.8rem 2rem;
             border-radius: 30px;
             transition: all 0.3s ease;
         }
-        
+
         .hero-buttons .default-buton:hover a {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
         }
-        
+
         /* Personal Info List Styles */
         .personal-info {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        
+
         .personal-info li {
             margin-bottom: 1rem;
             padding: 0.8rem;
@@ -161,12 +162,12 @@
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-        
+
         .personal-info li:hover {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             transform: translateX(5px);
         }
-        
+
         .personal-info h4 {
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.9rem;
@@ -174,59 +175,59 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
+
         .personal-info p {
             color: #fff;
             font-size: 1rem;
             margin: 0;
             font-weight: 500;
         }
-        
+
         .signature {
             text-align: center;
             margin-top: 1rem;
         }
-        
+
         .signature img {
             max-height: 60px;
             opacity: 0.8;
             transition: opacity 0.3s ease;
         }
-        
+
         .signature img:hover {
             opacity: 1;
         }
-        
+
         @media (max-width: 768px) {
             .profile-main-image {
                 width: 200px;
                 height: 200px;
             }
-            
+
             .unified-profile-info {
                 padding: 1rem 0;
                 text-align: center;
             }
-            
+
             .hero-name {
                 font-size: 2rem;
             }
-            
+
             .hero-title {
                 font-size: 1.2rem;
             }
-            
+
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
                 gap: 1rem;
             }
-            
+
             .hero-buttons .default-buton {
                 width: 100%;
                 text-align: center;
             }
-            
+
             .personal-details {
                 margin-top: 2rem;
             }
@@ -235,12 +236,12 @@
                 margin-bottom: 20px;
             }
         }
-        
+
         /* Improved scroll behavior */
         html {
             scroll-behavior: smooth;
         }
-        
+
         /* Experience Timeline Styles */
         .experience-timeline-container {
             position: relative;
@@ -248,7 +249,7 @@
             margin: 0 auto;
             padding: 2rem 0;
         }
-        
+
         .timeline-line {
             position: absolute;
             left: 50%;
@@ -301,11 +302,25 @@
             opacity: 0.8;
         }
 
-        .education-timeline-item-horizontal:nth-child(1) { animation-delay: 0.1s; }
-        .education-timeline-item-horizontal:nth-child(2) { animation-delay: 0.3s; }
-        .education-timeline-item-horizontal:nth-child(3) { animation-delay: 0.5s; }
-        .education-timeline-item-horizontal:nth-child(4) { animation-delay: 0.7s; }
-        .education-timeline-item-horizontal:nth-child(5) { animation-delay: 0.9s; }
+        .education-timeline-item-horizontal:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .education-timeline-item-horizontal:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .education-timeline-item-horizontal:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .education-timeline-item-horizontal:nth-child(4) {
+            animation-delay: 0.7s;
+        }
+
+        .education-timeline-item-horizontal:nth-child(5) {
+            animation-delay: 0.9s;
+        }
 
         .education-timeline-card-horizontal {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
@@ -345,10 +360,13 @@
         }
 
         @keyframes arrowPulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 opacity: 0.8;
                 transform: translateY(-50%) scale(1);
             }
+
             50% {
                 opacity: 1;
                 transform: translateY(-50%) scale(1.1);
@@ -639,45 +657,45 @@
                 gap: 2rem;
                 overflow-x: visible;
             }
-            
+
             .education-timeline-item-horizontal {
                 width: 100%;
                 max-width: 300px;
             }
-            
+
             .education-timeline-item-horizontal:not(:last-child)::after {
                 right: auto;
                 bottom: -25px;
                 left: 50%;
                 transform: translateX(-50%) rotate(90deg);
             }
-            
+
             .education-timeline-header {
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
                 gap: 0.8rem;
             }
-            
+
             .education-timeline-logo {
                 width: 50px;
                 height: 50px;
             }
-            
+
             .education-timeline-school {
                 font-size: 1.1rem;
             }
-            
+
             .education-timeline-degree {
                 font-size: 0.8rem;
             }
-            
+
             .education-highlight {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.6rem;
             }
-            
+
             .education-highlight .highlight-image {
                 width: 60px;
                 height: 35px;
@@ -685,58 +703,58 @@
                 overflow: hidden;
                 flex-shrink: 0;
             }
-            
+
             .education-timeline-vertical {
                 display: block;
             }
-            
+
             .education-timeline-line-vertical {
                 left: 30px;
             }
-            
+
             .education-timeline-item-vertical.left,
             .education-timeline-item-vertical.right {
                 padding-left: 70px;
                 padding-right: 0;
             }
-            
+
             .education-timeline-item-vertical.left .education-timeline-card-vertical::after,
             .education-timeline-item-vertical.right .education-timeline-card-vertical::after {
                 display: none;
             }
-            
+
             .education-timeline-dot-vertical {
                 left: -38px;
             }
-            
+
             .education-timeline-card-vertical {
                 padding: 1.5rem;
             }
         }
-        
+
         .timeline-item {
             position: relative;
             width: 100%;
             opacity: 0;
             animation: fadeInUp 0.6s ease forwards;
         }
-        
+
         .timeline-item:nth-child(odd) {
             animation-delay: 0.1s;
         }
-        
+
         .timeline-item:nth-child(even) {
             animation-delay: 0.3s;
         }
-        
+
         .timeline-item.left {
             padding-right: 55%;
         }
-        
+
         .timeline-item.right {
             padding-left: 55%;
         }
-        
+
         .timeline-content {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             backdrop-filter: blur(10px);
@@ -747,12 +765,12 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
-        
+
         .timeline-content:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        
+
         .timeline-item.left .timeline-content::after {
             content: '';
             position: absolute;
@@ -763,7 +781,7 @@
             border: 15px solid transparent;
             border-left-color: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         }
-        
+
         .timeline-item.right .timeline-content::after {
             content: '';
             position: absolute;
@@ -774,7 +792,7 @@
             border: 15px solid transparent;
             border-right-color: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         }
-        
+
         .timeline-dot {
             position: absolute;
             left: 50%;
@@ -789,40 +807,43 @@
             box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
             transition: all 0.3s ease;
         }
-        
+
         .timeline-item:nth-child(even) .timeline-dot {
             background: #4ecdc4;
             box-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
         }
-        
+
         /* 当前在读工作的特殊样式 */
         /* .timeline-item.current .timeline-dot {
             background: #ffd700;
             box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
             animation: pulse-current 2s ease-in-out infinite;
         } */
-        
+
         @keyframes pulse-current {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateX(-50%) scale(1);
                 box-shadow: 0 0 25px rgba(255, 215, 0, 0.8);
             }
+
             50% {
                 transform: translateX(-50%) scale(1.2);
                 box-shadow: 0 0 35px rgba(255, 215, 0, 1);
             }
         }
-        
+
         .timeline-header {
             margin-bottom: 1rem;
         }
-        
+
         .timeline-company-info {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        
+
         .timeline-company-logo {
             width: 60px;
             height: 60px;
@@ -831,31 +852,31 @@
             flex-shrink: 0;
             border: 2px solid rgba(255, 255, 255, 0.2);
         }
-        
+
         .timeline-company-logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .timeline-company-details {
             flex: 1;
         }
-        
+
         .timeline-company {
             color: #fff;
             font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 0;
         }
-        
+
         .timeline-role {
             color: #4ecdc4;
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 0;
         }
-        
+
         .timeline-type {
             color: #ff6b6b;
             font-size: 0.8rem;
@@ -867,7 +888,7 @@
             border-radius: 10px;
             display: inline-block;
         }
-        
+
         .timeline-period {
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.9rem;
@@ -876,7 +897,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .timeline-location,
         .timeline-program,
         .timeline-mentors {
@@ -887,7 +908,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .timeline-description-title {
             color: #4ecdc4;
             font-size: 0.9rem;
@@ -901,11 +922,11 @@
             border-radius: 8px;
             /* border-left: 3px solid #4ecdc4; */
         }
-        
+
         .timeline-description {
             margin-bottom: 1rem;
         }
-        
+
         .timeline-bullet {
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.9rem;
@@ -913,13 +934,13 @@
             margin-bottom: 0.3rem;
             padding-left: 0.5rem;
         }
-        
+
         .timeline-highlights {
             border-top: 1px solid linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             padding-top: 1rem;
             margin-top: 1rem;
         }
-        
+
         .timeline-highlight {
             display: flex;
             align-items: center;
@@ -930,29 +951,29 @@
             border-radius: 8px;
             transition: all 0.3s ease;
         }
-        
+
         .timeline-highlight:hover {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         }
-        
+
         .timeline-highlight i {
             color: #4ecdc4;
             font-size: 0.9rem;
         }
-        
+
         .timeline-highlight .highlight-content {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 0.2rem;
         }
-        
+
         .timeline-highlight .highlight-title {
             color: rgba(255, 255, 255, 0.9);
             font-size: 0.85rem;
             font-weight: 500;
         }
-        
+
         .highlight-type {
             color: #999;
             font-size: 0.75rem;
@@ -961,7 +982,7 @@
             padding: 0.1rem 0rem;
             border-radius: 6px;
         }
-        
+
         .highlight-link {
             color: #4ecdc4;
             text-decoration: none;
@@ -970,13 +991,13 @@
             border-radius: 4px;
             background: rgba(78, 205, 196, 0.1);
         }
-        
+
         .highlight-link:hover {
             color: #fff;
             transform: scale(1.1);
             background: rgba(78, 205, 196, 0.3);
         }
-        
+
         .timeline-quote {
             background: rgba(78, 205, 196, 0.1);
             border-left: 3px solid #4ecdc4;
@@ -984,26 +1005,26 @@
             margin-top: 1rem;
             border-radius: 0 8px 8px 0;
         }
-        
+
         .timeline-quote i {
             color: #4ecdc4;
             margin-right: 0.5rem;
         }
-        
+
         .timeline-quote span {
             color: rgba(255, 255, 255, 0.9);
             font-style: italic;
             font-size: 0.9rem;
             line-height: 1.4;
         }
-        
+
         /* 角色相关样式 */
         .timeline-roles {
             border-top: 1px solid linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             padding-top: 1rem;
             margin-top: 1rem;
         }
-        
+
         .roles-header {
             color: #4ecdc4;
             font-size: 1rem;
@@ -1013,7 +1034,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .role-item {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
@@ -1021,21 +1042,21 @@
             margin-bottom: 1rem;
             border-left: 3px solid #4ecdc4;
         }
-        
+
         .role-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 0rem;
         }
-        
+
         .role-title {
             color: #fff;
             font-size: 1.1rem;
             font-weight: 600;
             margin: 0;
         }
-        
+
         .role-type {
             color: #ff6b6b;
             font-size: 0.75rem;
@@ -1047,7 +1068,7 @@
             border-radius: 8px;
             text-wrap: nowrap;
         }
-        
+
         .role-duration {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.85rem;
@@ -1056,11 +1077,11 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .role-description {
             margin-bottom: 1rem;
         }
-        
+
         .role-bullet {
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.85rem;
@@ -1068,12 +1089,12 @@
             margin-bottom: 0.3rem;
             padding-left: 0.5rem;
         }
-        
+
         .role-highlights {
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             padding-top: 0.8rem;
         }
-        
+
         .role-highlight {
             display: flex;
             align-items: center;
@@ -1084,11 +1105,11 @@
             border-radius: 6px;
             transition: all 0.3s ease;
         }
-        
+
         .role-highlight:hover {
             background: rgba(255, 255, 255, 0.08);
         }
-        
+
         .highlight-image {
             width: 104px;
             height: 56px;
@@ -1096,26 +1117,26 @@
             overflow: hidden;
             flex-shrink: 0;
         }
-        
+
         .highlight-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .highlight-content {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 0.2rem;
         }
-        
+
         .highlight-title {
             color: rgba(255, 255, 255, 0.9);
             font-size: 0.85rem;
             font-weight: 500;
         }
-        
+
         .timeline-link {
             display: inline-block;
             background: rgba(255, 107, 107, 0.2);
@@ -1127,95 +1148,96 @@
             border: 1px solid rgba(255, 107, 107, 0.3);
             transition: all 0.3s ease;
         }
-        
+
         .timeline-link:hover {
             background: rgba(255, 107, 107, 0.3);
             color: #fff;
             text-decoration: none;
             transform: translateY(-2px);
         }
-        
+
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-        
+
         @media (max-width: 768px) {
             .timeline-line {
                 left: 30px;
             }
-            
+
             .timeline-item.left,
             .timeline-item.right {
                 padding-left: 70px;
                 padding-right: 0;
             }
-            
+
             .timeline-item.left .timeline-content::after,
             .timeline-item.right .timeline-content::after {
                 display: none;
             }
-            
+
             .timeline-dot {
                 left: 30px;
             }
-            
+
             .timeline-content {
                 padding: 1.5rem;
             }
-            
+
             .timeline-company {
                 font-size: 1.2rem;
             }
-            
+
             .timeline-role {
                 font-size: 1rem;
             }
-            
+
             .timeline-description-title {
                 font-size: 0.8rem;
                 padding: 0.4rem;
             }
-            
+
             .timeline-highlight {
                 padding: 0.4rem;
             }
-            
+
             .timeline-highlight span {
                 font-size: 0.8rem;
             }
-            
+
             .timeline-company-info {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.8rem;
             }
-            
+
             .timeline-company-logo {
                 width: 50px;
                 height: 50px;
             }
-            
+
             .role-item {
                 padding: 0.8rem;
             }
-            
+
             .role-title {
                 font-size: 1rem;
             }
-            
+
             .highlight-image {
                 width: 35px;
                 height: 35px;
             }
         }
-        
+
         /* Education Adaptive Timeline Styles */
         .education-timeline-container {
             position: relative;
@@ -1223,7 +1245,7 @@
             margin: 0 auto;
             padding: 2rem 0;
         }
-        
+
         /* Desktop horizontal timeline */
         .education-timeline-horizontal {
             display: flex;
@@ -1233,7 +1255,7 @@
             padding: 4rem 2rem;
             gap: 1rem;
         }
-        
+
         .education-timeline-line-horizontal {
             position: absolute;
             top: 50%;
@@ -1244,7 +1266,7 @@
             border-radius: 2px;
             z-index: 1;
         }
-        
+
         .education-timeline-item-horizontal {
             position: relative;
             flex: 1;
@@ -1256,13 +1278,27 @@
             opacity: 0;
             animation: fadeInUp 0.8s ease forwards;
         }
-        
-        .education-timeline-item-horizontal:nth-child(1) { animation-delay: 0.1s; }
-        .education-timeline-item-horizontal:nth-child(2) { animation-delay: 0.2s; }
-        .education-timeline-item-horizontal:nth-child(3) { animation-delay: 0.3s; }
-        .education-timeline-item-horizontal:nth-child(4) { animation-delay: 0.4s; }
-        .education-timeline-item-horizontal:nth-child(5) { animation-delay: 0.5s; }
-        
+
+        .education-timeline-item-horizontal:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .education-timeline-item-horizontal:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .education-timeline-item-horizontal:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .education-timeline-item-horizontal:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .education-timeline-item-horizontal:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
         .education-timeline-dot-horizontal {
             width: 16px;
             height: 16px;
@@ -1274,23 +1310,23 @@
             margin-bottom: 1rem;
             transition: all 0.3s ease;
         }
-        
+
         .education-timeline-item-horizontal:nth-child(2) .education-timeline-dot-horizontal {
             border-color: #4ecdc4;
         }
-        
+
         .education-timeline-item-horizontal:nth-child(3) .education-timeline-dot-horizontal {
             border-color: #45b7d1;
         }
-        
+
         .education-timeline-item-horizontal:nth-child(4) .education-timeline-dot-horizontal {
             border-color: #96ceb4;
         }
-        
+
         .education-timeline-item-horizontal:nth-child(5) .education-timeline-dot-horizontal {
             border-color: #ffd700;
         }
-        
+
         .education-timeline-card-horizontal {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             backdrop-filter: blur(15px);
@@ -1305,23 +1341,23 @@
             flex-direction: column;
             justify-content: center;
         }
-        
+
         .education-timeline-item-horizontal:hover .education-timeline-card-horizontal {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
-        
+
         .education-timeline-item-horizontal:hover .education-timeline-dot-horizontal {
             transform: scale(1.2);
         }
-        
+
         /* Mobile vertical timeline */
         .education-timeline-vertical {
             display: none;
             position: relative;
             padding: 2rem 0;
         }
-        
+
         .education-timeline-line-vertical {
             position: absolute;
             left: 30px;
@@ -1332,7 +1368,7 @@
             border-radius: 2px;
             z-index: 1;
         }
-        
+
         .education-timeline-item-vertical {
             position: relative;
             margin-bottom: 2rem;
@@ -1340,13 +1376,27 @@
             opacity: 0;
             animation: fadeInUp 0.6s ease forwards;
         }
-        
-        .education-timeline-item-vertical:nth-child(1) { animation-delay: 0.1s; }
-        .education-timeline-item-vertical:nth-child(2) { animation-delay: 0.2s; }
-        .education-timeline-item-vertical:nth-child(3) { animation-delay: 0.3s; }
-        .education-timeline-item-vertical:nth-child(4) { animation-delay: 0.4s; }
-        .education-timeline-item-vertical:nth-child(5) { animation-delay: 0.5s; }
-        
+
+        .education-timeline-item-vertical:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .education-timeline-item-vertical:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .education-timeline-item-vertical:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .education-timeline-item-vertical:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .education-timeline-item-vertical:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
         .education-timeline-dot-vertical {
             position: absolute;
             left: -38px;
@@ -1359,23 +1409,23 @@
             z-index: 2;
             transition: all 0.3s ease;
         }
-        
+
         .education-timeline-item-vertical:nth-child(2) .education-timeline-dot-vertical {
             border-color: #4ecdc4;
         }
-        
+
         .education-timeline-item-vertical:nth-child(3) .education-timeline-dot-vertical {
             border-color: #45b7d1;
         }
-        
+
         .education-timeline-item-vertical:nth-child(4) .education-timeline-dot-vertical {
             border-color: #96ceb4;
         }
-        
+
         .education-timeline-item-vertical:nth-child(5) .education-timeline-dot-vertical {
             border-color: #ffd700;
         }
-        
+
         .education-timeline-card-vertical {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             backdrop-filter: blur(15px);
@@ -1385,16 +1435,16 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
-        
+
         .education-timeline-item-vertical:hover .education-timeline-card-vertical {
             transform: translateX(10px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
         }
-        
+
         .education-timeline-item-vertical:hover .education-timeline-dot-vertical {
             transform: scale(1.2);
         }
-        
+
         /* Common content styles */
         .education-timeline-period {
             color: #ff6b6b;
@@ -1404,27 +1454,27 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        
+
         .education-timeline-item-horizontal:nth-child(2) .education-timeline-period,
         .education-timeline-item-vertical:nth-child(2) .education-timeline-period {
             color: #4ecdc4;
         }
-        
+
         .education-timeline-item-horizontal:nth-child(3) .education-timeline-period,
         .education-timeline-item-vertical:nth-child(3) .education-timeline-period {
             color: #45b7d1;
         }
-        
+
         .education-timeline-item-horizontal:nth-child(4) .education-timeline-period,
         .education-timeline-item-vertical:nth-child(4) .education-timeline-period {
             color: #96ceb4;
         }
-        
+
         .education-timeline-item-horizontal:nth-child(5) .education-timeline-period,
         .education-timeline-item-vertical:nth-child(5) .education-timeline-period {
             color: #ffd700;
         }
-        
+
         .education-timeline-school {
             color: #fff;
             font-size: 1.2rem;
@@ -1432,20 +1482,20 @@
             margin-bottom: 0.3rem;
             line-height: 1.2;
         }
-        
+
         .education-timeline-degree {
             color: rgba(255, 255, 255, 0.9);
             font-size: 0.85rem;
             font-weight: 500;
             margin-bottom: 0.2rem;
         }
-        
+
         .education-timeline-major {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.75rem;
             line-height: 1.3;
         }
-        
+
         /* Current status indicator */
         .education-timeline-current .education-timeline-dot-horizontal,
         .education-timeline-current .education-timeline-dot-vertical {
@@ -1454,7 +1504,7 @@
             animation: pulse-current 2s infinite;
             box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
         }
-        
+
         .education-timeline-current .education-timeline-card-horizontal::after,
         .education-timeline-current .education-timeline-card-vertical::after {
             content: '当前';
@@ -1471,18 +1521,21 @@
             letter-spacing: 0.3px;
             box-shadow: 0 3px 10px rgba(255, 215, 0, 0.4);
         }
-        
+
         @keyframes pulse-current {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1);
                 box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
             }
+
             50% {
                 transform: scale(1.15);
                 box-shadow: 0 0 30px rgba(255, 215, 0, 1);
             }
         }
-        
+
         /* Responsive behavior */
         @media (max-width: 1024px) {
             .education-timeline-horizontal {
@@ -1492,38 +1545,38 @@
                 width: 100%;
                 box-sizing: border-box;
             }
-            
+
             .education-timeline-item-horizontal {
                 width: 180px;
                 flex-shrink: 0;
             }
-            
+
             .education-timeline-card-horizontal {
                 margin: 0 25px;
                 min-height: 180px;
                 padding: 1.2rem;
             }
-            
+
             .education-timeline-item-horizontal:not(:last-child)::after {
                 right: -25px;
                 border-left-width: 15px;
                 border-top-width: 8px;
                 border-bottom-width: 8px;
             }
-            
+
             .education-timeline-school {
                 font-size: 0.9rem;
             }
-            
+
             .education-timeline-degree {
                 font-size: 0.8rem;
             }
-            
+
             .education-timeline-major {
                 font-size: 0.7rem;
             }
         }
-        
+
         @media (max-width: 768px) {
             .education-timeline-horizontal {
                 flex-direction: column;
@@ -1534,17 +1587,17 @@
                 width: 100%;
                 box-sizing: border-box;
             }
-            
+
             .education-timeline-item-horizontal {
                 width: 100%;
                 max-width: 100% !important;
             }
-            
+
             .education-timeline-card-horizontal {
                 margin: 0;
                 padding: 1.5rem;
             }
-            
+
             /* 移动端改为垂直箭头 */
             .education-timeline-item-horizontal:not(:last-child)::after {
                 right: auto;
@@ -1558,7 +1611,7 @@
                 border-bottom: 8px solid transparent;
             }
         }
-        
+
         /* Skills Grid Card Styles */
         .skills-grid {
             display: grid;
@@ -1659,7 +1712,7 @@
             width: 100%;
             box-sizing: border-box;
         }
-        
+
         .project-card {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             backdrop-filter: blur(10px);
@@ -1673,22 +1726,33 @@
             animation: fadeInUp 0.6s ease forwards;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .project-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        
-        .project-card:nth-child(1) { animation-delay: 0.1s; }
-        .project-card:nth-child(2) { animation-delay: 0.3s; }
-        .project-card:nth-child(3) { animation-delay: 0.5s; }
-        .project-card:nth-child(4) { animation-delay: 0.7s; }
-        
+
+        .project-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .project-card:nth-child(2) {
+            animation-delay: 0.3s;
+        }
+
+        .project-card:nth-child(3) {
+            animation-delay: 0.5s;
+        }
+
+        .project-card:nth-child(4) {
+            animation-delay: 0.7s;
+        }
+
         .project-card:hover {
             transform: translateY(-15px) scale(1.02);
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
         }
-        
+
         .project-header {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             backdrop-filter: blur(10px);
@@ -1698,7 +1762,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .project-header::before {
             content: '';
             position: absolute;
@@ -1706,15 +1770,20 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
             animation: rotate 20s linear infinite;
         }
-        
+
         @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
-        
+
         .project-company-info {
             display: flex;
             align-items: center;
@@ -1722,7 +1791,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .project-company-logo {
             width: 40px;
             height: 40px;
@@ -1731,17 +1800,17 @@
             flex-shrink: 0;
             border: 2px solid rgba(255, 255, 255, 0.3);
         }
-        
+
         .project-company-logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .project-company-details {
             flex: 1;
         }
-        
+
         .project-company {
             color: #fff;
             font-size: 1.4rem;
@@ -1752,20 +1821,20 @@
             justify-content: space-between;
             flex-wrap: wrap;
         }
-        
+
         .project-title {
             color: #4ecdc4;
             font-size: 1.2rem;
             font-weight: 600;
             margin-top: 0.3rem;
         }
-        
+
         .project-affiliation {
             position: relative;
             z-index: 1;
             margin-top: 0.8rem;
         }
-        
+
         .affiliation-info {
             display: flex;
             align-items: center;
@@ -1773,7 +1842,7 @@
             padding-bottom: 0.6rem;
             border-radius: 6px;
         }
-        
+
         .affiliation-logo {
             width: 20px;
             height: 20px;
@@ -1781,23 +1850,23 @@
             overflow: hidden;
             flex-shrink: 0;
         }
-        
+
         .affiliation-logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .affiliation-info span {
             color: rgba(255, 255, 255, 0.9);
             font-size: 0.85rem;
         }
-        
+
         .project-body {
             padding: 1.5rem;
             border-radius: 0 0 15px 15px;
         }
-        
+
         .project-period {
             color: rgba(255, 255, 255, 0.7);
             font-size: 1rem;
@@ -1806,11 +1875,11 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .project-description {
             margin-bottom: 1rem;
         }
-        
+
         .project-bullet {
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.9rem;
@@ -1819,20 +1888,20 @@
             padding-left: 1rem;
             position: relative;
         }
-        
+
         .project-bullet::before {
             content: '•';
             color: #4ecdc4;
             position: absolute;
             left: 0;
         }
-        
+
         .project-highlights {
             border-top: 1px solid linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             padding-top: 1rem;
             margin-top: 1rem;
         }
-        
+
         .project-highlight {
             display: flex;
             align-items: center;
@@ -1844,15 +1913,15 @@
             transition: all 0.3s ease;
             border: 1px solid linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         }
-        
+
         .project-highlight:hover {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         }
-        
+
         .project-highlight:hover {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         }
-        
+
         .project-highlight .highlight-image {
             width: 106px;
             height: 56px;
@@ -1860,42 +1929,42 @@
             overflow: hidden;
             flex-shrink: 0;
         }
-        
+
         .project-highlight .highlight-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .project-highlight .highlight-content {
             flex: 1;
             word-break: break-word;
         }
-        
+
         .project-highlight .highlight-title {
             color: rgba(255, 255, 255, 0.9);
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 0.2rem;
         }
-        
+
         .project-highlight .highlight-subtitle {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.8rem;
         }
-        
+
         .project-highlight .highlight-subtitle {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.8rem;
         }
-        
+
         .project-links {
             display: flex;
             gap: 0.6rem;
             margin-top: 0.8rem;
             flex-wrap: wrap;
         }
-        
+
         .project-link {
             display: inline-flex;
             align-items: center;
@@ -1909,19 +1978,19 @@
             border: 1px solid rgba(78, 205, 196, 0.3);
             transition: all 0.3s ease;
         }
-        
+
         .project-link:hover {
             background: rgba(78, 205, 196, 0.2);
             color: #fff;
             text-decoration: none;
             transform: translateY(-2px);
         }
-        
+
         .project-footer {
             text-align: center;
             padding: 0 2rem 2rem 2rem;
         }
-        
+
         .project-link {
             display: inline-block;
             background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
@@ -1935,7 +2004,7 @@
             overflow: hidden;
             z-index: 1;
         }
-        
+
         .project-link:before {
             content: '';
             position: absolute;
@@ -1943,22 +2012,22 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
             z-index: -1;
         }
-        
+
         .project-link:hover:before {
             left: 100%;
         }
-        
+
         .project-link:hover {
             color: #fff;
             text-decoration: none;
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
-        
+
         @media (max-width: 768px) {
             .projects-container {
                 grid-template-columns: 1fr;
@@ -1966,27 +2035,27 @@
                 padding: 1rem 0;
                 max-width: 100%;
             }
-            
+
             .project-card {
                 margin: 0;
             }
-            
+
             .project-header {
                 padding: 1rem;
             }
-            
+
             .project-body {
                 padding: 1.5rem;
             }
-            
+
             .project-company {
                 font-size: 1.1rem;
             }
-            
+
             .project-title {
                 font-size: 0.9rem;
             }
-            
+
             .project-company-info {
                 /* flex-direction: column;
                 align-items: flex-start; */
@@ -1995,28 +2064,28 @@
                 flex-wrap: wrap;
                 gap: 0.8rem;
             }
-            
+
             .project-company-logo {
                 width: 40px;
                 height: 40px;
             }
-            
+
             /* .project-highlight {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.8rem;
             } */
-            
+
             /* .project-highlight .highlight-image {
                 width: 100%;
                 height: 120px;
             } */
-            
+
             /* .project-links {
                 flex-direction: column;
                 gap: 0.5rem;
             } */
-            
+
             .project-link {
                 justify-content: center;
             }
@@ -2028,34 +2097,34 @@
                 padding: 1rem 0;
                 padding-top: 0;
             }
-            
+
             .skill-card {
                 min-height: 240px;
             }
-            
+
             .skill-image {
                 height: 120px;
             }
-            
+
             .skill-content {
                 padding: 1.2rem;
             }
-            
+
             .skill-name {
                 font-size: 1.1rem;
             }
-            
+
             .skill-category {
                 font-size: 0.8rem;
             }
         }
-        
+
         /* Skills Tag Cloud Styles */
         .skills-container {
             padding: 2rem 0;
             text-align: center;
         }
-        
+
         .skills-cloud {
             display: flex;
             flex-wrap: wrap;
@@ -2064,7 +2133,7 @@
             align-items: center;
             padding: 1rem 0;
         }
-        
+
         .skill-tag {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             backdrop-filter: blur(10px);
@@ -2081,18 +2150,47 @@
             opacity: 0;
             animation: fadeInScale 0.6s ease forwards;
         }
-        
-        .skill-tag:nth-child(1) { animation-delay: 0.1s; }
-        .skill-tag:nth-child(2) { animation-delay: 0.15s; }
-        .skill-tag:nth-child(3) { animation-delay: 0.2s; }
-        .skill-tag:nth-child(4) { animation-delay: 0.25s; }
-        .skill-tag:nth-child(5) { animation-delay: 0.3s; }
-        .skill-tag:nth-child(6) { animation-delay: 0.35s; }
-        .skill-tag:nth-child(7) { animation-delay: 0.4s; }
-        .skill-tag:nth-child(8) { animation-delay: 0.45s; }
-        .skill-tag:nth-child(9) { animation-delay: 0.5s; }
-        .skill-tag:nth-child(10) { animation-delay: 0.55s; }
-        
+
+        .skill-tag:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .skill-tag:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+
+        .skill-tag:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .skill-tag:nth-child(4) {
+            animation-delay: 0.25s;
+        }
+
+        .skill-tag:nth-child(5) {
+            animation-delay: 0.3s;
+        }
+
+        .skill-tag:nth-child(6) {
+            animation-delay: 0.35s;
+        }
+
+        .skill-tag:nth-child(7) {
+            animation-delay: 0.4s;
+        }
+
+        .skill-tag:nth-child(8) {
+            animation-delay: 0.45s;
+        }
+
+        .skill-tag:nth-child(9) {
+            animation-delay: 0.5s;
+        }
+
+        .skill-tag:nth-child(10) {
+            animation-delay: 0.55s;
+        }
+
         .skill-tag:hover {
             transform: translateY(-5px) scale(1.05);
             background: rgba(255, 107, 107, 0.3);
@@ -2100,7 +2198,7 @@
             box-shadow: 0 10px 30px rgba(255, 107, 107, 0.3);
             color: #fff;
         }
-        
+
         .skill-tag::before {
             content: '';
             position: absolute;
@@ -2108,61 +2206,62 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
             transition: left 0.5s;
         }
-        
+
         .skill-tag:hover::before {
             left: 100%;
         }
-        
+
         /* Alternative colors for different skill categories */
         .skill-tag:nth-child(3n+1):hover {
             background: rgba(78, 205, 196, 0.3);
             border-color: rgba(78, 205, 196, 0.5);
             box-shadow: 0 10px 30px rgba(78, 205, 196, 0.3);
         }
-        
+
         .skill-tag:nth-child(3n+2):hover {
             background: rgba(69, 183, 209, 0.3);
             border-color: rgba(69, 183, 209, 0.5);
             box-shadow: 0 10px 30px rgba(69, 183, 209, 0.3);
         }
-        
+
         .skill-tag:nth-child(5n):hover {
             background: rgba(150, 206, 180, 0.3);
             border-color: rgba(150, 206, 180, 0.5);
             box-shadow: 0 10px 30px rgba(150, 206, 180, 0.3);
         }
-        
+
         @keyframes fadeInScale {
             from {
                 opacity: 0;
                 transform: scale(0.8) translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: scale(1) translateY(0);
             }
         }
-        
+
         @media (max-width: 768px) {
             .skills-cloud {
                 gap: 0.8rem;
             }
-            
+
             .skill-tag {
                 padding: 0.6rem 1.2rem;
                 font-size: 0.9rem;
             }
         }
-        
+
         /* Publications Accordion Styles */
         .publications-accordion {
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .publication-item {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             backdrop-filter: blur(10px);
@@ -2174,17 +2273,28 @@
             opacity: 0;
             animation: fadeInUp 0.6s ease forwards;
         }
-        
-        .publication-item:nth-child(1) { animation-delay: 0.1s; }
-        .publication-item:nth-child(2) { animation-delay: 0.2s; }
-        .publication-item:nth-child(3) { animation-delay: 0.3s; }
-        .publication-item:nth-child(4) { animation-delay: 0.4s; }
-        
+
+        .publication-item:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .publication-item:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .publication-item:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .publication-item:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
         .publication-item:hover {
             transform: translateY(-3px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
-        
+
         .publication-header {
             padding: 1.5rem 2rem;
             cursor: pointer;
@@ -2194,11 +2304,11 @@
             transition: all 0.3s ease;
             position: relative;
         }
-        
+
         .publication-header:hover {
             background: rgba(255, 255, 255, 0.05);
         }
-        
+
         .publication-header::before {
             content: '';
             position: absolute;
@@ -2210,15 +2320,15 @@
             transform: scaleY(0);
             transition: transform 0.3s ease;
         }
-        
+
         .publication-header:hover::before {
             transform: scaleY(1);
         }
-        
+
         .publication-title-wrapper {
             flex: 1;
         }
-        
+
         .publication-title {
             color: #fff;
             font-size: 1.2rem;
@@ -2226,7 +2336,7 @@
             margin: 0 0 0.5rem 0;
             line-height: 1.4;
         }
-        
+
         .publication-year {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.9rem;
@@ -2234,7 +2344,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .publication-icon {
             width: 50px;
             height: 50px;
@@ -2247,7 +2357,7 @@
             font-size: 1.2rem;
             transition: all 0.3s ease;
         }
-        
+
         .publication-toggle {
             margin-left: 1rem;
             width: 30px;
@@ -2260,40 +2370,40 @@
             color: #fff;
             transition: all 0.3s ease;
         }
-        
+
         .publication-item.active .publication-toggle {
             transform: rotate(180deg);
             background: rgba(255, 107, 107, 0.3);
         }
-        
+
         .publication-content {
             max-height: 0;
             overflow: hidden;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .publication-item.active .publication-content {
             max-height: 500px;
         }
-        
+
         .publication-details {
             padding: 0 2rem 2rem 2rem;
             border-top: 1px solid linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         }
-        
+
         .publication-abstract {
             color: rgba(255, 255, 255, 0.8);
             line-height: 1.6;
             margin-bottom: 1rem;
         }
-        
+
         .publication-meta {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
             margin-bottom: 1rem;
         }
-        
+
         .publication-meta-item {
             display: flex;
             align-items: center;
@@ -2301,13 +2411,13 @@
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.9rem;
         }
-        
+
         .publication-links {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
-        
+
         .publication-link {
             display: inline-flex;
             align-items: center;
@@ -2321,14 +2431,14 @@
             border: 1px solid rgba(255, 107, 107, 0.3);
             transition: all 0.3s ease;
         }
-        
+
         .publication-link:hover {
             background: rgba(255, 107, 107, 0.3);
             color: #fff;
             text-decoration: none;
             transform: translateY(-2px);
         }
-        
+
         @media (max-width: 768px) {
             .publication-header {
                 padding: 1rem 1.5rem;
@@ -2336,25 +2446,25 @@
                 align-items: flex-start;
                 gap: 1rem;
             }
-            
+
             .publication-details {
                 padding: 0 1.5rem 1.5rem 1.5rem;
             }
-            
+
             .publication-title {
                 font-size: 1.1rem;
             }
-            
+
             .publication-meta {
                 flex-direction: column;
                 gap: 0.5rem;
             }
-            
+
             .publication-links {
                 flex-direction: column;
             }
         }
-        
+
         /* Certificates Card Styles */
         .certificates-container {
             display: grid;
@@ -2364,7 +2474,7 @@
             width: 100%;
             box-sizing: border-box;
         }
-        
+
         .certificate-card {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             backdrop-filter: blur(10px);
@@ -2378,19 +2488,36 @@
             animation: fadeInUp 0.6s ease forwards;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .certificate-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        
-        .certificate-card:nth-child(1) { animation-delay: 0.1s; }
-        .certificate-card:nth-child(2) { animation-delay: 0.2s; }
-        .certificate-card:nth-child(3) { animation-delay: 0.3s; }
-        .certificate-card:nth-child(4) { animation-delay: 0.4s; }
-        .certificate-card:nth-child(5) { animation-delay: 0.5s; }
-        .certificate-card:nth-child(6) { animation-delay: 0.6s; }
-        
+
+        .certificate-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .certificate-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .certificate-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .certificate-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .certificate-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .certificate-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
         /* Certificate Header Styles */
         .certificate-header {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
@@ -2404,7 +2531,7 @@
             align-items: flex-start;
             gap: 1rem;
         }
-        
+
         .certificate-logo {
             width: 60px;
             height: 60px;
@@ -2414,43 +2541,43 @@
             border: 2px solid rgba(255, 255, 255, 0.2);
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         }
-        
+
         .certificate-logo img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .certificate-info {
             flex: 1;
         }
-        
+
         .certificate-title {
             color: #fff;
             font-size: 1.4rem;
             font-weight: 700;
             margin: 0;
         }
-        
+
         .certificate-issuer {
             color: #4ecdc4;
             font-size: 1.1rem;
             font-weight: 600;
         }
-        
+
         .certificate-type {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.9rem;
             margin-top: 0.5rem;
             float: right;
         }
-        
+
         /* Certificate Body Styles */
         .certificate-body {
             padding: 1.5rem;
             border-radius: 0 0 15px 15px;
         }
-        
+
         .certificate-date {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.9rem;
@@ -2459,7 +2586,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .certificate-id {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.9rem;
@@ -2468,7 +2595,7 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .certificate-affiliation {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.9rem;
@@ -2477,11 +2604,11 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         .certificate-description {
             margin-bottom: 1rem;
         }
-        
+
         .desc-item {
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.85rem;
@@ -2492,13 +2619,13 @@
             border-radius: 6px;
             border-left: 3px solid #ff6b6b;
         }
-        
+
         /* Certificate Highlights Styles */
         .certificate-highlights {
             border-top: 1px solid linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             padding-top: 1rem;
         }
-        
+
         .highlight-item {
             display: flex;
             align-items: center;
@@ -2510,11 +2637,11 @@
             transition: all 0.3s ease;
             border: 1px solid linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         }
-        
+
         .highlight-item:hover {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
         }
-        
+
         .highlight-image {
             width: 80px;
             height: 45px;
@@ -2522,33 +2649,33 @@
             overflow: hidden;
             flex-shrink: 0;
         }
-        
+
         .highlight-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        
+
         .highlight-content {
             flex: 1;
             display: flex;
             flex-direction: column;
             gap: 0.3rem;
         }
-        
+
         .highlight-title {
             color: rgba(255, 255, 255, 0.9);
             font-size: 0.85rem;
             font-weight: 600;
             line-height: 1.3;
         }
-        
+
         .highlight-description {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.8rem;
             line-height: 1.3;
         }
-        
+
         .highlight-link {
             color: #4ecdc4;
             font-size: 0.8rem;
@@ -2558,12 +2685,12 @@
             gap: 0.3rem;
             transition: all 0.3s ease;
         }
-        
+
         .highlight-link:hover {
             color: #fff;
             text-decoration: underline;
         }
-        
+
         /* Responsive Design for Certificates */
         @media (max-width: 768px) {
             .certificates-container {
@@ -2572,7 +2699,7 @@
                 width: 100%;
                 box-sizing: border-box;
             }
-            
+
             .projects-container {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
@@ -2580,7 +2707,7 @@
                 width: 100%;
                 box-sizing: border-box;
             }
-            
+
             .skills-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
@@ -2588,92 +2715,92 @@
                 width: 100%;
                 box-sizing: border-box;
             }
-            
+
             .publications-container {
                 gap: 1.5rem;
                 padding: 1rem;
                 width: 100%;
                 box-sizing: border-box;
             }
-            
+
             .publication-header {
                 padding: 1rem;
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.8rem;
             }
-            
+
             .publication-icon {
                 width: 50px;
                 height: 50px;
                 font-size: 1.2rem;
             }
-            
+
             .publication-title {
                 font-size: 1.1rem;
             }
-            
+
             .publication-year {
                 font-size: 0.9rem;
             }
-            
+
             .publication-body {
                 padding: 1rem;
             }
-            
+
             .publication-description {
                 font-size: 0.9rem;
             }
-            
+
             .publication-links {
                 flex-direction: column;
                 gap: 0.8rem;
             }
-            
+
             .publication-link {
                 font-size: 0.85rem;
                 padding: 0.4rem 0.8rem;
             }
-            
+
             .publication-toggle-btn {
                 font-size: 0.85rem;
                 padding: 0.4rem 0.8rem;
             }
-            
+
             .certificate-header {
                 gap: 0.5rem;
             }
-            
+
             .certificate-logo {
                 width: 50px;
                 height: 50px;
             }
-            
+
             .certificate-title {
                 font-size: 1.2rem;
                 margin-top: -5px;
             }
-            
+
             .certificate-issuer {
                 font-size: 1rem;
             }
-            
+
             .certificate-body {
                 padding: 1rem;
             }
-            
+
             .highlight-item {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 0.6rem;
             }
-            
+
             /* .highlight-image {
                 width: 100%;
                 height: 120px;
             } */
         }
-        
+
         /* Publications Container Styles */
         .publications-container {
             display: flex;
@@ -2683,7 +2810,7 @@
             width: 100%;
             box-sizing: border-box;
         }
-        
+
         .publication-card {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             backdrop-filter: blur(10px);
@@ -2697,19 +2824,36 @@
             animation: fadeInUp 0.6s ease forwards;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
+
         .publication-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        
-        .publication-card:nth-child(1) { animation-delay: 0.1s; }
-        .publication-card:nth-child(2) { animation-delay: 0.2s; }
-        .publication-card:nth-child(3) { animation-delay: 0.3s; }
-        .publication-card:nth-child(4) { animation-delay: 0.4s; }
-        .publication-card:nth-child(5) { animation-delay: 0.5s; }
-        .publication-card:nth-child(6) { animation-delay: 0.6s; }
-        
+
+        .publication-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .publication-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .publication-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .publication-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .publication-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .publication-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
+
         /* Publication Header Styles */
         .publication-header {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
@@ -2723,7 +2867,7 @@
             align-items: flex-start;
             gap: 1rem;
         }
-        
+
         .publication-icon {
             width: 60px;
             height: 60px;
@@ -2738,11 +2882,11 @@
             font-size: 1.5rem;
             color: #4ecdc4;
         }
-        
+
         .publication-info {
             flex: 1;
         }
-        
+
         .publication-title {
             color: #fff;
             font-size: 1.3rem;
@@ -2750,7 +2894,7 @@
             margin: 0 0 0.5rem 0;
             line-height: 1.4;
         }
-        
+
         .publication-year {
             color: #4ecdc4;
             font-size: 1rem;
@@ -2759,13 +2903,13 @@
             align-items: center;
             gap: 0.5rem;
         }
-        
+
         /* Publication Body Styles */
         .publication-body {
             padding: 1.5rem;
             border-radius: 0 0 15px 15px;
         }
-        
+
         .publication-description {
             color: rgba(255, 255, 255, 0.8);
             font-size: 0.95rem;
@@ -2773,12 +2917,12 @@
             margin-bottom: 1.5rem;
             position: relative;
         }
-        
+
         .publication-description.collapsed {
             max-height: 120px;
             overflow: hidden;
         }
-        
+
         .publication-description.collapsed::after {
             content: '';
             position: absolute;
@@ -2789,7 +2933,7 @@
             background: linear-gradient(transparent, linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)));
             pointer-events: none;
         }
-        
+
         .publication-toggle-btn {
             color: #4ecdc4;
             font-size: 0.9rem;
@@ -2806,30 +2950,30 @@
             font-family: inherit;
             outline: none;
         }
-        
+
         .publication-toggle-btn:hover {
             color: #fff;
             background: rgba(78, 205, 196, 0.3);
             border-color: rgba(78, 205, 196, 0.5);
             transform: translateY(-2px);
         }
-        
+
         .publication-toggle-btn i {
             transition: transform 0.3s ease;
         }
-        
+
         .publication-toggle-btn.expanded i {
             transform: rotate(180deg);
         }
-        
+
         .publication-description p {
             margin-bottom: 1rem;
         }
-        
+
         .publication-description p:last-child {
             margin-bottom: 0;
         }
-        
+
         .publication-actions {
             display: flex;
             gap: 1rem;
@@ -2837,13 +2981,13 @@
             align-items: center;
             margin-top: 1.5rem;
         }
-        
+
         .publication-links {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
-        
+
         .publication-link {
             color: #fff;
             font-size: 0.9rem;
@@ -2859,14 +3003,14 @@
             font-weight: 500;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
-        
+
         .publication-link:hover {
             color: #fff;
             background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
         }
-        
+
         /* Organizations Logo Cloud Styles */
         .organizations-cloud {
             display: flex;
@@ -2876,7 +3020,7 @@
             align-items: center;
             padding: 2rem 0;
         }
-        
+
         .organization-item {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
             backdrop-filter: blur(5px);
@@ -2895,7 +3039,7 @@
             opacity: 0;
             animation: fadeInUp 0.6s ease forwards;
         }
-        
+
         /* .organization-item:nth-child(1) { animation-delay: 0.1s; }
         .organization-item:nth-child(2) { animation-delay: 0.15s; }
         .organization-item:nth-child(3) { animation-delay: 0.2s; }
@@ -2927,7 +3071,7 @@
         .organization-item:hover::before {
             transform: scale(1);
         } */
-        
+
         .organization-logo {
             width: 60px;
             height: 60px;
@@ -2944,19 +3088,19 @@
             z-index: 1;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
         }
-        
+
         .organization-logo:nth-child(3n+1) {
             background: linear-gradient(135deg, #4ecdc4, #44a08d);
         }
-        
+
         .organization-logo:nth-child(3n+2) {
             background: linear-gradient(135deg, #45b7d1, #96ceb4);
         }
-        
+
         .organization-logo:nth-child(5n) {
             background: linear-gradient(135deg, #96ceb4, #feca57);
         }
-        
+
         .organization-name {
             color: #fff;
             font-size: 0.9rem;
@@ -2966,7 +3110,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .organization-type {
             color: rgba(255, 255, 255, 0.7);
             font-size: 0.8rem;
@@ -2975,7 +3119,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         /* Alternative simple text-based organization cloud */
         .organization-simple {
             display: inline-block;
@@ -2992,46 +3136,51 @@
             opacity: 0;
             animation: fadeInScale 0.6s ease forwards;
         }
-        
-        .organization-simple:nth-child(odd) { animation-delay: 0.1s; }
-        .organization-simple:nth-child(even) { animation-delay: 0.2s; }
-        
+
+        .organization-simple:nth-child(odd) {
+            animation-delay: 0.1s;
+        }
+
+        .organization-simple:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+
         .organization-simple:hover {
             transform: translateY(-3px) scale(1.05);
             background: rgba(255, 255, 255, 0.2);
             border-color: rgba(255, 255, 255, 0.4);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
         }
-        
+
         @media (max-width: 768px) {
             .organizations-cloud {
                 gap: 1rem;
                 padding: 1rem 0;
             }
-            
+
             .organization-item {
                 min-width: 120px;
                 min-height: 100px;
                 padding: 1rem;
             }
-            
+
             .organization-logo {
                 width: 50px;
                 height: 50px;
                 font-size: 1.2rem;
             }
-            
+
             .organization-name {
                 font-size: 0.8rem;
             }
         }
-        
+
         /* Content Section Styles */
         .content-section {
             padding: 3rem 0;
             position: relative;
         }
-        
+
         .content-section:not(:last-child)::after {
             content: '';
             position: absolute;
@@ -3041,11 +3190,11 @@
             height: 1px;
             background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
         }
-        
+
         .section-header {
             margin-bottom: 3rem;
         }
-        
+
         .section-title {
             font-size: 2.5rem;
             font-weight: 700;
@@ -3053,22 +3202,22 @@
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        
+
         .section-subtitle {
             color: rgba(255, 255, 255, 0.8);
             font-size: 1.1rem;
             margin: 0;
         }
-        
+
         @media (max-width: 768px) {
             .content-section {
                 padding: 2rem 0;
             }
-            
+
             .section-title {
                 font-size: 2rem;
             }
-            
+
             .section-subtitle {
                 font-size: 1rem;
             }
@@ -3077,11 +3226,12 @@
         a {
             color: #0d6efd;
         }
+
         a:hover {
             color: #0a58ca;
         }
     </style>
-    
+
 </head>
 
 <body>
@@ -3097,7 +3247,7 @@
         </div>
     </div>
     <!--end preloader-->
-    
+
     <div class="sidebar-wrap">
         <div class="sidebar-inner">
             <div class="sidebar-close">
@@ -3117,11 +3267,11 @@
                         <!-- Social links will be dynamically inserted -->
                     </ul>
                 </div>
-                
+
             </div>
         </div>
     </div>
-    
+
     <!-- Header -->
     <header id="header-area" class="header-area fixed">
         <div class="header-btm-area">
@@ -3133,15 +3283,9 @@
                     <div class="main-menu-area text-right">
                         <nav class="mainmenu">
                             <ul id="nav_header">
-                                <!-- <li><a onclick="menuclick12()" href="#home">Home</a></li> -->
                                 <li><a onclick="menuclick12()" href="#about">About</a></li>
                                 <li><a onclick="menuclick12()" href="#work-experience">Work</a></li>
-                                <!-- <li><a onclick="menuclick12()" href="#qualification-authentication">Qualifications</a></li> -->
-                                <!-- <li><a onclick="menuclick12()" href="#skill">Skills</a></li> -->
-                                <!-- <li><a onclick="menuclick12()" href="#educational">Education</a></li> -->
                                 <li><a onclick="menuclick12()" href="#publications">Publications</a></li>
-                                <!-- <li><a onclick="menuclick12()" href="#my-projects">Projects</a></li>
-                                <li><a onclick="menuclick12()" href="#publications">Publications</a></li> -->
                                 <li><a onclick="menuclick12()" href="#awards">Awards</a></li>
                                 <li><a onclick="menuclick12()" href="#organizations">Organizations</a></li>
                                 <li><a onclick="menuclick12()" href="#interests">Interests</a></li>
@@ -3157,45 +3301,9 @@
             </div>
         </div>
     </header>
-    
 
-
-    <!-- <section id="home" class="hero-banner">
-        <div class="shape">
-           <img src="static/picture/shape.png" alt="men">
-        </div>
+    <section id="about" class="about-section section-padding" style="padding-bottom: 100px;">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-xl-6 col-md-12 order-2 order-lg-1 align-self-center">
-                    <div class="hero-content">
-                        <h2>I am Hongzhang (Alpha) Liu</h2>
-                        <div class="hero-counter">
-                            <div class="counter-single text-center">
-                                <h2><span class="counter">10,489</span>+</h2>
-                                <p>Followers</p>
-                            </div>
-                            <div class="counter-single text-center">
-                                <h2><span class="counter">500</span>+</h2>
-                                <p>Friends</p>
-                            </div>
-                            <div class="counter-single text-center">
-                                <h2><span class="counter">7</span>+</h2>
-                                <p>Projects</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-xl-6 col-md-12 order-1 order-lg-2">
-                    <div class="hero-img">
-                        <img src="static/image/t2.png" alt="men">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    
-    <section id="about"  class="about-section section-padding" style="padding-bottom: 100px;">
-        <div class="container" >
             <div class="row">
                 <div class="col-xl-6 col-md-8">
                     <div class="img-wrapper about-img-wrap titlt" data-tilt="" data-tilt-max="4">
@@ -3206,16 +3314,31 @@
                     <div class="section-title section-title2 text-start">
                         <h2><span>About Me</span></h2>
                         <h4 id="personal-location">
-                            <p style="font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">I’m <span style="color: #FFF;">Hongzhang Liu</span>, 
-                                an Agentic Staff Member at <a href="https://www.moonshot.ai/" target="_blank">Moonshot AI</a>.</p>
-    <p style="margin: 15px 0;font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">
-        I am completing an accelerated two-year Bachelor's degree as a Dalyell Scholar at the University of Sydney <img style="width: 30px; height: 30px;" src="static/image/xndx.png" alt="" srcset=""> , including a visiting semester at Peking University <img style="width: 30px; height: 30px;" src="static/image/Peking_University_seal.svg" alt="" srcset="">
-        Alongside my studies, I co-founded three AI startups and subsequently completed research internships at <a href="https://www.shlab.org.cn/" target="_blank" >Shanghai AI Laboratory</a> and <a href="https://game.qq.com" target="_blank" >Tencent Games</a>.
-    </p>
-    <p style="font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">
-        Prior to university, I worked as a full-time Research Assistant at <a href="https://nlp.csai.tsinghua.edu.cn/" target="_blank" >THUNLP</a> <img style="width: 30px; height: 30px;" src="static/image/Tsinghua_University_Logo.svg" alt="" srcset=""> and <a href="https://modelbest.cn/" target="_blank" >ModelBest Inc</a>.
-        where I was fortunate to be supervised by Professors <a href="https://scholar.google.com/citations?user=dT0v5u0AAAAJ&hl=en" target="_blank">Zhiyuan Liu</a> and <a href="https://qianc62.github.io/" target="_blank">Chen Qian</a>.
-    </p>
+                            <p style="font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">I’m <span
+                                    style="color: #FFF;">Hongzhang Liu</span>,
+                                an Agentic Staff Member at <a href="https://www.moonshot.ai/" target="_blank">Moonshot
+                                    AI</a>.</p>
+                            <p style="margin: 15px 0;font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">
+                                I am completing an accelerated two-year Bachelor's degree as a Dalyell Scholar at the
+                                University of Sydney <img style="width: 30px; height: 30px;" src="static/image/xndx.png"
+                                    alt="" srcset=""> , including a visiting semester at Peking University <img
+                                    style="width: 30px; height: 30px;" src="static/image/Peking_University_seal.svg"
+                                    alt="" srcset="">
+                                Alongside my studies, I co-founded three AI startups and subsequently completed research
+                                internships at <a href="https://www.shlab.org.cn/" target="_blank">Shanghai AI
+                                    Laboratory</a> and <a href="https://game.qq.com" target="_blank">Tencent Games</a>.
+                            </p>
+                            <p style="font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;">
+                                Prior to university, I worked as a full-time Research Assistant at <a
+                                    href="https://nlp.csai.tsinghua.edu.cn/" target="_blank">THUNLP</a> <img
+                                    style="width: 30px; height: 30px;" src="static/image/Tsinghua_University_Logo.svg"
+                                    alt="" srcset=""> and <a href="https://modelbest.cn/" target="_blank">ModelBest
+                                    Inc</a>.
+                                where I was fortunate to be supervised by Professors <a
+                                    href="https://scholar.google.com/citations?user=dT0v5u0AAAAJ&hl=en"
+                                    target="_blank">Zhiyuan Liu</a> and <a href="https://qianc62.github.io/"
+                                    target="_blank">Chen Qian</a>.
+                            </p>
                         </h4>
                         <div style="font-size: 20px; line-height: 1.8;font-weight: 400; color: #999;margin-top: 10px;">
                             🌟 The AI revolution needs diverse perspectives—let’s connect and co-create!
@@ -3230,8 +3353,9 @@
                         </a>
                     </div> -->
                     <div class="profile-card" style="margin-top: 0;">
-1                        <div class="social-links">
-                            <a href="https://scholar.google.com/citations?user=VUGiv-EAAAAJ&hl=zh-CN" class="social-btn" target="_blank">
+                        1 <div class="social-links">
+                            <a href="https://scholar.google.com/citations?user=VUGiv-EAAAAJ&hl=zh-CN" class="social-btn"
+                                target="_blank">
                                 <i class="fas fa-graduation-cap"></i>
                                 <span>Google Scholar: VUGiv-EAAAAJ&hl</span>
                             </a>
@@ -3239,11 +3363,11 @@
                                 <i class="fab fa-linkedin-in"></i>
                                 <span>LinkedIn: alpha4ai</span>
                             </a>
-                            <div class="social-btn social-btn-hover1" >
+                            <div class="social-btn social-btn-hover1">
                                 <i class="fab fa-weixin"></i>
                                 <span>Wechat: Alpha4AGI</span>
                             </div>
-                            <div class="social-btn social-btn-hover2" >
+                            <div class="social-btn social-btn-hover2">
                                 <i class="fas fa-book"></i>
                                 <span>REDNote: Alpha4ai_041231</span>
                             </div>
@@ -3252,36 +3376,36 @@
                         <img src="static/image/xhs.jpg" alt="XiaoHongShu QR Code" class="img2">
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
         <div class="design-elements">
-        <img class="de-about-1 elem-left" src="static/picture/b1.png" alt="about element 1">
+            <img class="de-about-1 elem-left" src="static/picture/b1.png" alt="about element 1">
             <img class="de-about-2 elem-updown" src="static/picture/shape3.png" alt="about element 2">
         </div> <!-- .design-elements -->
-    
+
     </section>
 
     <section class="about-section section-padding" id="work-experience">
         <div class="container">
             <div class="row">
-               <div class="col-12">
-                   <!-- Experience Section -->
-                   <div class="content-section mb-5" >
-                       <div class="section-title section-title2 text-center mb-4">
+                <div class="col-12">
+                    <!-- Experience Section -->
+                    <div class="content-section mb-5">
+                        <div class="section-title section-title2 text-center mb-4">
                             <h2><span class="line">Work Experience</span></h2>
                             <h4>
                                 My Career Journey
                             </h4>
                         </div>
-                       <div class="experience-grid">
-                           <div id="experience-cards">
-                               <!-- Experience cards will be dynamically inserted -->
-                           </div>
-                       </div>
-                   </div>                 
+                        <div class="experience-grid">
+                            <div id="experience-cards">
+                                <!-- Experience cards will be dynamically inserted -->
+                            </div>
+                        </div>
+                    </div>
 
-                   <!-- Skills Section -->
-                   <!-- <div class="content-section mb-5" id="skill">
+                    <!-- Skills Section -->
+                    <!-- <div class="content-section mb-5" id="skill">
                        <div class="section-title section-title2 text-center mb-4">
                             <h2><span class="line">Skills</span></h2>
                             <h4>
@@ -3293,12 +3417,12 @@
                            </div>
                        </div>
                    </div> -->
-                   </div>
-               </div>
-           </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-   
+
     <!-- <section class="testimonial-area section-padding" style="padding-bottom: 0;" id="educational">
         <div class="content-section">
             <div class="section-title section-title2 text-center mb-4">
@@ -3330,14 +3454,14 @@
                 <div class="col-12 col-lg-6">
                     <!--end project area-->
                     <div id="chart" style="width: 100%; height: 80vh; "></div>
-                    
+
                     <style>
-                    /* 移动端高度限制 */
-                    @media (max-width: 768px) {
-                        #chart {
-                        max-height: 500px !important;
+                        /* 移动端高度限制 */
+                        @media (max-width: 768px) {
+                            #chart {
+                                max-height: 500px !important;
+                            }
                         }
-                    }
                     </style>
                 </div>
             </div>
@@ -3345,9 +3469,8 @@
     </section>
 
     <section id="awards" class="about-section section-padding">
-    <!-- Certificates Section -->
-        <div class="container" >
-            <div class="content-section mb-5" >
+        <div class="container">
+            <div class="content-section mb-5">
                 <div class="section-title section-title2 text-center mb-4">
                     <h2><span class="line">Awards</span></h2>
                     <h4>
@@ -3360,54 +3483,14 @@
         </div>
     </section>
 
-    <!-- pricing-area -->
-    <!-- <section id="my-projects" class="pricing-area section-padding">
-        <div class="container container2">
-            <div class="row">
-                <div class="section-title text-center">
-                    <h2><span>Projects</span></h2>
-                    <h4>
-                        Showcasing My Key Project Experiences
-                    </h4>
-                </div>
-            </div>
-            <div class="row ppt-60">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <div id="projects-grid" class="projects-container">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!--start project area-->
-    <!-- <section class="project-area-cul" id="publications">
-        <div class="project-bg" style="background-image: url(static/image/bg3.png);"></div>
-        <div class="background-overlay bg-1"></div>
-        <div class="container-two">
-            <div class="row">
-                <div class="section-title section-title2 project-title">
-                    <h2><span>Publications</span></h2>
-                    <h4>These Are My Published Works</h4>
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col-12">
-                    <div id="publications-container"  class="publications-container">
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    
     <section class="project-area-cul" id="organizations">
-        <div class="container" >
-            <div class="content-section mb-5" >
+        <div class="container">
+            <div class="content-section mb-5">
                 <div class="section-title section-title2 text-center mb-4">
                     <h2><span class="line">organizations</span></h2>
                     <h4>
-                        A global elite ecosystem of top university AI talent and entrepreneurs, bridging academia, industry, and investment to shape the future.
+                        A global elite ecosystem of top university AI talent and entrepreneurs, bridging academia,
+                        industry, and investment to shape the future.
                     </h4>
                 </div>
                 <div id="organizations-grid" class="organizations-container">
@@ -3432,26 +3515,22 @@
                 <div class="col-lg-6 col-md-6 col-12 mb-4">
                     <div class="interest-item">
                         <div class="interest-image-wrapper">
-                            <img src="static/image/chinese-go.jpg" 
-                                 alt="Chinese Go" 
-                                 class="interest-image clickable-image"
-                                 data-title="Chinese Go (Board Game)"
-                                 data-description="Strategic thinking and ancient wisdom through the game of Go">
+                            <img src="static/image/chinese-go.jpg" alt="Chinese Go"
+                                class="interest-image clickable-image" data-title="Chinese Go (Board Game)"
+                                data-description="Strategic thinking and ancient wisdom through the game of Go">
                         </div>
                         <div class="interest-info">
                             <h3>Chinese Go (Board Game)</h3>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-6 col-md-6 col-12 mb-4">
                     <div class="interest-item">
                         <div class="interest-image-wrapper">
-                            <img src="static/image/calligraphy.jpg" 
-                                 alt="Calligraphy" 
-                                 class="interest-image clickable-image"
-                                 data-title="Calligraphy"
-                                 data-description="The art of beautiful writing and mindful expression">
+                            <img src="static/image/calligraphy.jpg" alt="Calligraphy"
+                                class="interest-image clickable-image" data-title="Calligraphy"
+                                data-description="The art of beautiful writing and mindful expression">
                         </div>
                         <div class="interest-info">
                             <h3>Calligraphy</h3>
@@ -3459,31 +3538,25 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-12 mb-4">
                     <div class="interest-item">
                         <div class="interest-image-wrapper">
-                            <img src="static/image/e-sports.jpg" 
-                                 alt="E-Sports" 
-                                 class="interest-image clickable-image"
-                                 data-title="E-Sports"
-                                 data-description="Competitive gaming and digital athletics">
+                            <img src="static/image/e-sports.jpg" alt="E-Sports" class="interest-image clickable-image"
+                                data-title="E-Sports" data-description="Competitive gaming and digital athletics">
                         </div>
                         <div class="interest-info">
                             <h3>E-Sports</h3>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-6 col-md-6 col-12 mb-4">
                     <div class="interest-item">
                         <div class="interest-image-wrapper">
-                            <img src="static/image/pop-music.jpg" 
-                                 alt="Pop Music" 
-                                 class="interest-image clickable-image"
-                                 data-title="Pop Music"
-                                 data-description="Contemporary music and creative expression">
+                            <img src="static/image/pop-music.jpg" alt="Pop Music" class="interest-image clickable-image"
+                                data-title="Pop Music" data-description="Contemporary music and creative expression">
                         </div>
                         <div class="interest-info">
                             <h3>Pop Music</h3>
@@ -3492,7 +3565,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Image Modal for enlargement -->
         <div class="image-modal" id="imageModal">
             <div class="modal-backdrop"></div>
@@ -3514,7 +3587,7 @@
     <div class="scroll-area" style="cursor: pointer;">
         <i class="fa fa-angle-up" onclick="scrollToTop()"></i>
     </div>
-    
+
     <!-- Scripts -->
     <script src="static/js/jquery-3.6.4.min.js"></script>
     <script src="static/js/popper.min.js"></script>
@@ -3965,7 +4038,7 @@
         // 从PAPERS中提取所有机构信息并去重
         const INSTITUTIONS = [];
         const institutionMap = new Map();
-        
+
         PAPERS.forEach(paper => {
             if (paper.institutions && paper.institutions.length > 0) {
                 paper.institutions.forEach(inst => {
@@ -3985,7 +4058,7 @@
                 });
             }
         });
-        
+
         // 转换为数组
         institutionMap.forEach(value => {
             INSTITUTIONS.push(value);
@@ -3993,24 +4066,24 @@
 
         // 数据处理 - 确保坐标格式正确
         const data = INSTITUTIONS.map(p => ({
-          name: p.name,
-          value: [p.coordinates[0], p.coordinates[1], 0]
+            name: p.name,
+            value: [p.coordinates[0], p.coordinates[1], 0]
         }));
-        
+
         const option = {
-          backgroundColor: '#1c1c1c',
-          tooltip: {
-            trigger: 'item',
-            formatter: function(params) {
-                if (params.seriesType === 'scatter3D') {
-                const institutionName = params.name;
-                // 从INSTITUTIONS数组中找到对应的数据
-                const institutionData = INSTITUTIONS.find(p => p.name === institutionName);
-                if (!institutionData) return institutionName;
-                
-                const papers = institutionData.papers || [];
-                
-                let html = `
+            backgroundColor: '#1c1c1c',
+            tooltip: {
+                trigger: 'item',
+                formatter: function (params) {
+                    if (params.seriesType === 'scatter3D') {
+                        const institutionName = params.name;
+                        // 从INSTITUTIONS数组中找到对应的数据
+                        const institutionData = INSTITUTIONS.find(p => p.name === institutionName);
+                        if (!institutionData) return institutionName;
+
+                        const papers = institutionData.papers || [];
+
+                        let html = `
                     <div style="
                     color: #ffffff;
                     background: linear-gradient(135deg, #1154FD, #0d47a1);
@@ -4022,22 +4095,22 @@
                     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
                     ">${institutionName}</div>
                 `;
-                
-                if (papers.length > 0) {
-                    html += `
+
+                        if (papers.length > 0) {
+                            html += `
                     <div style="background: #ffffff; padding: 16px;">
                         <div style="
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
                         ">`;
-                    
-                    // 根据论文ID找到论文信息，并按论文分组显示人员
-                    papers.forEach(paperId => {
-                    const paper = PAPERS.find(p => p.id === paperId);
-                    
-                    if (paper) {
-                        html += `
+
+                            // 根据论文ID找到论文信息，并按论文分组显示人员
+                            papers.forEach(paperId => {
+                                const paper = PAPERS.find(p => p.id === paperId);
+
+                                if (paper) {
+                                    html += `
                         <div style="
                             background: linear-gradient(135deg, rgba(17, 84, 253, 0.08), rgba(17, 84, 253, 0.05));
                             color: #212529;
@@ -4055,258 +4128,259 @@
                             font-size: 14px;
                             ">${paper.name}</div>
                         </div>`;
+                                }
+                            });
+                            html += `</div></div>`;
+                        }
+
+                        return html;
                     }
-                    });
-                    html += `</div></div>`;
-                }
-                
-                return html;
-                }
-                return params.name;
-            },
-            backgroundColor: 'linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 249, 250, 0.95))',
-            borderColor: '#1154FD',
-            borderWidth: 2,
-            borderRadius: 12,
-            textStyle: {
-                color: '#212529',
-                fontSize: 13
-            },
-            extraCssText: 'box-shadow: 0 12px 40px rgba(17, 84, 253, 0.2); backdrop-filter: blur(15px); border: 2px solid #1154FD;'
-            },
-          globe: {
-            // 简化纹理配置，只使用基础纹理
-            baseTexture: 'static/image/world.topo.bathy.200401.jpg',
-            // environment: 'static/image/starfield.jpg',
-            shading: 'lambert',
-            light: {
-              main: { intensity: 0 },
-              ambient: { intensity: 1 }
-            },
-            viewControl: {
-              rotateSensitivity: 2.5, // 降低旋转灵敏度为默认的一半
-              zoomSensitivity: 1.5,   // 提高缩放灵敏度，让缩放更精确
-              panSensitivity: 1,      // 允许平移，方便调整视角
-              distance: 280, 
-              alpha: 20,               // 调整垂直角度，让美国更居中
-              beta: 360,              // 调整水平角度，让地球默认显示美国视角
-              autoRotate: true,
-              autoRotateSpeed: 2,
-              // 鼠标悬停时停止旋转
-              autoRotateAfterStill: 10,    // 设为0，鼠标离开立即恢复旋转
-              damping: 0.8,                // 添加阻尼效果，让旋转更平滑
-              // 控制标签的可见性，让标签在更大的角度范围内可见
-              projection: 'perspective',    // 使用透视投影
-              // 大幅调整视角范围，让地图可以放得更大
-              minDistance: 50,             // 最小距离大幅减小，允许更近的视角
-              maxDistance: 800             // 最大距离增加，允许更远的视角
-            }
-          },
-          series: [
-            // 论文机构连线 - 默认显示所有论文的连线
-            {
-              type: 'lines3D',
-              name: 'Paper Connections',
-              coordinateSystem: 'globe',
-              data: (() => {
-                const lines = [];
-                PAPERS.forEach(paper => {
-                  if (paper.institutions.length >= 2) {
-                    // 简单选择第一个机构作为主要机构
-                    const mainInstitution = paper.institutions[0];
-                    
-                    paper.institutions.filter(inst => inst !== mainInstitution).forEach(inst => {
-                      lines.push({
-                        coords: [
-                          [mainInstitution.coordinates[0], mainInstitution.coordinates[1], 0.1],
-                          [inst.coordinates[0], inst.coordinates[1], 0.1]
-                        ],
-                        lineStyle: {
-                          color: paper.color,
-                          width: 3,
-                          opacity: 0.8
-                        },
-                        effect: {
-                          show: true,
-                          period: 4,
-                          trailLength: 0.1,
-                          color: paper.color,
-                          symbolSize: 8
-                        }
-                      });
-                    });
-                  }
-                });
-                return lines;
-              })(),
-              lineStyle: {
-                width: 3,
-                opacity: 0.8
-              },
-              effect: {
-                show: true,
-                period: 4,
-                trailLength: 0.1,
-                symbolSize: 8
-              },
-              z: 50
-            },
-            
-            // 图钉样式的标记点
-            {
-              type: 'scatter3D',
-              name: 'Locations',
-              coordinateSystem: 'globe',
-              symbol: 'pin',              // 使用图钉符号
-              symbolSize: 18,
-              // 确保标记点在正确层级
-              z: 99,
-              // 增加悬停区域，让重合点更容易被选中
-              hoverAnimation: true,
-              // 设置更大的悬停检测区域
-              cursor: 'pointer',
-              itemStyle: { 
-                color: '#FF4757',         // 经典红色图钉
-                borderColor: '#E8E8E8',   // 白色边框
-                borderWidth: 2,
-                // 增加阴影效果，让点更容易识别
-                shadowBlur: 10,
-                shadowColor: 'rgba(255, 71, 87, 0.5)'
-              },
-              emphasis: { 
-                itemStyle: { 
-                  color: '#FF6B6B',       // 悬停时变为亮红色
-                  symbolSize: 25,         // 悬停时变得更大
-                  borderWidth: 3,         // 悬停时边框变粗
-                  shadowBlur: 15,        // 悬停时阴影更明显
-                  shadowColor: 'rgba(255, 107, 107, 0.8)'
-                }
-              },
-              // 添加标签显示
-              label: {
-                show: true,
-                position: 'left',
-                distance: 5,
-                color: '#E8E8E8',         // 白色文字
-                fontSize: 11,
-                backgroundColor: 'rgba(20, 25, 40, 0.9)',  // 深色背景，与浮框呼应
-                padding: [5, 10],
-                borderRadius: 8,
-                formatter: '{b}',  // 显示名称
-                // 确保标签在最上层显示
-                z: 100,
-                // 控制标签可见范围，让标签在更大的角度范围内可见
-                visibleRange: {
-                  // 垂直角度范围：-90到90度（从南极到北极）
-                  vertical: [-90, 90],
-                  // 水平角度范围：-180到180度（整个水平面）
-                  horizontal: [-180, 180]
+                    return params.name;
                 },
-                // 设置标签的透明度渐变，让边缘的标签逐渐变透明
-                opacity: 1,
-                // 标签的渲染优先级，确保始终在最前面
-                renderMode: 'always'
-              },
-              data: (() => {
-                const points = [];
-                PAPERS.forEach(paper => {
-                  // 只显示有数据的论文的机构点
-                  if (paper.institutions && paper.institutions.length > 0) {
-                    paper.institutions.forEach(inst => {
-                      points.push({
-                        name: inst.name,
-                        value: [inst.coordinates[0], inst.coordinates[1], 0],
-                        itemStyle: {
-                          color: paper.color,
-                          borderColor: '#E8E8E8',
-                          borderWidth: 2,
-                          shadowBlur: 10,
-                          shadowColor: paper.color + '80'
-                        }
-                      });
-                    });
-                  }
-                });
-                return points;
-              })()
-            }
-          ]
-        };
-    
-        async function loadWorld() {
-          try {
-            // 先尝试简单配置
-            const simpleOption = {
-              backgroundColor: '#1c1c1c',
-              globe: {
+                backgroundColor: 'linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(248, 249, 250, 0.95))',
+                borderColor: '#1154FD',
+                borderWidth: 2,
+                borderRadius: 12,
+                textStyle: {
+                    color: '#212529',
+                    fontSize: 13
+                },
+                extraCssText: 'box-shadow: 0 12px 40px rgba(17, 84, 253, 0.2); backdrop-filter: blur(15px); border: 2px solid #1154FD;'
+            },
+            globe: {
+                // 简化纹理配置，只使用基础纹理
                 baseTexture: 'static/image/world.topo.bathy.200401.jpg',
                 // environment: 'static/image/starfield.jpg',
                 shading: 'lambert',
-                light: { main: { intensity: 0 }, ambient: { intensity: 1 } },
-                viewControl: { 
+                light: {
+                    main: { intensity: 0 },
+                    ambient: { intensity: 1 }
+                },
+                viewControl: {
                     rotateSensitivity: 2.5, // 降低旋转灵敏度为默认的一半
                     zoomSensitivity: 1.5,   // 提高缩放灵敏度，让缩放更精确
                     panSensitivity: 1,      // 允许平移，方便调整视角
-                    distance: 280, 
-                    alpha: 20,               // 调整垂直角度，让美国更居中
-                    beta: 360,              // 调整水平角度，让地球默认显示美国视角
-                  autoRotate: true, 
-                  autoRotateSpeed: 2,
-                  autoRotateAfterStill: 10,
-                  damping: 0.8,
-                  // 控制标签的可见性，让标签在更大的角度范围内可见
-                  projection: 'perspective',    // 使用透视投影
-                  // 大幅调整视角范围，让地图可以放得更大
-                  minDistance: 50,             // 最小距离大幅减小，允许更近的视角
-                  maxDistance: 800             // 最大距离增加，允许更远的视角
+                    distance: 220,
+                    alpha: 40,               // 调整垂直角度，让美国更居中
+                    beta: 380,              // 调整水平角度，让地球默认显示美国视角
+                    autoRotate: true,
+                    autoRotateSpeed: 2,
+                    // 鼠标悬停时停止旋转
+                    autoRotateAfterStill: 10,    // 设为0，鼠标离开立即恢复旋转
+                    damping: 0.8,                // 添加阻尼效果，让旋转更平滑
+                    // 控制标签的可见性，让标签在更大的角度范围内可见
+                    projection: 'perspective',    // 使用透视投影
+                    // 大幅调整视角范围，让地图可以放得更大
+                    minDistance: 50,             // 最小距离大幅减小，允许更近的视角
+                    maxDistance: 800             // 最大距离增加，允许更远的视角
                 }
-              },
-              series: [{
-                type: 'scatter3D',
-                coordinateSystem: 'globe',
-                symbol: 'pin',              // 图钉样式
-                symbolSize: 18,
-                // 增加悬停区域，让重合点更容易被选中
-                hoverAnimation: true,
-                cursor: 'pointer',
-                itemStyle: { 
-                  color: '#FF4757',        // 经典红色
-                  borderColor: '#E8E8E8',  // 白色边框
-                  borderWidth: 2,
-                  // 增加阴影效果，让点更容易识别
-                  shadowBlur: 10,
-                  shadowColor: 'rgba(255, 71, 87, 0.5)'
+            },
+            series: [
+                // 论文机构连线 - 默认显示所有论文的连线
+                {
+                    type: 'lines3D',
+                    name: 'Paper Connections',
+                    coordinateSystem: 'globe',
+                    data: (() => {
+                        const lines = [];
+                        PAPERS.forEach(paper => {
+                            if (paper.institutions.length >= 2) {
+                                // 简单选择第一个机构作为主要机构
+                                const mainInstitution = paper.institutions[0];
+
+                                paper.institutions.filter(inst => inst !== mainInstitution).forEach(inst => {
+                                    lines.push({
+                                        coords: [
+                                            [mainInstitution.coordinates[0], mainInstitution.coordinates[1], 0.1],
+                                            [inst.coordinates[0], inst.coordinates[1], 0.1]
+                                        ],
+                                        lineStyle: {
+                                            color: paper.color,
+                                            width: 3,
+                                            opacity: 0.8
+                                        },
+                                        effect: {
+                                            show: true,
+                                            period: 4,
+                                            trailLength: 0.1,
+                                            color: paper.color,
+                                            symbolSize: 8
+                                        }
+                                    });
+                                });
+                            }
+                        });
+                        return lines;
+                    })(),
+                    lineStyle: {
+                        width: 3,
+                        opacity: 0.8
+                    },
+                    effect: {
+                        show: true,
+                        period: 4,
+                        trailLength: 0.1,
+                        symbolSize: 8
+                    },
+                    z: 50
                 },
-                emphasis: { 
-                  itemStyle: { 
-                    color: '#FF6B6B',       // 悬停时变为亮红色
-                    symbolSize: 25,         // 悬停时变得更大
-                    borderWidth: 3,         // 悬停时边框变粗
-                    shadowBlur: 15,        // 悬停时阴影更明显
-                    shadowColor: 'rgba(255, 107, 107, 0.8)'
-                  }
-                },
-                data: data.map(point => ({
-                  name: point.name,
-                  value: [point.value[0], point.value[1], 0]
-                }))
-              }]
-            };
-            
-            chart.setOption(simpleOption);
-            // 如果简单配置成功，再尝试完整配置
-            setTimeout(() => {
-              try {
-                chart.setOption(option);
-              } catch (e) {
-                console.log('完整配置失败，保持简单配置:', e);
-              }
-            }, 1000);
-            
-            window.addEventListener('resize', () => chart.resize());
-            
-          } catch (error) {
-            document.body.innerHTML = `
+
+                // 图钉样式的标记点
+                {
+                    type: 'scatter3D',
+                    name: 'Locations',
+                    coordinateSystem: 'globe',
+                    symbol: 'pin',              // 使用图钉符号
+                    symbolSize: 18,
+                    // 确保标记点在正确层级
+                    z: 99,
+                    // 增加悬停区域，让重合点更容易被选中
+                    hoverAnimation: true,
+                    // 设置更大的悬停检测区域
+                    cursor: 'pointer',
+                    itemStyle: {
+                        color: '#FF4757',         // 经典红色图钉
+                        borderColor: '#E8E8E8',   // 白色边框
+                        borderWidth: 2,
+                        // 增加阴影效果，让点更容易识别
+                        shadowBlur: 10,
+                        shadowColor: 'rgba(255, 71, 87, 0.5)'
+                    },
+                    emphasis: {
+                        itemStyle: {
+                            color: '#FF6B6B',       // 悬停时变为亮红色
+                            symbolSize: 25,         // 悬停时变得更大
+                            borderWidth: 3,         // 悬停时边框变粗
+                            shadowBlur: 15,        // 悬停时阴影更明显
+                            shadowColor: 'rgba(255, 107, 107, 0.8)'
+                        }
+                    },
+                    // 添加标签显示
+                    label: {
+                        show: true,
+                        position: 'left',
+                        distance: 5,
+                        color: '#E8E8E8',         // 白色文字
+                        fontSize: 11,
+                        backgroundColor: 'rgba(20, 25, 40, 0.9)',  // 深色背景，与浮框呼应
+                        padding: [5, 10],
+                        borderRadius: 8,
+                        formatter: '{b}',  // 显示名称
+                        // 确保标签在最上层显示
+                        z: 100,
+                        // 控制标签可见范围，让标签在更大的角度范围内可见
+                        visibleRange: {
+                            // 垂直角度范围：-90到90度（从南极到北极）
+                            vertical: [-90, 90],
+                            // 水平角度范围：-180到180度（整个水平面）
+                            horizontal: [-180, 180]
+                        },
+                        // 设置标签的透明度渐变，让边缘的标签逐渐变透明
+                        opacity: 1,
+                        // 标签的渲染优先级，确保始终在最前面
+                        renderMode: 'always'
+                    },
+                    data: (() => {
+                        const points = [];
+                        PAPERS.forEach(paper => {
+                            // 只显示有数据的论文的机构点
+                            if (paper.institutions && paper.institutions.length > 0) {
+                                paper.institutions.forEach(inst => {
+                                    points.push({
+                                        name: inst.name,
+                                        value: [inst.coordinates[0], inst.coordinates[1], 0],
+                                        itemStyle: {
+                                            color: paper.color,
+                                            borderColor: '#E8E8E8',
+                                            borderWidth: 2,
+                                            shadowBlur: 10,
+                                            shadowColor: paper.color + '80'
+                                        }
+                                    });
+                                });
+                            }
+                        });
+                        return points;
+                    })()
+                }
+            ]
+        };
+
+        async function loadWorld() {
+            try {
+                // 先尝试简单配置
+                const simpleOption = {
+                    backgroundColor: '#1c1c1c',
+                    globe: {
+                        baseTexture: 'static/image/world.topo.bathy.200401.jpg',
+                        // environment: 'static/image/starfield.jpg',
+                        shading: 'lambert',
+                        light: { main: { intensity: 0 }, ambient: { intensity: 1 } },
+                        viewControl: {
+                            rotateSensitivity: 2.5, // 降低旋转灵敏度为默认的一半
+                            zoomSensitivity: 1.5,   // 提高缩放灵敏度，让缩放更精确
+                            panSensitivity: 1,      // 允许平移，方便调整视角
+                            distance: 220,
+                            alpha: 40,               // 调整垂直角度，让美国更居中
+                            beta: 380,              // 调整水平角度，让地球默认显示美国视角
+                            autoRotate: true,
+                            autoRotateSpeed: 2,
+                            // 鼠标悬停时停止旋转
+                            autoRotateAfterStill: 10,    // 设为0，鼠标离开立即恢复旋转
+                            damping: 0.8,                // 添加阻尼效果，让旋转更平滑
+                            // 控制标签的可见性，让标签在更大的角度范围内可见
+                            projection: 'perspective',    // 使用透视投影
+                            // 大幅调整视角范围，让地图可以放得更大
+                            minDistance: 50,             // 最小距离大幅减小，允许更近的视角
+                            maxDistance: 800             // 最大距离增加，允许更远的视角
+                        }
+                    },
+                    series: [{
+                        type: 'scatter3D',
+                        coordinateSystem: 'globe',
+                        symbol: 'pin',              // 图钉样式
+                        symbolSize: 18,
+                        // 增加悬停区域，让重合点更容易被选中
+                        hoverAnimation: true,
+                        cursor: 'pointer',
+                        itemStyle: {
+                            color: '#FF4757',        // 经典红色
+                            borderColor: '#E8E8E8',  // 白色边框
+                            borderWidth: 2,
+                            // 增加阴影效果，让点更容易识别
+                            shadowBlur: 10,
+                            shadowColor: 'rgba(255, 71, 87, 0.5)'
+                        },
+                        emphasis: {
+                            itemStyle: {
+                                color: '#FF6B6B',       // 悬停时变为亮红色
+                                symbolSize: 25,         // 悬停时变得更大
+                                borderWidth: 3,         // 悬停时边框变粗
+                                shadowBlur: 15,        // 悬停时阴影更明显
+                                shadowColor: 'rgba(255, 107, 107, 0.8)'
+                            }
+                        },
+                        data: data.map(point => ({
+                            name: point.name,
+                            value: [point.value[0], point.value[1], 0]
+                        }))
+                    }]
+                };
+
+                chart.setOption(simpleOption);
+                // 如果简单配置成功，再尝试完整配置
+                setTimeout(() => {
+                    try {
+                        chart.setOption(option);
+                    } catch (e) {
+                        console.log('完整配置失败，保持简单配置:', e);
+                    }
+                }, 1000);
+
+                window.addEventListener('resize', () => chart.resize());
+
+            } catch (error) {
+                document.body.innerHTML = `
               <div style="color:#fff;padding:16px;font-family:system-ui;background:#1a1a1a;margin:20px;border-radius:8px;">
                 <h3>❌ 地球加载失败</h3>
                 <p>错误信息: ${error.message}</p>
@@ -4318,50 +4392,50 @@
                 </ul>
               </div>
             `;
-          }
+            }
         }
-    
+
         loadWorld();
 
 
 
-// 生成组织图片内容
-function generateOrganizationsContent() {
-    const organizationsGrid = document.getElementById('organizations-grid');
-    if (!organizationsGrid) return;
-    
-    // 组织图片列表 - 根据你的图片文件名
-    const organizations = [
-        { name: '麻省理工学院华人创业者协会(MIT CEO)', image: '1.png' },
-        { name: '清华大学通用人工智能研究会(THUAGI)', image: '2.jpg' },
-        { name: 'U8-Nexters 全球创新网络', image: '3.png' },
-        { name: '伯克利华人创业者协会（ACE）', image: '4.png' },
-        { name: '中国高智商俱乐部（胜寒）', image: '5.png' },
-        { name: '始智 AI Wisemodl', image: '6.png' },
-        { name: '智谱 AI TIME', image: '7.jpg' },
-        { name: '清华创业学会', image: '8.jpg' },
-        { name: '特工宇宙', image: '9.png' },
-        { name: '观猹', image: '10.jpg' },
-        { name: '清华互联网产品研究协会（五道口产品观察）', image: '11.jpg' },
-        { name: 'CBAIA', image: '12.png' },
-        { name: '弦计划', image: '13.png' },
-        { name: 'IntelliPro Group', image: '14.png' },
-        { name: '北京大学人工智能创新协会（SAIIC）', image: '15.jpg' },
-        { name: '北京大学创新学社 - AI 俱乐部', image: '16.jpg' },
-        { name: '极客实验室', image: '17.jpg' },
-        { name: '北京大学算法协会', image: '18.jpg' },
-        { name: '北大燕聚', image: '19.jpg' },
-        { name: '剑桥人工智能学会', image: '20.jpg' },
-        { name: '北京大学咨询学会（PCA）', image: '21.png' },
-        { name: '北大 linux', image: '22.png' },
-        { name: 'OpenBMB', image: '23.png' },
-        { name: 'FoundationAgents', image: '24.png' },
-        { name: 'NICE学术', image: '25.jpg' },
-        { name: '（澳洲）华人 AI 协会', image: '26.png' },
-        { name: 'IASEI', image: '27.png' }
-    ];
-    
-    organizationsGrid.innerHTML = organizations.map(org => `
+        // 生成组织图片内容
+        function generateOrganizationsContent() {
+            const organizationsGrid = document.getElementById('organizations-grid');
+            if (!organizationsGrid) return;
+
+            // 组织图片列表 - 根据你的图片文件名
+            const organizations = [
+                { name: '麻省理工学院华人创业者协会(MIT CEO)', image: '1.png' },
+                { name: '清华大学通用人工智能研究会(THUAGI)', image: '2.jpg' },
+                { name: 'U8-Nexters 全球创新网络', image: '3.png' },
+                { name: '伯克利华人创业者协会（ACE）', image: '4.png' },
+                { name: '中国高智商俱乐部（胜寒）', image: '5.png' },
+                { name: '始智 AI Wisemodl', image: '6.png' },
+                { name: '智谱 AI TIME', image: '7.jpg' },
+                { name: '清华创业学会', image: '8.jpg' },
+                { name: '特工宇宙', image: '9.png' },
+                { name: '观猹', image: '10.jpg' },
+                { name: '清华互联网产品研究协会（五道口产品观察）', image: '11.jpg' },
+                { name: 'CBAIA', image: '12.png' },
+                { name: '弦计划', image: '13.png' },
+                { name: 'IntelliPro Group', image: '14.png' },
+                { name: '北京大学人工智能创新协会（SAIIC）', image: '15.jpg' },
+                { name: '北京大学创新学社 - AI 俱乐部', image: '16.jpg' },
+                { name: '极客实验室', image: '17.jpg' },
+                { name: '北京大学算法协会', image: '18.jpg' },
+                { name: '北大燕聚', image: '19.jpg' },
+                { name: '剑桥人工智能学会', image: '20.jpg' },
+                { name: '北京大学咨询学会（PCA）', image: '21.png' },
+                { name: '北大 linux', image: '22.png' },
+                { name: 'OpenBMB', image: '23.png' },
+                { name: 'FoundationAgents', image: '24.png' },
+                { name: 'NICE学术', image: '25.jpg' },
+                { name: '（澳洲）华人 AI 协会', image: '26.png' },
+                { name: 'IASEI', image: '27.png' }
+            ];
+
+            organizationsGrid.innerHTML = organizations.map(org => `
         <div class="organization-item">
             <div class="organization-image-wrapper">
                 <img src="static/image/Organizations/${org.image}" 
@@ -4371,24 +4445,30 @@ function generateOrganizationsContent() {
             </div>
         </div>
     `).join('');
-}
-
-// 论文聚焦功能
-// 动态生成论文内容
-// 动态生成论文内容
-function generatePapersContent() {
-    const papersList = document.getElementById('papersList');
-    if (!papersList) return;
-    
-    // 默认选中所有有数据的论文
-    selectedPapers.clear();
-    PAPERS.forEach(paper => {
-        if (paper.institutions && paper.institutions.length > 0) {
-            selectedPapers.add(paper.id);
         }
-    });
-    
-    papersList.innerHTML = PAPERS.map((paper, index) => `
+
+        // 论文聚焦功能
+        // 动态生成论文内容
+         // 动态生成论文内容
+         function generatePapersContent() {
+             const papersList = document.getElementById('papersList');
+             if (!papersList) return;
+
+             // 默认只选中指定的三篇论文
+             selectedPapers.clear();
+             const defaultSelectedPapers = [
+                 'A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence',
+                 'xbench: Tracking Agents Productivity Scaling With Profession-Aligned Real-World Evaluations',
+                 'Advances and Challenges in Foundation Agents'
+             ];
+             
+             PAPERS.forEach(paper => {
+                 if (defaultSelectedPapers.includes(paper.name)) {
+                     selectedPapers.add(paper.id);
+                 }
+             });
+
+            papersList.innerHTML = PAPERS.map((paper, index) => `
         <div class="paper-item" data-paper-id="${paper.id}" style="margin-bottom: 10px; ${paper.institutions.length === 0 ? 'opacity: 0.6; background: rgba(255,255,255,0.02);' : ''}">
             <div class="paper-header">
                 <div class="paper-title">
@@ -4399,12 +4479,12 @@ function generatePapersContent() {
                                    class="paper-checkbox" 
                                    data-paper-id="${paper.id}"
                                    style="width: 18px; height: 18px; cursor: ${paper.institutions.length > 0 ? 'pointer' : 'not-allowed'};"
-                                   ${paper.institutions.length > 0 ? 'checked' : 'disabled'}
+                                   ${paper.institutions.length > 0 ? (selectedPapers.has(paper.id) ? 'checked' : '') : 'disabled'}
                                    onchange="togglePaperConnections('${paper.id}')">
                         </div>
                         ${paper.image ? `
                             <img src="${paper.image}" alt="${paper.name}" class="paper-image">
-                        `:``}
+                        `: ``}
                         ${paper.url ? `
                             <div style="display: flex; align-items: center; gap: 0px;">
                                 <h3>${paper.name}<a href="${paper.url}" target="_blank" class="highlight-link" style="display: inline-block;">
@@ -4432,209 +4512,210 @@ function generatePapersContent() {
             </div>
         </div>
     `).join('');
-    
-    // 论文内容生成完成，地球已经在初始化时显示了所有数据
-}
 
-// 存储当前选中的论文ID
-let selectedPapers = new Set();
+            // 论文内容生成完成，地球已经在初始化时显示了所有数据
+        }
 
-// 切换论文连线的显示
-function togglePaperConnections(paperId) {
-    const checkbox = document.getElementById(`checkbox-${paperId}`);
-    const isChecked = checkbox.checked;
-    
-    if (isChecked) {
-        selectedPapers.add(paperId);
-    } else {
-        selectedPapers.delete(paperId);
-    }
-    
-    // 更新地球上的连线
-    updateGlobeConnections();
-}
+        // 存储当前选中的论文ID
+        let selectedPapers = new Set();
 
-// 更新地球上的连线和点显示
-function updateGlobeConnections() {
-    if (typeof chart === 'undefined' || !chart) {
-        console.log('Chart not initialized yet');
-        return;
-    }
-    
-    // 生成当前选中论文的连线数据
-    const lines = [];
-    // 生成当前选中论文的点数据
-    const points = [];
-    
-    selectedPapers.forEach(paperId => {
-        const paper = PAPERS.find(p => p.id === paperId);
-        if (!paper) return;
-        
-        // 添加该论文的所有机构点
-        paper.institutions.forEach(inst => {
-            points.push({
-                name: inst.name,
-                value: [inst.coordinates[0], inst.coordinates[1], 0],
-                itemStyle: {
-                    color: paper.color,
-                    borderColor: '#E8E8E8',
-                    borderWidth: 2,
-                    shadowBlur: 10,
-                    shadowColor: paper.color + '80'
+        // 切换论文连线的显示
+        function togglePaperConnections(paperId) {
+            const checkbox = document.getElementById(`checkbox-${paperId}`);
+            const isChecked = checkbox.checked;
+
+            if (isChecked) {
+                selectedPapers.add(paperId);
+            } else {
+                selectedPapers.delete(paperId);
+            }
+
+            // 更新地球上的连线
+            updateGlobeConnections();
+        }
+
+        // 更新地球上的连线和点显示
+        function updateGlobeConnections() {
+            if (typeof chart === 'undefined' || !chart) {
+                console.log('Chart not initialized yet');
+                return;
+            }
+
+            // 生成当前选中论文的连线数据
+            const lines = [];
+            // 生成当前选中论文的点数据
+            const points = [];
+
+            selectedPapers.forEach(paperId => {
+                const paper = PAPERS.find(p => p.id === paperId);
+                if (!paper) return;
+
+                // 添加该论文的所有机构点
+                paper.institutions.forEach(inst => {
+                    points.push({
+                        name: inst.name,
+                        value: [inst.coordinates[0], inst.coordinates[1], 0],
+                        itemStyle: {
+                            color: paper.color,
+                            borderColor: '#E8E8E8',
+                            borderWidth: 2,
+                            shadowBlur: 10,
+                            shadowColor: paper.color + '80'
+                        }
+                    });
+                });
+
+                // 如果机构数量大于1，生成连线
+                if (paper.institutions.length >= 2) {
+                    // 简单选择第一个机构作为主要机构
+                    const mainInstitution = paper.institutions[0];
+
+                    // 从主要机构向其他机构连线
+                    paper.institutions.filter(inst => inst !== mainInstitution).forEach(inst => {
+                        lines.push({
+                            coords: [
+                                [mainInstitution.coordinates[0], mainInstitution.coordinates[1], 0.1],
+                                [inst.coordinates[0], inst.coordinates[1], 0.1]
+                            ],
+                            lineStyle: {
+                                color: paper.color,
+                                width: 3,
+                                opacity: 0.8
+                            },
+                            effect: {
+                                show: true,
+                                period: 4,
+                                trailLength: 0.1,
+                                color: paper.color,
+                                symbolSize: 8
+                            }
+                        });
+                    });
+                }
+            });
+
+            // 更新图表配置
+            const currentOption = chart.getOption();
+
+            // 更新连线和点系列
+            const updatedSeries = currentOption.series.map(series => {
+                if (series.type === 'lines3D') {
+                    return {
+                        ...series,
+                        data: lines
+                    };
+                }
+                if (series.type === 'scatter3D') {
+                    return {
+                        ...series,
+                        data: points
+                    };
+                }
+                return series;
+            });
+
+            // 应用更新
+            chart.setOption({
+                series: updatedSeries
+            });
+        }
+
+        // 根据坐标获取地点名称
+        function getLocationName(coordinates) {
+            const [lon, lat] = coordinates;
+
+            // 中国地区
+            if (lon > 73 && lon < 135 && lat > 18 && lat < 54) {
+                if (lon > 115 && lon < 125 && lat > 30 && lat < 40) return "Eastern China";
+                if (lon > 100 && lon < 110 && lat > 20 && lat < 30) return "Southern China";
+                if (lon > 110 && lon < 120 && lat > 20 && lat < 30) return "Southeastern China";
+                return "China";
+            }
+
+            // North America
+            if (lon > -140 && lon < -50 && lat > 25 && lat < 70) return "North America";
+
+            // Europe
+            if (lon > -10 && lon < 40 && lat > 35 && lat < 70) return "Europe";
+
+            // Australia
+            if (lon > 110 && lon < 155 && lat > -45 && lat < -10) return "Australia";
+
+            // Other regions
+            if (lon > 0 && lon < 180 && lat > -60 && lat < 80) return "Asia";
+
+            return "Global";
+        }
+
+        // 切换论文详情显示
+        function togglePaperDetails(paperId) {
+            const detailsElement = document.getElementById(`details-${paperId}`);
+            const toggleElement = document.querySelector(`[data-paper-id="${paperId}"] .paper-toggle`);
+
+            if (detailsElement.classList.contains('active')) {
+                detailsElement.classList.remove('active');
+                toggleElement.classList.remove('active');
+            } else {
+                // 关闭其他所有论文详情
+                document.querySelectorAll('.paper-details').forEach(el => {
+                    el.classList.remove('active');
+                });
+                document.querySelectorAll('.paper-toggle').forEach(el => {
+                    el.classList.remove('active');
+                });
+
+                // 打开当前论文详情
+                detailsElement.classList.add('active');
+                toggleElement.classList.add('active');
+
+                // 高亮地球上的对应连线
+                highlightPaperOnGlobe(paperId);
+
+                // 平滑滚动到当前论文
+                detailsElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        }
+
+        // 在地球上高亮论文连线
+        function highlightPaperOnGlobe(paperId) {
+            const paper = PAPERS.find(p => p.id === paperId);
+            if (!paper) return;
+
+            // 高亮显示对应的连线
+            chart.dispatchAction({
+                type: 'highlight',
+                seriesName: paper.name
+            });
+
+            // 3秒后取消高亮
+            setTimeout(() => {
+                chart.dispatchAction({
+                    type: 'downplay',
+                    seriesName: paper.name
+                });
+            }, 3000);
+        }
+
+        // 页面加载完成后自动生成论文内容
+        document.addEventListener('DOMContentLoaded', () => {
+            generatePapersContent();
+            generateOrganizationsContent();
+
+            // 添加键盘快捷键支持
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    // ESC键关闭所有详情
+                    document.querySelectorAll('.paper-details').forEach(el => {
+                        el.classList.remove('active');
+                    });
+                    document.querySelectorAll('.paper-toggle').forEach(el => {
+                        el.classList.remove('active');
+                    });
                 }
             });
         });
-        
-        // 如果机构数量大于1，生成连线
-        if (paper.institutions.length >= 2) {
-            // 简单选择第一个机构作为主要机构
-            const mainInstitution = paper.institutions[0];
-            
-            // 从主要机构向其他机构连线
-            paper.institutions.filter(inst => inst !== mainInstitution).forEach(inst => {
-                lines.push({
-                    coords: [
-                        [mainInstitution.coordinates[0], mainInstitution.coordinates[1], 0.1],
-                        [inst.coordinates[0], inst.coordinates[1], 0.1]
-                    ],
-                    lineStyle: {
-                        color: paper.color,
-                        width: 3,
-                        opacity: 0.8
-                    },
-                    effect: {
-                        show: true,
-                        period: 4,
-                        trailLength: 0.1,
-                        color: paper.color,
-                        symbolSize: 8
-                    }
-                });
-            });
-        }
-    });
-    
-    // 更新图表配置
-    const currentOption = chart.getOption();
-    
-    // 更新连线和点系列
-    const updatedSeries = currentOption.series.map(series => {
-        if (series.type === 'lines3D') {
-            return {
-                ...series,
-                data: lines
-            };
-        }
-        if (series.type === 'scatter3D') {
-            return {
-                ...series,
-                data: points
-            };
-        }
-        return series;
-    });
-    
-    // 应用更新
-    chart.setOption({
-        series: updatedSeries
-    });
-}
 
-// 根据坐标获取地点名称
-function getLocationName(coordinates) {
-    const [lon, lat] = coordinates;
-    
-    // 中国地区
-    if (lon > 73 && lon < 135 && lat > 18 && lat < 54) {
-        if (lon > 115 && lon < 125 && lat > 30 && lat < 40) return "Eastern China";
-        if (lon > 100 && lon < 110 && lat > 20 && lat < 30) return "Southern China";
-        if (lon > 110 && lon < 120 && lat > 20 && lat < 30) return "Southeastern China";
-        return "China";
-    }
-    
-    // North America
-    if (lon > -140 && lon < -50 && lat > 25 && lat < 70) return "North America";
-
-    // Europe
-    if (lon > -10 && lon < 40 && lat > 35 && lat < 70) return "Europe";
-
-    // Australia
-    if (lon > 110 && lon < 155 && lat > -45 && lat < -10) return "Australia";
-
-    // Other regions
-    if (lon > 0 && lon < 180 && lat > -60 && lat < 80) return "Asia";
-
-    return "Global";
-}
-
-// 切换论文详情显示
-function togglePaperDetails(paperId) {
-    const detailsElement = document.getElementById(`details-${paperId}`);
-    const toggleElement = document.querySelector(`[data-paper-id="${paperId}"] .paper-toggle`);
-    
-    if (detailsElement.classList.contains('active')) {
-        detailsElement.classList.remove('active');
-        toggleElement.classList.remove('active');
-    } else {
-        // 关闭其他所有论文详情
-        document.querySelectorAll('.paper-details').forEach(el => {
-            el.classList.remove('active');
-        });
-        document.querySelectorAll('.paper-toggle').forEach(el => {
-            el.classList.remove('active');
-        });
-        
-        // 打开当前论文详情
-        detailsElement.classList.add('active');
-        toggleElement.classList.add('active');
-        
-        // 高亮地球上的对应连线
-        highlightPaperOnGlobe(paperId);
-        
-        // 平滑滚动到当前论文
-        detailsElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-}
-
-// 在地球上高亮论文连线
-function highlightPaperOnGlobe(paperId) {
-    const paper = PAPERS.find(p => p.id === paperId);
-    if (!paper) return;
-    
-    // 高亮显示对应的连线
-    chart.dispatchAction({
-        type: 'highlight',
-        seriesName: paper.name
-    });
-    
-    // 3秒后取消高亮
-    setTimeout(() => {
-        chart.dispatchAction({
-            type: 'downplay',
-            seriesName: paper.name
-        });
-    }, 3000);
-}
-
-// 页面加载完成后自动生成论文内容
-document.addEventListener('DOMContentLoaded', () => {
-    generatePapersContent();
-    generateOrganizationsContent();
-    
-    // 添加键盘快捷键支持
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            // ESC键关闭所有详情
-            document.querySelectorAll('.paper-details').forEach(el => {
-                el.classList.remove('active');
-            });
-            document.querySelectorAll('.paper-toggle').forEach(el => {
-                el.classList.remove('active');
-            });
-        }
-    });
-});
-
-      </script>
+    </script>
 </body>
+
 </html>
