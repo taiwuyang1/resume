@@ -2568,8 +2568,7 @@
         @media (max-width: 768px) {
             .certificates-container {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
-                padding: 1rem;
+                gap: 10px;
                 width: 100%;
                 box-sizing: border-box;
             }
@@ -2642,7 +2641,7 @@
             }
             
             .certificate-header {
-                padding: 1rem;
+                gap: 0.5rem;
             }
             
             .certificate-logo {
@@ -2652,6 +2651,7 @@
             
             .certificate-title {
                 font-size: 1.2rem;
+                margin-top: -5px;
             }
             
             .certificate-issuer {
@@ -3230,8 +3230,7 @@
                         </a>
                     </div> -->
                     <div class="profile-card" style="margin-top: 0;">
-                        <!-- Social Links -->
-                        <div class="social-links">
+1                        <div class="social-links">
                             <a href="https://scholar.google.com/citations?user=VUGiv-EAAAAJ&hl=zh-CN" class="social-btn" target="_blank">
                                 <i class="fas fa-graduation-cap"></i>
                                 <span>Google Scholar: VUGiv-EAAAAJ&hl</span>
@@ -3240,26 +3239,17 @@
                                 <i class="fab fa-linkedin-in"></i>
                                 <span>LinkedIn: alpha4ai</span>
                             </a>
-                            <div class="social-btn social-btn-hover" data-image="static/image/wx.jpg">
+                            <div class="social-btn social-btn-hover1" >
                                 <i class="fab fa-weixin"></i>
                                 <span>Wechat: Alpha4AGI</span>
-                                <div class="qr-popup">
-                                    <img src="static/image/wx.jpg" alt="WeChat QR Code">
-                                </div>
                             </div>
-                            <div class="social-btn social-btn-hover" data-image="static/image/xhs.jpg">
+                            <div class="social-btn social-btn-hover2" >
                                 <i class="fas fa-book"></i>
                                 <span>REDNote: Alpha4ai_041231</span>
-                                <div class="qr-popup">
-                                    <img src="static/image/xhs.jpg" alt="XiaoHongShu QR Code">
-                                </div>
                             </div>
                         </div>
-                        
-                        <!-- Personal Quote -->
-                        <!-- <div class="personal-quote">
-                            <p>"Simple souls can also harbor mighty dreams -- I stand on the plain, gazing at the celestial plane."</p>
-                        </div> -->
+                        <img src="static/image/wx.jpg" alt="WeChat QR Code" class="img1">
+                        <img src="static/image/xhs.jpg" alt="XiaoHongShu QR Code" class="img2">
                     </div>
                 </div>
             </div> 
@@ -3792,7 +3782,7 @@
                     },
                     {
                         name: 'Google DeepMind',
-                        value: [-0.1270, 51.5194],
+                        value: [-122.12264370149205, 37.45059796337923],
                     }
                 ]
             },
@@ -4379,7 +4369,6 @@ function generateOrganizationsContent() {
                      class="organization-image"
                      onerror="this.parentElement.style.background='rgba(255,255,255,0.1)'; this.style.display='none';">
             </div>
-            <p title="${org.name}">${org.name}</p>
         </div>
     `).join('');
 }

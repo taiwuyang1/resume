@@ -1200,73 +1200,7 @@ function updateSimpleHighlight(scrollTop) {
     }
 }
 
-// QR Code Popup Mobile Interaction
-document.addEventListener('DOMContentLoaded', function() {
-    const socialBtnsHover = document.querySelectorAll('.social-btn-hover');
-    
-    socialBtnsHover.forEach(btn => {
-        let touchTimeout;
-        
-        // Touch events for mobile
-        btn.addEventListener('touchstart', function(e) {
-            e.preventDefault();
-            
-            // Clear any existing active states
-            socialBtnsHover.forEach(b => b.classList.remove('active'));
-            
-            // Add active class to show popup
-            this.classList.add('active');
-            
-            // Set timeout to hide popup after 3 seconds
-            touchTimeout = setTimeout(() => {
-                this.classList.remove('active');
-            }, 3000);
-        });
-        
-        // Touch end event
-        btn.addEventListener('touchend', function(e) {
-            e.preventDefault();
-        });
-        
-        // Click event for mobile (fallback)
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Toggle active state
-            if (this.classList.contains('active')) {
-                this.classList.remove('active');
-                clearTimeout(touchTimeout);
-            } else {
-                // Clear other active states
-                socialBtnsHover.forEach(b => b.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Auto-hide after 3 seconds
-                touchTimeout = setTimeout(() => {
-                    this.classList.remove('active');
-                }, 3000);
-            }
-        });
-    });
-    
-    // Hide popup when clicking outside (for mobile)
-    document.addEventListener('touchstart', function(e) {
-        if (!e.target.closest('.social-btn-hover')) {
-            socialBtnsHover.forEach(btn => {
-                btn.classList.remove('active');
-            });
-        }
-    });
-    
-    // Hide popup when clicking outside (for desktop)
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.social-btn-hover')) {
-            socialBtnsHover.forEach(btn => {
-                btn.classList.remove('active');
-            });
-        }
-    });
-});
+// QR Code functionality with enhanced mobile support
 
 // Interests Image Modal Functionality
 document.addEventListener('DOMContentLoaded', function() {
@@ -1347,5 +1281,226 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
         });
     }
+});
+
+// QR Code Display Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const hover1Btn = document.querySelector('.social-btn-hover1');
+    const hover2Btn = document.querySelector('.social-btn-hover2');
+    const img1 = document.querySelector('.profile-card .img1');
+    const img2 = document.querySelector('.profile-card .img2');
+    
+    if (!hover1Btn || !hover2Btn || !img1 || !img2) {
+        console.log('QR Code elements not found');
+        return;
+    }
+    
+    let activeQR = null;
+    let touchTimer = null;
+    
+    // Function to show QR code
+    function showQR(targetImg, buttonElement) {
+        // Hide the other QR code first
+        if (activeQR && activeQR !== targetImg) {
+            hideQR(activeQR);
+        }
+        
+        targetImg.style.opacity = '1';
+        targetImg.style.visibility = 'visible';
+        buttonElement.classList.add('show-qr');
+        activeQR = targetImg;
+        
+        console.log('Showing QR:', targetImg.className);
+    }
+    
+    // Function to hide QR code
+    function hideQR(targetImg) {
+        if (targetImg) {
+            targetImg.style.opacity = '0';
+            targetImg.style.visibility = 'hidden';
+        }
+        
+        // Remove show-qr class from both buttons
+        hover1Btn.classList.remove('show-qr');
+        hover2Btn.classList.remove('show-qr');
+        
+        if (activeQR === targetImg) {
+            activeQR = null;
+        }
+        
+        console.log('Hiding QR:', targetImg ? targetImg.className : 'null');
+    }
+    
+    // Function to hide all QR codes
+    function hideAllQR() {
+        hideQR(img1);
+        hideQR(img2);
+    }
+    
+    // Desktop hover events
+    hover1Btn.addEventListener('mouseenter', function() {
+        if (window.innerWidth > 768) { // Only on desktop
+            showQR(img1, hover1Btn);
+        }
+    });
+    
+    hover1Btn.addEventListener('mouseleave', function() {
+        if (window.innerWidth > 768) { // Only on desktop
+            setTimeout(() => {
+                if (!hover1Btn.matches(':hover')) {
+                    hideQR(img1);
+                }
+            }, 100);
+        }
+    });
+    
+    hover2Btn.addEventListener('mouseenter', function() {
+        if (window.innerWidth > 768) { // Only on desktop
+            showQR(img2, hover2Btn);
+        }
+    });
+    
+    hover2Btn.addEventListener('mouseleave', function() {
+        if (window.innerWidth > 768) { // Only on desktop
+            setTimeout(() => {
+                if (!hover2Btn.matches(':hover')) {
+                    hideQR(img2);
+                }
+            }, 100);
+        }
+    });
+    
+    // Mobile touch events
+    hover1Btn.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        clearTimeout(touchTimer);
+        
+        if (activeQR === img1) {
+            // If already showing, hide it
+            hideQR(img1);
+        } else {
+            // Show this QR and hide others
+            showQR(img1, hover1Btn);
+            
+            // Auto hide after 3 seconds
+            touchTimer = setTimeout(() => {
+                hideQR(img1);
+            }, 3000);
+        }
+    });
+    
+    hover2Btn.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        clearTimeout(touchTimer);
+        
+        if (activeQR === img2) {
+            // If already showing, hide it
+            hideQR(img2);
+        } else {
+            // Show this QR and hide others
+            showQR(img2, hover2Btn);
+            
+            // Auto hide after 3 seconds
+            touchTimer = setTimeout(() => {
+                hideQR(img2);
+            }, 3000);
+        }
+    });
+    
+    // Click events for better mobile compatibility
+    hover1Btn.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            clearTimeout(touchTimer);
+            
+            if (activeQR === img1) {
+                hideQR(img1);
+            } else {
+                showQR(img1, hover1Btn);
+                touchTimer = setTimeout(() => {
+                    hideQR(img1);
+                }, 3000);
+            }
+        }
+    });
+    
+    hover2Btn.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            clearTimeout(touchTimer);
+            
+            if (activeQR === img2) {
+                hideQR(img2);
+            } else {
+                showQR(img2, hover2Btn);
+                touchTimer = setTimeout(() => {
+                    hideQR(img2);
+                }, 3000);
+            }
+        }
+    });
+    
+    // Hide QR when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.profile-card')) {
+            hideAllQR();
+            clearTimeout(touchTimer);
+        }
+    });
+    
+    // Hide QR when touching outside (mobile)
+    document.addEventListener('touchstart', function(e) {
+        if (!e.target.closest('.profile-card')) {
+            hideAllQR();
+            clearTimeout(touchTimer);
+        }
+    });
+    
+    // Keyboard accessibility
+    hover1Btn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            if (activeQR === img1) {
+                hideQR(img1);
+            } else {
+                showQR(img1, hover1Btn);
+            }
+        } else if (e.key === 'Escape') {
+            hideQR(img1);
+        }
+    });
+    
+    hover2Btn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            if (activeQR === img2) {
+                hideQR(img2);
+            } else {
+                showQR(img2, hover2Btn);
+            }
+        } else if (e.key === 'Escape') {
+            hideQR(img2);
+        }
+    });
+    
+    // Global escape key handler
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            hideAllQR();
+            clearTimeout(touchTimer);
+        }
+    });
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+        hideAllQR();
+        clearTimeout(touchTimer);
+    });
+    
+    // Make buttons focusable for keyboard navigation
+    hover1Btn.setAttribute('tabindex', '0');
+    hover2Btn.setAttribute('tabindex', '0');
+    
+    console.log('QR Code functionality initialized');
 });
 
